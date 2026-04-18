@@ -1,0 +1,963 @@
+﻿<Structure xmlns="http://v8.1c.ru/8.1/data/core" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Structure">
+	<Property name="Формат">
+		<Value xsi:type="xs:string">КонсольЗапросов9000</Value>
+	</Property>
+	<Property name="Версия">
+		<Value xsi:type="xs:decimal">12</Value>
+	</Property>
+	<Property name="КоличествоЗапросов">
+		<Value xsi:type="xs:decimal">37</Value>
+	</Property>
+	<Property name="ИмяФайла">
+		<Value xsi:type="xs:string">C:\Users\admin1C\Desktop\15-04-2026\ПакетЗапитів_15-04-2026-5.q9</Value>
+	</Property>
+	<Property name="СохраняемыеСостояния">
+		<Value xsi:type="Structure">
+			<Property name="ВидРезультата">
+				<Value xsi:type="xs:string">дерево</Value>
+			</Property>
+			<Property name="ОграничениеВыводимыхСтрок">
+				<Value xsi:type="xs:decimal">1000</Value>
+			</Property>
+			<Property name="ОграничениеВыводимыхСтрокВкл">
+				<Value xsi:type="xs:boolean">false</Value>
+			</Property>
+			<Property name="ОграничениеВыводимыхСтрокПервые">
+				<Value xsi:type="xs:decimal">1000</Value>
+			</Property>
+			<Property name="ОграничениеВыводимыхСтрокПервыеВкл">
+				<Value xsi:type="xs:boolean">false</Value>
+			</Property>
+			<Property name="ПараметрыЗапросаРядомСТекстом">
+				<Value xsi:type="xs:boolean">true</Value>
+			</Property>
+			<Property name="УстановитьЗначенияПараметров">
+				<Value xsi:type="xs:boolean">true</Value>
+			</Property>
+		</Value>
+	</Property>
+	<Property name="Опции">
+		<Value xsi:type="Structure">
+			<Property name="ОпцияСохранятьКомментарии">
+				<Value xsi:type="xs:boolean">true</Value>
+			</Property>
+			<Property name="ОпцияАвтосохранениеПередВыполнениемЗапроса">
+				<Value xsi:type="xs:boolean">true</Value>
+			</Property>
+			<Property name="ОпцияПериодОпросаВключенияВыключенияТехнологическогоЖурнала">
+				<Value xsi:type="xs:decimal">3</Value>
+			</Property>
+			<Property name="ОпцияОбрабатывать__">
+				<Value xsi:type="xs:boolean">true</Value>
+			</Property>
+			<Property name="ОпцияИнтервалОбновленияВыполненияАлгоритма">
+				<Value xsi:type="xs:decimal">1000</Value>
+			</Property>
+			<Property name="ОпцияИнтервалАвтосохранения">
+				<Value xsi:type="xs:decimal">60</Value>
+			</Property>
+		</Value>
+	</Property>
+	<Property name="ПакетЗапросов">
+		<Value xsi:type="Array">
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">ХозрасчетнийРегистрПоКонтрагентуПоДокументамЗаПеріод</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ
+	ХозрасчетныйОстаткиИОбороты.Счет КАК Рахунок,
+	ХозрасчетныйОстаткиИОбороты.Субконто1 КАК Контрагент,
+	ХозрасчетныйОстаткиИОбороты.Субконто2 КАК Договір,
+	ХозрасчетныйОстаткиИОбороты.Регистратор КАК Регистратор,
+	СУММА(ХозрасчетныйОстаткиИОбороты.СуммаНачальныйОстатокДт) КАК ПочЗалДт,
+	СУММА(ХозрасчетныйОстаткиИОбороты.СуммаНачальныйОстатокКт) КАК ПочЗалКт,
+	СУММА(ХозрасчетныйОстаткиИОбороты.СуммаОборотДт) КАК ОборотДт,
+	СУММА(ХозрасчетныйОстаткиИОбороты.СуммаОборотКт) КАК ОборотКт,
+	СУММА(ХозрасчетныйОстаткиИОбороты.СуммаКонечныйОстатокДт) КАК КінЗалДт,
+	СУММА(ХозрасчетныйОстаткиИОбороты.СуммаКонечныйОстатокКт) КАК КінЗалКт
+ИЗ
+	РегистрБухгалтерии.Хозрасчетный.ОстаткиИОбороты(&amp;ПочатокПеріоду, &amp;ЗавершенняПеріоду, Регистратор, , , , Субконто1.Ссылка = &amp;Контрагент) КАК ХозрасчетныйОстаткиИОбороты
+ГДЕ
+	(ХозрасчетныйОстаткиИОбороты.Счет = &amp;Счет1
+			ИЛИ ХозрасчетныйОстаткиИОбороты.Счет = &amp;Счет2
+			ИЛИ ХозрасчетныйОстаткиИОбороты.Счет = &amp;Счет3
+			ИЛИ ХозрасчетныйОстаткиИОбороты.Счет = &amp;Счет4)
+
+СГРУППИРОВАТЬ ПО
+	ХозрасчетныйОстаткиИОбороты.Субконто1,
+	ХозрасчетныйОстаткиИОбороты.Счет,
+	ХозрасчетныйОстаткиИОбороты.Субконто2,
+	ХозрасчетныйОстаткиИОбороты.Регистратор
+ИТОГИ
+	СУММА(ПочЗалДт),
+	СУММА(ПочЗалКт),
+	СУММА(ОборотДт),
+	СУММА(ОборотКт),
+	СУММА(КінЗалДт),
+	СУММА(КінЗалКт)
+ПО
+	Контрагент
+</Value>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">6</lastId>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">Счет1</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:ChartOfAccountsRef.Хозрасчетный</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ChartOfAccountsRef.Хозрасчетный">c0738ae5-a0be-11ed-8132-8cdcd43ed5b0</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ChartOfAccountsRef.Хозрасчетный">c0738ae5-a0be-11ed-8132-8cdcd43ed5b0</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">0</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">Счет2</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:ChartOfAccountsRef.Хозрасчетный</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ChartOfAccountsRef.Хозрасчетный">c0738b59-a0be-11ed-8132-8cdcd43ed5b0</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ChartOfAccountsRef.Хозрасчетный">c0738b59-a0be-11ed-8132-8cdcd43ed5b0</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">1</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">Счет3</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:ChartOfAccountsRef.Хозрасчетный</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ChartOfAccountsRef.Хозрасчетный">c0738b80-a0be-11ed-8132-8cdcd43ed5b0</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ChartOfAccountsRef.Хозрасчетный">c0738b80-a0be-11ed-8132-8cdcd43ed5b0</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">2</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">Счет4</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:ChartOfAccountsRef.Хозрасчетный</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ChartOfAccountsRef.Хозрасчетный">c0738aec-a0be-11ed-8132-8cdcd43ed5b0</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ChartOfAccountsRef.Хозрасчетный">c0738aec-a0be-11ed-8132-8cdcd43ed5b0</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">3</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">Контрагент</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВидыНалоговойДеятельности</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ОтчетПроизводстваЗаСмену</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ПлатежныйОрдерСписаниеДенежныхСредств</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Склады</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ПередачаОС</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.БиологическиеАктивы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.СписаниеТоваров</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.АвансовыйОтчет</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ГТДИмпорт</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОсновныеСредства</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ОприходованиеТоваров</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.СписаниеСРасчетногоСчета</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ПередачаМалоценныхАктивовВЭксплуатацию</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ДокументРасчетовСКонтрагентом</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ФинансовыеИнвестиции</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ПлатежныйОрдерПоступлениеДенежныхСредств</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ЦенныеБумаги</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.НематериальныеАктивы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ДоговорыКонтрагентов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.РасходныйКассовыйОрдер</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ДоходыБудущихПериодов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.АктОбОказанииПроизводственныхУслуг</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ПоступлениеНМА</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.КорректировкаДолга</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ПоступлениеТоваровУслуг</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.НазначениеЦелевыхСредств</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПрочиеНеоборотныеАктивы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ВозвратТоваровОтПокупателя</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.СчетНаОплатуПокупателю</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ПередачаТоваров</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ПоступлениеНаРасчетныйСчет</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.БанковскиеСчета</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ОтчетКомиссионераОПродажах</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ОтчетКомитентуОПродажах</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПодразделенияОрганизаций</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ВводНачальныхОстатков</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ПередачаНМА</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ОтчетОРозничныхПродажах</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.НоменклатурныеГруппы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.КомплектацияНоменклатуры</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОбъектыСтроительства</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ПриходныйКассовыйОрдер</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Субконто</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ПоступлениеИзПереработки</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СтатьиДоходов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Контрагенты</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.УдалитьВводНачальныхОстатковМалоценныхАктивовВЭксплуатации</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.РасходыБудущихПериодов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Гарантии</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.РеализацияУслугПоПереработке</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Резервы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.РеализацияТоваровУслуг</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ВозвратТоваровПоставщику</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СтатьиЗатрат</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ПартияМалоценныхАктивовВЭксплуатации</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.КонтрактныеОбязательства</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.НазначенияИспользования</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Организации</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.СчетНаОплатуПоставщика</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:EnumRef.СтавкиНДС</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СтатьиНеоперационныхРасходов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:EnumRef.ВидыИспользованияАмортизации</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СтатьиОтсроченныхНалоговыхАктивовИОбязательств</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СтатьиНалоговыхДеклараций</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Номенклатура</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.НалоговыеНазначенияАктивовИЗатрат</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.Партия</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОбособленныеПодразделенияОрганизаций</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.НалоговыеГруппыОсновныхСредств</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ПоступлениеДопРасходов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Налоги</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СтатьиДвиженияДенежныхСредств</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ПеремещениеТоваров</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ФизическиеЛица</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:CatalogRef.Контрагенты">2fe7afee-b2d6-11ed-afe3-24be0520da1d</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:CatalogRef.Контрагенты">2fe7afee-b2d6-11ed-afe3-24be0520da1d</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">4</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">ПочатокПеріоду</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type>xs:dateTime</Type>
+										<DateQualifiers>
+											<DateFractions>DateTime</DateFractions>
+										</DateQualifiers>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xsi:type="xs:dateTime">2026-01-01T00:00:00</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xsi:type="xs:dateTime">2026-01-01T00:00:00</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">5</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">ЗавершенняПеріоду</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type>xs:dateTime</Type>
+										<DateQualifiers>
+											<DateFractions>DateTime</DateFractions>
+										</DateQualifiers>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xsi:type="xs:dateTime">2026-04-13T00:00:00</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xsi:type="xs:dateTime">2026-04-13T00:00:00</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">6</id>
+						</item>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array"/>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">18 / 00:00:15.768</Value>
+				</Property>
+			</Value>
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">ХозрасчетнийРегистрПоКонтрагентуПоДокументамЗаПеріодАвтоВТаблиці</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ
+	ХозрасчетныйОстаткиИОбороты.Счет КАК Рахунок,
+	ХозрасчетныйОстаткиИОбороты.Субконто1 КАК Контрагент,
+	ХозрасчетныйОстаткиИОбороты.Субконто2 КАК Договір,
+	ХозрасчетныйОстаткиИОбороты.Регистратор.Автомобиль КАК Автомобіль,
+	ХозрасчетныйОстаткиИОбороты.Регистратор КАК Регистратор,
+	СУММА(ХозрасчетныйОстаткиИОбороты.СуммаНачальныйОстатокДт) КАК ПочЗалДт,
+	СУММА(ХозрасчетныйОстаткиИОбороты.СуммаНачальныйОстатокКт) КАК ПочЗалКт,
+	СУММА(ХозрасчетныйОстаткиИОбороты.СуммаОборотДт) КАК ОборотДт,
+	СУММА(ХозрасчетныйОстаткиИОбороты.СуммаОборотКт) КАК ОборотКт,
+	СУММА(ХозрасчетныйОстаткиИОбороты.СуммаКонечныйОстатокДт) КАК КінЗалДт,
+	СУММА(ХозрасчетныйОстаткиИОбороты.СуммаКонечныйОстатокКт) КАК КінЗалКт
+ИЗ
+	РегистрБухгалтерии.Хозрасчетный.ОстаткиИОбороты(&amp;ПочатокПеріоду, &amp;ЗавершенняПеріоду, Регистратор, , , , Субконто1.Ссылка = &amp;Контрагент) КАК ХозрасчетныйОстаткиИОбороты
+ГДЕ
+	(ХозрасчетныйОстаткиИОбороты.Счет = &amp;Счет1
+			ИЛИ ХозрасчетныйОстаткиИОбороты.Счет = &amp;Счет2
+			ИЛИ ХозрасчетныйОстаткиИОбороты.Счет = &amp;Счет3
+			ИЛИ ХозрасчетныйОстаткиИОбороты.Счет = &amp;Счет4)
+
+СГРУППИРОВАТЬ ПО
+	ХозрасчетныйОстаткиИОбороты.Субконто1,
+	ХозрасчетныйОстаткиИОбороты.Счет,
+	ХозрасчетныйОстаткиИОбороты.Субконто2,
+	ХозрасчетныйОстаткиИОбороты.Регистратор
+ИТОГИ
+	СУММА(ПочЗалДт),
+	СУММА(ПочЗалКт),
+	СУММА(ОборотДт),
+	СУММА(ОборотКт),
+	СУММА(КінЗалДт),
+	СУММА(КінЗалКт)
+ПО
+	Контрагент
+</Value>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">6</lastId>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">Счет1</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:ChartOfAccountsRef.Хозрасчетный</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ChartOfAccountsRef.Хозрасчетный">c0738ae5-a0be-11ed-8132-8cdcd43ed5b0</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ChartOfAccountsRef.Хозрасчетный">c0738ae5-a0be-11ed-8132-8cdcd43ed5b0</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">0</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">Счет2</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:ChartOfAccountsRef.Хозрасчетный</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ChartOfAccountsRef.Хозрасчетный">c0738b59-a0be-11ed-8132-8cdcd43ed5b0</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ChartOfAccountsRef.Хозрасчетный">c0738b59-a0be-11ed-8132-8cdcd43ed5b0</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">1</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">Счет3</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:ChartOfAccountsRef.Хозрасчетный</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ChartOfAccountsRef.Хозрасчетный">c0738b80-a0be-11ed-8132-8cdcd43ed5b0</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ChartOfAccountsRef.Хозрасчетный">c0738b80-a0be-11ed-8132-8cdcd43ed5b0</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">2</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">Счет4</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:ChartOfAccountsRef.Хозрасчетный</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ChartOfAccountsRef.Хозрасчетный">c0738aec-a0be-11ed-8132-8cdcd43ed5b0</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ChartOfAccountsRef.Хозрасчетный">c0738aec-a0be-11ed-8132-8cdcd43ed5b0</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">3</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">Контрагент</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВидыНалоговойДеятельности</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ОтчетПроизводстваЗаСмену</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ПлатежныйОрдерСписаниеДенежныхСредств</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Склады</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ПередачаОС</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.БиологическиеАктивы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.СписаниеТоваров</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.АвансовыйОтчет</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ГТДИмпорт</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОсновныеСредства</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ОприходованиеТоваров</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.СписаниеСРасчетногоСчета</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ПередачаМалоценныхАктивовВЭксплуатацию</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ДокументРасчетовСКонтрагентом</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ФинансовыеИнвестиции</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ПлатежныйОрдерПоступлениеДенежныхСредств</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ЦенныеБумаги</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.НематериальныеАктивы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ДоговорыКонтрагентов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.РасходныйКассовыйОрдер</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ДоходыБудущихПериодов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.АктОбОказанииПроизводственныхУслуг</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ПоступлениеНМА</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.КорректировкаДолга</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ПоступлениеТоваровУслуг</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.НазначениеЦелевыхСредств</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПрочиеНеоборотныеАктивы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ВозвратТоваровОтПокупателя</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.СчетНаОплатуПокупателю</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ПередачаТоваров</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ПоступлениеНаРасчетныйСчет</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.БанковскиеСчета</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ОтчетКомиссионераОПродажах</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ОтчетКомитентуОПродажах</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПодразделенияОрганизаций</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ВводНачальныхОстатков</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ПередачаНМА</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ОтчетОРозничныхПродажах</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.НоменклатурныеГруппы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.КомплектацияНоменклатуры</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОбъектыСтроительства</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ПриходныйКассовыйОрдер</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Субконто</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ПоступлениеИзПереработки</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СтатьиДоходов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Контрагенты</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.УдалитьВводНачальныхОстатковМалоценныхАктивовВЭксплуатации</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.РасходыБудущихПериодов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Гарантии</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.РеализацияУслугПоПереработке</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Резервы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.РеализацияТоваровУслуг</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ВозвратТоваровПоставщику</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СтатьиЗатрат</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ПартияМалоценныхАктивовВЭксплуатации</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.КонтрактныеОбязательства</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.НазначенияИспользования</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Организации</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.СчетНаОплатуПоставщика</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:EnumRef.СтавкиНДС</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СтатьиНеоперационныхРасходов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:EnumRef.ВидыИспользованияАмортизации</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СтатьиОтсроченныхНалоговыхАктивовИОбязательств</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СтатьиНалоговыхДеклараций</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Номенклатура</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.НалоговыеНазначенияАктивовИЗатрат</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.Партия</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОбособленныеПодразделенияОрганизаций</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.НалоговыеГруппыОсновныхСредств</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ПоступлениеДопРасходов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Налоги</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СтатьиДвиженияДенежныхСредств</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ПеремещениеТоваров</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ФизическиеЛица</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:CatalogRef.Контрагенты">2fe7afee-b2d6-11ed-afe3-24be0520da1d</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:CatalogRef.Контрагенты">2fe7afee-b2d6-11ed-afe3-24be0520da1d</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">4</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">ПочатокПеріоду</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type>xs:dateTime</Type>
+										<DateQualifiers>
+											<DateFractions>DateTime</DateFractions>
+										</DateQualifiers>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xsi:type="xs:dateTime">2026-01-01T00:00:00</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xsi:type="xs:dateTime">2026-01-01T00:00:00</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">5</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">ЗавершенняПеріоду</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type>xs:dateTime</Type>
+										<DateQualifiers>
+											<DateFractions>DateTime</DateFractions>
+										</DateQualifiers>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xsi:type="xs:dateTime">2026-04-13T00:00:00</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xsi:type="xs:dateTime">2026-04-13T00:00:00</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">6</id>
+						</item>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array"/>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">18 / 00:00:16.491</Value>
+				</Property>
+			</Value>
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">ХозрасчетнийРегистрПоКонтрагентуПоДокументамЗаПеріодПідсумокПоАвто</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ
+	ХозрасчетныйОстаткиИОбороты.Счет КАК Рахунок,
+	ХозрасчетныйОстаткиИОбороты.Субконто1 КАК Контрагент,
+	ХозрасчетныйОстаткиИОбороты.Субконто2 КАК Договір,
+	ХозрасчетныйОстаткиИОбороты.Регистратор.Автомобиль КАК Автомобіль,
+	ХозрасчетныйОстаткиИОбороты.Регистратор КАК Регистратор,
+	СУММА(ХозрасчетныйОстаткиИОбороты.СуммаНачальныйОстатокДт) КАК ПочЗалДт,
+	СУММА(ХозрасчетныйОстаткиИОбороты.СуммаНачальныйОстатокКт) КАК ПочЗалКт,
+	СУММА(ХозрасчетныйОстаткиИОбороты.СуммаОборотДт) КАК ОборотДт,
+	СУММА(ХозрасчетныйОстаткиИОбороты.СуммаОборотКт) КАК ОборотКт,
+	СУММА(ХозрасчетныйОстаткиИОбороты.СуммаКонечныйОстатокДт) КАК КінЗалДт,
+	СУММА(ХозрасчетныйОстаткиИОбороты.СуммаКонечныйОстатокКт) КАК КінЗалКт
+ИЗ
+	РегистрБухгалтерии.Хозрасчетный.ОстаткиИОбороты(&amp;ПочатокПеріоду, &amp;ЗавершенняПеріоду, Регистратор, , , , Субконто1.Ссылка = &amp;Контрагент) КАК ХозрасчетныйОстаткиИОбороты
+ГДЕ
+	(ХозрасчетныйОстаткиИОбороты.Счет = &amp;Счет1
+			ИЛИ ХозрасчетныйОстаткиИОбороты.Счет = &amp;Счет2
+			ИЛИ ХозрасчетныйОстаткиИОбороты.Счет = &amp;Счет3
+			ИЛИ ХозрасчетныйОстаткиИОбороты.Счет = &amp;Счет4)
+
+СГРУППИРОВАТЬ ПО
+	ХозрасчетныйОстаткиИОбороты.Субконто1,
+	ХозрасчетныйОстаткиИОбороты.Счет,
+	ХозрасчетныйОстаткиИОбороты.Субконто2,
+	ХозрасчетныйОстаткиИОбороты.Регистратор,
+	ХозрасчетныйОстаткиИОбороты.Регистратор.Автомобиль
+ИТОГИ
+	СУММА(ПочЗалДт),
+	СУММА(ПочЗалКт),
+	СУММА(ОборотДт),
+	СУММА(ОборотКт),
+	СУММА(КінЗалДт),
+	СУММА(КінЗалКт)
+ПО
+	Контрагент,
+	Автомобіль
+</Value>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">6</lastId>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">Счет1</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:ChartOfAccountsRef.Хозрасчетный</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ChartOfAccountsRef.Хозрасчетный">c0738ae5-a0be-11ed-8132-8cdcd43ed5b0</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ChartOfAccountsRef.Хозрасчетный">c0738ae5-a0be-11ed-8132-8cdcd43ed5b0</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">0</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">Счет2</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:ChartOfAccountsRef.Хозрасчетный</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ChartOfAccountsRef.Хозрасчетный">c0738b59-a0be-11ed-8132-8cdcd43ed5b0</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ChartOfAccountsRef.Хозрасчетный">c0738b59-a0be-11ed-8132-8cdcd43ed5b0</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">1</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">Счет3</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:ChartOfAccountsRef.Хозрасчетный</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ChartOfAccountsRef.Хозрасчетный">c0738b80-a0be-11ed-8132-8cdcd43ed5b0</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ChartOfAccountsRef.Хозрасчетный">c0738b80-a0be-11ed-8132-8cdcd43ed5b0</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">2</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">Счет4</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:ChartOfAccountsRef.Хозрасчетный</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ChartOfAccountsRef.Хозрасчетный">c0738aec-a0be-11ed-8132-8cdcd43ed5b0</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ChartOfAccountsRef.Хозрасчетный">c0738aec-a0be-11ed-8132-8cdcd43ed5b0</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">3</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">Контрагент</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ВидыНалоговойДеятельности</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ОтчетПроизводстваЗаСмену</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ПлатежныйОрдерСписаниеДенежныхСредств</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Склады</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ПередачаОС</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.БиологическиеАктивы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.СписаниеТоваров</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.АвансовыйОтчет</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ГТДИмпорт</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОсновныеСредства</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ОприходованиеТоваров</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.СписаниеСРасчетногоСчета</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ПередачаМалоценныхАктивовВЭксплуатацию</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ДокументРасчетовСКонтрагентом</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ФинансовыеИнвестиции</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ПлатежныйОрдерПоступлениеДенежныхСредств</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ЦенныеБумаги</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.НематериальныеАктивы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ДоговорыКонтрагентов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.РасходныйКассовыйОрдер</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ДоходыБудущихПериодов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.АктОбОказанииПроизводственныхУслуг</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ПоступлениеНМА</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.КорректировкаДолга</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ПоступлениеТоваровУслуг</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.НазначениеЦелевыхСредств</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПрочиеНеоборотныеАктивы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ВозвратТоваровОтПокупателя</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.СчетНаОплатуПокупателю</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ПередачаТоваров</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ПоступлениеНаРасчетныйСчет</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.БанковскиеСчета</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ОтчетКомиссионераОПродажах</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ОтчетКомитентуОПродажах</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ПодразделенияОрганизаций</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ВводНачальныхОстатков</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ПередачаНМА</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ОтчетОРозничныхПродажах</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.НоменклатурныеГруппы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.КомплектацияНоменклатуры</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОбъектыСтроительства</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ПриходныйКассовыйОрдер</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Субконто</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ПоступлениеИзПереработки</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СтатьиДоходов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Контрагенты</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.УдалитьВводНачальныхОстатковМалоценныхАктивовВЭксплуатации</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.РасходыБудущихПериодов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Гарантии</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.РеализацияУслугПоПереработке</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Резервы</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.РеализацияТоваровУслуг</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ВозвратТоваровПоставщику</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СтатьиЗатрат</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ПартияМалоценныхАктивовВЭксплуатации</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.КонтрактныеОбязательства</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.НазначенияИспользования</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Организации</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.СчетНаОплатуПоставщика</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:EnumRef.СтавкиНДС</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СтатьиНеоперационныхРасходов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:EnumRef.ВидыИспользованияАмортизации</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СтатьиОтсроченныхНалоговыхАктивовИОбязательств</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СтатьиНалоговыхДеклараций</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Номенклатура</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.НалоговыеНазначенияАктивовИЗатрат</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.Партия</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ОбособленныеПодразделенияОрганизаций</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.НалоговыеГруппыОсновныхСредств</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ПоступлениеДопРасходов</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Налоги</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.СтатьиДвиженияДенежныхСредств</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.ПеремещениеТоваров</Type>
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ФизическиеЛица</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:CatalogRef.Контрагенты">9cfe2002-b78f-11ed-afe3-24be0520da1d</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:CatalogRef.Контрагенты">9cfe2002-b78f-11ed-afe3-24be0520da1d</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">4</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">ПочатокПеріоду</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type>xs:dateTime</Type>
+										<DateQualifiers>
+											<DateFractions>DateTime</DateFractions>
+										</DateQualifiers>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xsi:type="xs:dateTime">2026-01-01T00:00:00</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xsi:type="xs:dateTime">2026-01-01T00:00:00</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">5</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">ЗавершенняПеріоду</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type>xs:dateTime</Type>
+										<DateQualifiers>
+											<DateFractions>DateTime</DateFractions>
+										</DateQualifiers>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xsi:type="xs:dateTime">2026-04-13T00:00:00</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xsi:type="xs:dateTime">2026-04-13T00:00:00</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">6</id>
+						</item>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array"/>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">112 / 00:00:04.776</Value>
+				</Property>
+			</Value>
+		</Value>
+	</Property>
+</Structure>
