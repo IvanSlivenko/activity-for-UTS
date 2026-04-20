@@ -1,0 +1,2905 @@
+﻿<Structure xmlns="http://v8.1c.ru/8.1/data/core" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Structure">
+	<Property name="Формат">
+		<Value xsi:type="xs:string">КонсольЗапросов9000</Value>
+	</Property>
+	<Property name="Версия">
+		<Value xsi:type="xs:decimal">12</Value>
+	</Property>
+	<Property name="КоличествоЗапросов">
+		<Value xsi:type="xs:decimal">43</Value>
+	</Property>
+	<Property name="ИмяФайла">
+		<Value xsi:type="xs:string">C:\Users\admin1C\Desktop\Lessons\Запити\ПакетНавчальнихЗапитів.q9</Value>
+	</Property>
+	<Property name="СохраняемыеСостояния">
+		<Value xsi:type="Structure">
+			<Property name="ВидРезультата">
+				<Value xsi:type="xs:string">таблица</Value>
+			</Property>
+			<Property name="ОграничениеВыводимыхСтрок">
+				<Value xsi:type="xs:decimal">10</Value>
+			</Property>
+			<Property name="ОграничениеВыводимыхСтрокВкл">
+				<Value xsi:type="xs:boolean">false</Value>
+			</Property>
+			<Property name="ОграничениеВыводимыхСтрокПервые">
+				<Value xsi:type="xs:decimal">1000</Value>
+			</Property>
+			<Property name="ОграничениеВыводимыхСтрокПервыеВкл">
+				<Value xsi:type="xs:boolean">false</Value>
+			</Property>
+			<Property name="ПараметрыЗапросаРядомСТекстом">
+				<Value xsi:type="xs:boolean">true</Value>
+			</Property>
+			<Property name="УстановитьЗначенияПараметров">
+				<Value xsi:type="xs:boolean">true</Value>
+			</Property>
+		</Value>
+	</Property>
+	<Property name="Опции">
+		<Value xsi:type="Structure">
+			<Property name="ОпцияСохранятьКомментарии">
+				<Value xsi:type="xs:boolean">true</Value>
+			</Property>
+			<Property name="ОпцияАвтосохранениеПередВыполнениемЗапроса">
+				<Value xsi:type="xs:boolean">true</Value>
+			</Property>
+			<Property name="ОпцияПериодОпросаВключенияВыключенияТехнологическогоЖурнала">
+				<Value xsi:type="xs:decimal">3</Value>
+			</Property>
+			<Property name="ОпцияОбрабатывать__">
+				<Value xsi:type="xs:boolean">true</Value>
+			</Property>
+			<Property name="ОпцияИнтервалОбновленияВыполненияАлгоритма">
+				<Value xsi:type="xs:decimal">1000</Value>
+			</Property>
+			<Property name="ОпцияИнтервалАвтосохранения">
+				<Value xsi:type="xs:decimal">60</Value>
+			</Property>
+		</Value>
+	</Property>
+	<Property name="ПакетЗапросов">
+		<Value xsi:type="Array">
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">Запит з постійними значеннями</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ
+	5 КАК ЧисловеЗначення,
+	"Стрічка" КАК СтрічковеЗначення
+</Value>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array"/>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">1 / 0:00:00.000</Value>
+				</Property>
+			</Value>
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">Запит до константи</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ
+	Валюта.Значение КАК Значение
+ИЗ
+	Константа.ВалютаРегламентированногоУчета КАК Валюта
+</Value>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array"/>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">1 / 0:00:00.000</Value>
+				</Property>
+			</Value>
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">Запит з довідників</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ
+	Контрагенты.Наименование КАК Наименование,
+	Контрагенты.ИНН КАК ИНН,
+	Контрагенты.Код КАК Код,
+	Контрагенты.КодПоЕДРПОУ КАК КодПоЕДРПОУ
+ИЗ
+	Справочник.Контрагенты КАК Контрагенты
+</Value>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array"/>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">269 / 0:00:00.016</Value>
+				</Property>
+			</Value>
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">Запит з документів</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ
+	АктВыполненыхРабот.Номер КАК Номер,
+	АктВыполненыхРабот.Дата КАК Дата,
+	АктВыполненыхРабот.Контрагент КАК Контрагент,
+	АктВыполненыхРабот.Организация КАК Организация
+ИЗ
+	Документ.АктВыполненыхРабот КАК АктВыполненыхРабот
+</Value>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array"/>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">356 / 0:00:00.000</Value>
+				</Property>
+			</Value>
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">Запит до ТЧ Документа</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ
+	АктВыполненыхРаботТовары.Номенклатура КАК Номенклатура,
+	АктВыполненыхРаботТовары.КолВо КАК КолВо,
+	АктВыполненыхРаботТовары.Цена КАК Цена,
+	АктВыполненыхРаботТовары.Сумма КАК Сумма,
+	АктВыполненыхРаботТовары.Ссылка.Контрагент КАК Контрагент,
+	АктВыполненыхРаботТовары.Номенклатура.БазоваяЕдиницаИзмерения КАК ОдиницяВиміру
+ИЗ
+	Документ.АктВыполненыхРабот.Товары КАК АктВыполненыхРаботТовары
+</Value>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array"/>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">4 523 / 0:00:00.047</Value>
+				</Property>
+			</Value>
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">Запит з фільтром (загальні поняття)</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ
+	Контрагенты.Наименование КАК Наименование,
+	Контрагенты.Ссылка КАК Ссылка,
+	Контрагенты.КодПоЕДРПОУ КАК КодПоЕДРПОУ
+ИЗ
+	Справочник.Контрагенты КАК Контрагенты
+ГДЕ
+	Контрагенты.Наименование = &amp;Наименование
+</Value>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">0</lastId>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">Наименование</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type>xs:string</Type>
+										<StringQualifiers>
+											<Length>0</Length>
+											<AllowedLength>Variable</AllowedLength>
+										</StringQualifiers>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xsi:type="xs:string">Тютюник</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xsi:type="xs:string">Тютюник</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">0</id>
+						</item>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array"/>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">1 / 0:00:00.000</Value>
+				</Property>
+			</Value>
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">Запит тільки елементи</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ
+	Номенклатура.Наименование КАК Наименование,
+	Номенклатура.Артикул КАК Артикул,
+	Номенклатура.Код КАК Код
+ИЗ
+	Справочник.Номенклатура КАК Номенклатура
+ГДЕ
+	Номенклатура.ЭтоГруппа = ЛОЖЬ
+</Value>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array"/>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">6 701 / 0:00:00.078</Value>
+				</Property>
+			</Value>
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">Запит за артикулом ( один артикул )</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ
+	Номенклатура.Артикул КАК Артикул,
+	Номенклатура.Наименование КАК Наименование
+ИЗ
+	Справочник.Номенклатура КАК Номенклатура
+ГДЕ
+	Номенклатура.Артикул = &amp;Артикул
+</Value>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">0</lastId>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">Артикул</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type>xs:string</Type>
+										<StringQualifiers>
+											<Length>0</Length>
+											<AllowedLength>Variable</AllowedLength>
+										</StringQualifiers>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xsi:type="xs:string">1104102</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xsi:type="xs:string">1104102</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">0</id>
+						</item>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array"/>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">1 / 0:00:00.000</Value>
+				</Property>
+			</Value>
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">Запит за артикулом ( декілька артикулів )</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ
+	Номенклатура.Артикул КАК Артикул,
+	Номенклатура.Наименование КАК Наименование
+ИЗ
+	Справочник.Номенклатура КАК Номенклатура
+ГДЕ
+	Номенклатура.Артикул В ("1103112", "1103113" , "1103117")
+</Value>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array"/>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">3 / 0:00:00.000</Value>
+				</Property>
+			</Value>
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">Пошук за назвою</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ
+	Номенклатура.Наименование КАК Наименование
+ИЗ
+	Справочник.Номенклатура КАК Номенклатура
+ГДЕ
+	Номенклатура.Наименование = &amp;Наименование
+</Value>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">0</lastId>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">Наименование</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type>xs:string</Type>
+										<StringQualifiers>
+											<Length>0</Length>
+											<AllowedLength>Variable</AllowedLength>
+										</StringQualifiers>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xsi:type="xs:string">Очисник кузова ATAS DECABIT 250 мл</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xsi:type="xs:string">Очисник кузова ATAS DECABIT 250 мл</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">0</id>
+						</item>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array"/>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">1 / 0:00:00.000</Value>
+				</Property>
+			</Value>
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">Пошук за співпадінням</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ
+	Номенклатура.Наименование КАК Наименование
+ИЗ
+	Справочник.Номенклатура КАК Номенклатура
+ГДЕ
+	Номенклатура.Наименование ПОДОБНО &amp;Наименование
+</Value>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">0</lastId>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">Наименование</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type>xs:string</Type>
+										<StringQualifiers>
+											<Length>0</Length>
+											<AllowedLength>Variable</AllowedLength>
+										</StringQualifiers>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xsi:type="xs:string">%болт%</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xsi:type="xs:string">%болт%</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">0</id>
+						</item>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array"/>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">194 / 0:00:00.047</Value>
+				</Property>
+			</Value>
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">Пошук в ієрархії</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ
+	Номенклатура.Наименование КАК Наименование
+ИЗ
+	Справочник.Номенклатура КАК Номенклатура
+ГДЕ
+	Номенклатура.Родитель В Иерархии  (&amp;Родитель)
+</Value>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">0</lastId>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">Родитель</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Номенклатура</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:CatalogRef.Номенклатура">a83ad9ad-b530-11ed-afe3-24be0520da1d</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:CatalogRef.Номенклатура">a83ad9ad-b530-11ed-afe3-24be0520da1d</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">0</id>
+						</item>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array"/>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">15 / 0:00:00.015</Value>
+				</Property>
+			</Value>
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">Пошук товарів з пустим артикулом</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ
+	Номенклатура.Наименование КАК Наименование,
+	Номенклатура.Артикул КАК Артикул
+ИЗ
+	Справочник.Номенклатура КАК Номенклатура
+ГДЕ
+	Номенклатура.Артикул = ""
+</Value>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array"/>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">4 049 / 0:00:00.016</Value>
+				</Property>
+			</Value>
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">Пошук товарів з НЕ пустим артикулом</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ
+	Номенклатура.Наименование КАК Наименование,
+	Номенклатура.Артикул КАК Артикул
+ИЗ
+	Справочник.Номенклатура КАК Номенклатура
+ГДЕ
+	Номенклатура.Артикул &lt;&gt; ""
+</Value>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array"/>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">2 652 / 0:00:00.047</Value>
+				</Property>
+			</Value>
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">Всі товари з замовлень</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ
+	РеализацияТоваровУслугТовары.Номенклатура КАК Номенклатура,
+	РеализацияТоваровУслугТовары.Количество КАК Количество,
+	РеализацияТоваровУслугТовары.Сумма КАК Сумма,
+	МИНИМУМ(РеализацияТоваровУслугТовары.Цена) КАК Цена
+ИЗ
+	Документ.РеализацияТоваровУслуг.Товары КАК РеализацияТоваровУслугТовары
+ГДЕ
+	РеализацияТоваровУслугТовары.Ссылка.Проведен = &amp;Проведен
+
+СГРУППИРОВАТЬ ПО
+	РеализацияТоваровУслугТовары.Номенклатура,
+	РеализацияТоваровУслугТовары.Количество,
+	РеализацияТоваровУслугТовары.Сумма
+
+УПОРЯДОЧИТЬ ПО
+	Сумма УБЫВ
+</Value>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">0</lastId>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">Проведен</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type>xs:boolean</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xsi:type="xs:boolean">true</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xsi:type="xs:boolean">true</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">0</id>
+						</item>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array"/>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">6 638 / 0:00:00.062</Value>
+				</Property>
+			</Value>
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">Продажі по документам</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ
+	РеализацияТоваровУслугТовары.Номенклатура КАК Номенклатура,
+	СУММА(РеализацияТоваровУслугТовары.Количество) КАК Количество,
+	СУММА(РеализацияТоваровУслугТовары.Сумма) КАК Сумма
+ИЗ
+	Документ.РеализацияТоваровУслуг.Товары КАК РеализацияТоваровУслугТовары
+
+СГРУППИРОВАТЬ ПО
+	РеализацияТоваровУслугТовары.Номенклатура
+
+УПОРЯДОЧИТЬ ПО
+	Сумма УБЫВ
+</Value>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array"/>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">2 520 / 0:00:00.047</Value>
+				</Property>
+			</Value>
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">Продажі в розрізі Покупців</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ
+	РеализацияТоваровУслуг.Контрагент КАК Контрагент,
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ РеализацияТоваровУслуг.Ссылка) КАК КількістьВипадківПродажу
+ИЗ
+	Документ.РеализацияТоваровУслуг КАК РеализацияТоваровУслуг
+
+СГРУППИРОВАТЬ ПО
+	РеализацияТоваровУслуг.Контрагент
+
+УПОРЯДОЧИТЬ ПО
+	КількістьВипадківПродажу УБЫВ
+</Value>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array"/>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">110 / 0:00:00.016</Value>
+				</Property>
+			</Value>
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">Максимальна кількість за одну продаж</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ
+	РеализацияТоваровУслугТовары.Номенклатура КАК Номенклатура,
+	МАКСИМУМ(РеализацияТоваровУслугТовары.Количество) КАК Количество
+ИЗ
+	Документ.РеализацияТоваровУслуг.Товары КАК РеализацияТоваровУслугТовары
+
+СГРУППИРОВАТЬ ПО
+	РеализацияТоваровУслугТовары.Номенклатура
+
+УПОРЯДОЧИТЬ ПО
+	Количество УБЫВ
+</Value>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array"/>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">2 520 / 0:00:00.032</Value>
+				</Property>
+			</Value>
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">Середня сума продажів за період</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ
+	НАЧАЛОПЕРИОДА(РеализацияТоваровУслуг.Дата, ДЕНЬ) КАК Дата,
+	СУММА(РеализацияТоваровУслуг.СуммаДокумента) КАК СуммаДокумента
+ИЗ
+	Документ.РеализацияТоваровУслуг КАК РеализацияТоваровУслуг
+
+СГРУППИРОВАТЬ ПО
+	НАЧАЛОПЕРИОДА(РеализацияТоваровУслуг.Дата, ДЕНЬ)
+
+УПОРЯДОЧИТЬ ПО
+	Дата
+</Value>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array"/>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">272 / 0:00:00.016</Value>
+				</Property>
+			</Value>
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">Придбання товарів за спаданням по кількості</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ
+	ПоступлениеТоваровУслугТовары.Номенклатура КАК Номенклатура,
+	ПоступлениеТоваровУслугТовары.ЕдиницаИзмерения КАК ЕдиницаИзмерения,
+	СУММА(ПоступлениеТоваровУслугТовары.Количество) КАК Количество
+ИЗ
+	Документ.ПоступлениеТоваровУслуг.Товары КАК ПоступлениеТоваровУслугТовары
+ГДЕ
+	ПоступлениеТоваровУслугТовары.Ссылка.Проведен = &amp;Проведен
+
+СГРУППИРОВАТЬ ПО
+	ПоступлениеТоваровУслугТовары.Номенклатура,
+	ПоступлениеТоваровУслугТовары.ЕдиницаИзмерения
+
+УПОРЯДОЧИТЬ ПО
+	Количество УБЫВ
+</Value>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">0</lastId>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">Проведен</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type>xs:boolean</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xsi:type="xs:boolean">true</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xsi:type="xs:boolean">true</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">0</id>
+						</item>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array"/>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">3 871 / 0:00:00.063</Value>
+				</Property>
+			</Value>
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">Дата останнього надходження товару</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ ПЕРВЫЕ 1
+	ПоступлениеТоваровУслугТовары.Номенклатура КАК Номенклатура,
+	ПоступлениеТоваровУслугТовары.Количество КАК Количество,
+	ПоступлениеТоваровУслугТовары.Цена КАК Цена,
+	ПоступлениеТоваровУслугТовары.Сумма КАК Сумма,
+	ПоступлениеТоваровУслугТовары.Ссылка.Дата КАК Дата
+ИЗ
+	Документ.ПоступлениеТоваровУслуг.Товары КАК ПоступлениеТоваровУслугТовары
+ГДЕ
+	ПоступлениеТоваровУслугТовары.Ссылка.Проведен = &amp;Проведен
+	И ПоступлениеТоваровУслугТовары.Номенклатура = &amp;Номенклатура
+
+СГРУППИРОВАТЬ ПО
+	ПоступлениеТоваровУслугТовары.Номенклатура,
+	ПоступлениеТоваровУслугТовары.Количество,
+	ПоступлениеТоваровУслугТовары.Цена,
+	ПоступлениеТоваровУслугТовары.Сумма,
+	ПоступлениеТоваровУслугТовары.Ссылка.Дата
+
+УПОРЯДОЧИТЬ ПО
+	Дата УБЫВ
+</Value>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">1</lastId>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">Проведен</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type>xs:boolean</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xsi:type="xs:boolean">true</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xsi:type="xs:boolean">true</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">0</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">Номенклатура</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Номенклатура</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:CatalogRef.Номенклатура">8a7e32c3-a3b9-11ed-8139-8cdcd43ed5b0</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:CatalogRef.Номенклатура">8a7e32c3-a3b9-11ed-8139-8cdcd43ed5b0</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">1</id>
+						</item>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array"/>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">1 / 0:00:00.016</Value>
+				</Property>
+			</Value>
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">ПідсумокПродажПоПокупцям</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ
+	РеализацияТоваровУслуг.Контрагент КАК Контрагент,
+	РеализацияТоваровУслуг.СуммаДокумента КАК СуммаДокумента,
+	РеализацияТоваровУслуг.Ссылка КАК РТУ
+ИЗ
+	Документ.РеализацияТоваровУслуг КАК РеализацияТоваровУслуг
+ГДЕ
+	РеализацияТоваровУслуг.Проведен = ИСТИНА
+ИТОГИ
+	СУММА(СуммаДокумента)
+ПО
+	Контрагент
+</Value>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array"/>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">4 172 / 0:00:00.031</Value>
+				</Property>
+			</Value>
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">КількістьПридбаньЗаКоженДень</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ
+	НАЧАЛОПЕРИОДА(ПоступлениеТоваровУслуг.Дата, ДЕНЬ) КАК Дата,
+	ПоступлениеТоваровУслуг.Номер КАК Номер,
+	ПоступлениеТоваровУслуг.Ссылка КАК Ссылка
+ИЗ
+	Документ.ПоступлениеТоваровУслуг КАК ПоступлениеТоваровУслуг
+ИТОГИ
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ Ссылка)
+ПО
+	ОБЩИЕ,
+	Дата
+</Value>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array"/>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">1 760 / 0:00:00.016</Value>
+				</Property>
+			</Value>
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">Актуальний курс валют</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ
+	КурсыВалютСрезПоследних.Период КАК Период,
+	КурсыВалютСрезПоследних.Валюта КАК Валюта,
+	КурсыВалютСрезПоследних.Курс КАК Курс
+ИЗ
+	РегистрСведений.КурсыВалют.СрезПоследних(&amp;ДатаЗрізу, ) КАК КурсыВалютСрезПоследних
+</Value>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">0</lastId>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">ДатаЗрізу</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type>xs:dateTime</Type>
+										<DateQualifiers>
+											<DateFractions>DateTime</DateFractions>
+										</DateQualifiers>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xsi:type="xs:dateTime">0001-01-01T00:00:00</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xsi:type="xs:dateTime">0001-01-01T00:00:00</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">0</id>
+						</item>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array"/>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">3 / 0:00:00.000</Value>
+				</Property>
+			</Value>
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">Актуальні Ціни</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ
+	ЦеныНоменклатурыСрезПоследних.Номенклатура КАК Номенклатура,
+	ЦеныНоменклатурыСрезПоследних.Цена КАК Цена
+ИЗ
+	РегистрСведений.ЦеныНоменклатуры.СрезПоследних(&amp;Дата, Номенклатура = &amp;Номенклатура) КАК ЦеныНоменклатурыСрезПоследних
+</Value>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">1</lastId>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">Дата</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type>xs:dateTime</Type>
+										<DateQualifiers>
+											<DateFractions>DateTime</DateFractions>
+										</DateQualifiers>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xsi:type="xs:dateTime">2025-03-31T00:00:00</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xsi:type="xs:dateTime">2025-03-31T00:00:00</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">0</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">Номенклатура</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Номенклатура</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:CatalogRef.Номенклатура">54a819f4-a3b9-11ed-8139-8cdcd43ed5b0</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:CatalogRef.Номенклатура">54a819f4-a3b9-11ed-8139-8cdcd43ed5b0</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">1</id>
+						</item>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array"/>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">1 / 0:00:00.031</Value>
+				</Property>
+			</Value>
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">Актуальні ціни на сьогодні</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ
+	ЦеныНоменклатурыСрезПоследних.Период КАК Период,
+	ЦеныНоменклатурыСрезПоследних.Номенклатура КАК Номенклатура,
+	ЦеныНоменклатурыСрезПоследних.ТипЦен КАК ТипЦен,
+	ЦеныНоменклатурыСрезПоследних.Цена КАК Цена
+ИЗ
+	РегистрСведений.ЦеныНоменклатуры.СрезПоследних КАК ЦеныНоменклатурыСрезПоследних
+</Value>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array"/>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">3 898 / 0:00:00.094</Value>
+				</Property>
+			</Value>
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">Актуальні ціни на певну дату</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ
+	ЦеныНоменклатурыСрезПоследних.Период КАК Период,
+	ЦеныНоменклатурыСрезПоследних.ТипЦен КАК ТипЦен,
+	ЦеныНоменклатурыСрезПоследних.Номенклатура КАК Номенклатура,
+	ЦеныНоменклатурыСрезПоследних.Цена КАК Цена
+ИЗ
+	РегистрСведений.ЦеныНоменклатуры.СрезПоследних(&amp;Дата, ТипЦен = &amp;ТипЦін И Номенклатура = &amp;Товар) КАК ЦеныНоменклатурыСрезПоследних
+</Value>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">2</lastId>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">Дата</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type>xs:dateTime</Type>
+										<DateQualifiers>
+											<DateFractions>DateTime</DateFractions>
+										</DateQualifiers>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xsi:type="xs:dateTime">2026-03-01T00:00:00</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xsi:type="xs:dateTime">2026-03-01T00:00:00</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">0</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">ТипЦін</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.ТипыЦенНоменклатуры</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:CatalogRef.ТипыЦенНоменклатуры">aa904d69-a3b7-11ed-8139-8cdcd43ed5b0</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:CatalogRef.ТипыЦенНоменклатуры">aa904d69-a3b7-11ed-8139-8cdcd43ed5b0</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">1</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">Товар</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Номенклатура</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:CatalogRef.Номенклатура">7b2fd110-a3b9-11ed-8139-8cdcd43ed5b0</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:CatalogRef.Номенклатура">7b2fd110-a3b9-11ed-8139-8cdcd43ed5b0</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">2</id>
+						</item>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array"/>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">1 / 0:00:00.031</Value>
+				</Property>
+			</Value>
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">Залишки всіх товарів по всім складам на вказаному дату</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ
+	ТоварыНаСкладеОстатки.Номенклатура КАК Номенклатура,
+	ТоварыНаСкладеОстатки.Склад КАК Склад,
+	ТоварыНаСкладеОстатки.КолВоОстаток КАК КолВоОстаток
+ИЗ
+	РегистрНакопления.ТоварыНаСкладе.Остатки(&amp;Дата, Склад=&amp;Склад) КАК ТоварыНаСкладеОстатки
+</Value>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">1</lastId>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">Дата</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type>xs:dateTime</Type>
+										<DateQualifiers>
+											<DateFractions>DateTime</DateFractions>
+										</DateQualifiers>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xsi:type="xs:dateTime">2025-03-15T00:00:00</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xsi:type="xs:dateTime">2025-03-15T00:00:00</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">0</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">Склад</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Склады</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:CatalogRef.Склады">aa904d6a-a3b7-11ed-8139-8cdcd43ed5b0</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:CatalogRef.Склады">aa904d6a-a3b7-11ed-8139-8cdcd43ed5b0</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">1</id>
+						</item>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array"/>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">2 392 / 0:00:00.032</Value>
+				</Property>
+			</Value>
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">Залишки певного товара по певному складу</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ
+	ТоварыНаСкладеОстатки.Склад КАК Склад,
+	ТоварыНаСкладеОстатки.Номенклатура КАК Номенклатура,
+	ТоварыНаСкладеОстатки.КолВоОстаток КАК КолВоОстаток
+ИЗ
+	РегистрНакопления.ТоварыНаСкладе.Остатки(
+			&amp;ДатаЗалишків,
+			Склад = &amp;Склад
+				И Номенклатура = &amp;Товар) КАК ТоварыНаСкладеОстатки
+</Value>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">2</lastId>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">Склад</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Склады</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:CatalogRef.Склады">aa904d6a-a3b7-11ed-8139-8cdcd43ed5b0</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:CatalogRef.Склады">aa904d6a-a3b7-11ed-8139-8cdcd43ed5b0</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">0</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">Товар</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Номенклатура</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:CatalogRef.Номенклатура">54a819f7-a3b9-11ed-8139-8cdcd43ed5b0</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:CatalogRef.Номенклатура">54a819f7-a3b9-11ed-8139-8cdcd43ed5b0</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">1</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">ДатаЗалишків</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type>xs:dateTime</Type>
+										<DateQualifiers>
+											<DateFractions>DateTime</DateFractions>
+										</DateQualifiers>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xsi:type="xs:dateTime">2026-03-14T00:00:00</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xsi:type="xs:dateTime">2026-03-14T00:00:00</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">2</id>
+						</item>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array"/>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">1 / 0:00:00.015</Value>
+				</Property>
+			</Value>
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">Відомість по товарам на складах</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ
+	ТоварыНаСкладеОстаткиИОбороты.Номенклатура КАК Номенклатура,
+	ТоварыНаСкладеОстаткиИОбороты.Склад КАК Склад,
+	ТоварыНаСкладеОстаткиИОбороты.Регистратор КАК Регистратор,
+	ТоварыНаСкладеОстаткиИОбороты.КолВоНачальныйОстаток КАК ПочатоковийЗалишок,
+	ТоварыНаСкладеОстаткиИОбороты.КолВоПриход КАК Надходження,
+	ТоварыНаСкладеОстаткиИОбороты.КолВоРасход КАК Видаток,
+	ТоварыНаСкладеОстаткиИОбороты.КолВоКонечныйОстаток КАК КінцевийЗалишок
+ИЗ
+	РегистрНакопления.ТоварыНаСкладе.ОстаткиИОбороты(&amp;ПочатокПеріоду, &amp;ЗавершенняПеріоду, Запись, , Номенклатура = &amp;Товар) КАК ТоварыНаСкладеОстаткиИОбороты
+</Value>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">2</lastId>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">ПочатокПеріоду</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type>xs:dateTime</Type>
+										<DateQualifiers>
+											<DateFractions>DateTime</DateFractions>
+										</DateQualifiers>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xsi:type="xs:dateTime">2022-03-01T00:00:00</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xsi:type="xs:dateTime">2022-03-01T00:00:00</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">0</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">ЗавершенняПеріоду</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type>xs:dateTime</Type>
+										<DateQualifiers>
+											<DateFractions>DateTime</DateFractions>
+										</DateQualifiers>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xsi:type="xs:dateTime">2026-03-15T00:00:00</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xsi:type="xs:dateTime">2026-03-15T00:00:00</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">1</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">Товар</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:CatalogRef.Номенклатура</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:CatalogRef.Номенклатура">72654d3a-a78d-11ed-afe1-24be0520da1d</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:CatalogRef.Номенклатура">72654d3a-a78d-11ed-afe1-24be0520da1d</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">2</id>
+						</item>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array"/>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">29 / 0:00:00.047</Value>
+				</Property>
+			</Value>
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">Дебеторська заборгованість в розрізі покупців</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ
+	ВзаєморозрахункиОстатки.Контрагент КАК Контрагент,
+	ВзаєморозрахункиОстатки.Валюта КАК Валюта,
+	ВзаєморозрахункиОстатки.СумаОстаток КАК СумаОстаток
+ИЗ
+	РегистрНакопления.Взаєморозрахунки.Остатки КАК ВзаєморозрахункиОстатки
+</Value>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array"/>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">0 / 0:00:00.078</Value>
+				</Property>
+			</Value>
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">ХозрасчетнийРегистр</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ
+	ХозрасчетныйОстаткиИОбороты.Субконто1 КАК Контрагент,
+	ХозрасчетныйОстаткиИОбороты.Субконто2 КАК Договір,
+	ХозрасчетныйОстаткиИОбороты.Субконто3 КАК Субконто3,
+	ХозрасчетныйОстаткиИОбороты.Счет КАК Рахунок,
+	СУММА(ХозрасчетныйОстаткиИОбороты.СуммаНачальныйОстатокДт) КАК СуммаНачальныйОстатокДт,
+	СУММА(ХозрасчетныйОстаткиИОбороты.СуммаНачальныйОстатокКт) КАК СуммаНачальныйОстатокКт,
+	СУММА(ХозрасчетныйОстаткиИОбороты.СуммаОборотДт) КАК СуммаОборотДт,
+	СУММА(ХозрасчетныйОстаткиИОбороты.СуммаОборотКт) КАК СуммаОборотКт,
+	СУММА(ХозрасчетныйОстаткиИОбороты.СуммаКонечныйОстатокДт) КАК СуммаКонечныйОстатокДт,
+	СУММА(ХозрасчетныйОстаткиИОбороты.СуммаКонечныйОстатокКт) КАК СуммаКонечныйОстатокКт
+ИЗ
+	РегистрБухгалтерии.Хозрасчетный.ОстаткиИОбороты(, , , , , , ) КАК ХозрасчетныйОстаткиИОбороты
+ГДЕ
+	(ХозрасчетныйОстаткиИОбороты.Счет = &amp;Счет1
+			ИЛИ ХозрасчетныйОстаткиИОбороты.Счет = &amp;Счет2
+			ИЛИ ХозрасчетныйОстаткиИОбороты.Счет = &amp;Счет3
+			ИЛИ ХозрасчетныйОстаткиИОбороты.Счет = &amp;Счет4)
+
+СГРУППИРОВАТЬ ПО
+	ХозрасчетныйОстаткиИОбороты.Субконто1,
+	ХозрасчетныйОстаткиИОбороты.Счет,
+	ХозрасчетныйОстаткиИОбороты.Субконто2,
+	ХозрасчетныйОстаткиИОбороты.Субконто3
+ИТОГИ
+	СУММА(СуммаНачальныйОстатокДт),
+	СУММА(СуммаНачальныйОстатокКт),
+	СУММА(СуммаОборотДт),
+	СУММА(СуммаОборотКт),
+	СУММА(СуммаКонечныйОстатокДт),
+	СУММА(СуммаКонечныйОстатокКт)
+ПО
+	Контрагент
+</Value>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">3</lastId>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">Счет1</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:ChartOfAccountsRef.Хозрасчетный</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ChartOfAccountsRef.Хозрасчетный">c0738ae5-a0be-11ed-8132-8cdcd43ed5b0</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ChartOfAccountsRef.Хозрасчетный">c0738ae5-a0be-11ed-8132-8cdcd43ed5b0</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">0</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">Счет2</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:ChartOfAccountsRef.Хозрасчетный</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ChartOfAccountsRef.Хозрасчетный">c0738b59-a0be-11ed-8132-8cdcd43ed5b0</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ChartOfAccountsRef.Хозрасчетный">c0738b59-a0be-11ed-8132-8cdcd43ed5b0</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">1</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">Счет3</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:ChartOfAccountsRef.Хозрасчетный</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ChartOfAccountsRef.Хозрасчетный">c0738b80-a0be-11ed-8132-8cdcd43ed5b0</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ChartOfAccountsRef.Хозрасчетный">c0738b80-a0be-11ed-8132-8cdcd43ed5b0</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">2</id>
+						</item>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">Счет4</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:ChartOfAccountsRef.Хозрасчетный</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ChartOfAccountsRef.Хозрасчетный">c0738aec-a0be-11ed-8132-8cdcd43ed5b0</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:ChartOfAccountsRef.Хозрасчетный">c0738aec-a0be-11ed-8132-8cdcd43ed5b0</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">3</id>
+						</item>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array">
+						<Value xsi:type="Structure">
+							<Property name="Имя">
+								<Value xsi:type="xs:string">ХозрасчетнийРегистрПоКонтрагенту</Value>
+							</Property>
+							<Property name="ТекстЗапроса">
+								<Value xsi:type="xs:string">ВЫБРАТЬ
+	ХозрасчетныйОстаткиИОбороты.Субконто1 КАК Контрагент,
+	ХозрасчетныйОстаткиИОбороты.Субконто2 КАК Договір,
+	ХозрасчетныйОстаткиИОбороты.Субконто3 КАК Субконто3,
+	ХозрасчетныйОстаткиИОбороты.Счет КАК Рахунок,
+	СУММА(ХозрасчетныйОстаткиИОбороты.СуммаНачальныйОстатокДт) КАК СуммаНачальныйОстатокДт,
+	СУММА(ХозрасчетныйОстаткиИОбороты.СуммаНачальныйОстатокКт) КАК СуммаНачальныйОстатокКт,
+	СУММА(ХозрасчетныйОстаткиИОбороты.СуммаОборотДт) КАК СуммаОборотДт,
+	СУММА(ХозрасчетныйОстаткиИОбороты.СуммаОборотКт) КАК СуммаОборотКт,
+	СУММА(ХозрасчетныйОстаткиИОбороты.СуммаКонечныйОстатокДт) КАК СуммаКонечныйОстатокДт,
+	СУММА(ХозрасчетныйОстаткиИОбороты.СуммаКонечныйОстатокКт) КАК СуммаКонечныйОстатокКт
+ИЗ
+	РегистрБухгалтерии.Хозрасчетный.ОстаткиИОбороты(, , , , , , Субконто1.Ссылка = &amp;Контрагент) КАК ХозрасчетныйОстаткиИОбороты
+ГДЕ
+	(ХозрасчетныйОстаткиИОбороты.Счет = &amp;Счет1
+			ИЛИ ХозрасчетныйОстаткиИОбороты.Счет = &amp;Счет2
+			ИЛИ ХозрасчетныйОстаткиИОбороты.Счет = &amp;Счет3
+			ИЛИ ХозрасчетныйОстаткиИОбороты.Счет = &amp;Счет4)
+
+СГРУППИРОВАТЬ ПО
+	ХозрасчетныйОстаткиИОбороты.Субконто1,
+	ХозрасчетныйОстаткиИОбороты.Счет,
+	ХозрасчетныйОстаткиИОбороты.Субконто2,
+	ХозрасчетныйОстаткиИОбороты.Субконто3
+ИТОГИ
+	СУММА(СуммаНачальныйОстатокДт),
+	СУММА(СуммаНачальныйОстатокКт),
+	СУММА(СуммаОборотДт),
+	СУММА(СуммаОборотКт),
+	СУММА(СуммаКонечныйОстатокДт),
+	СУММА(СуммаКонечныйОстатокКт)
+ПО
+	Контрагент
+</Value>
+							</Property>
+							<Property name="ТекстКод">
+								<Value xsi:type="xs:string"/>
+							</Property>
+							<Property name="МетодИсполненияКода">
+								<Value xsi:type="xs:decimal">0</Value>
+							</Property>
+							<Property name="ПараметрыЗапроса">
+								<Value xsi:type="ValueListType">
+									<valueType/>
+									<lastId xsi:type="xs:decimal">4</lastId>
+									<item>
+										<value xsi:type="Structure">
+											<Property name="Имя">
+												<Value xsi:type="xs:string">Счет1</Value>
+											</Property>
+											<Property name="ТипЗначения">
+												<Value xsi:type="TypeDescription">
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:ChartOfAccountsRef.Хозрасчетный</Type>
+												</Value>
+											</Property>
+											<Property name="Значение">
+												<Value xmlns:d13p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d13p1:ChartOfAccountsRef.Хозрасчетный">c0738ae5-a0be-11ed-8132-8cdcd43ed5b0</Value>
+											</Property>
+											<Property name="ТипКонтейнера">
+												<Value xsi:type="xs:decimal">0</Value>
+											</Property>
+											<Property name="Контейнер">
+												<Value xmlns:d13p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d13p1:ChartOfAccountsRef.Хозрасчетный">c0738ae5-a0be-11ed-8132-8cdcd43ed5b0</Value>
+											</Property>
+										</value>
+										<id xsi:type="xs:decimal">0</id>
+									</item>
+									<item>
+										<value xsi:type="Structure">
+											<Property name="Имя">
+												<Value xsi:type="xs:string">Счет2</Value>
+											</Property>
+											<Property name="ТипЗначения">
+												<Value xsi:type="TypeDescription">
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:ChartOfAccountsRef.Хозрасчетный</Type>
+												</Value>
+											</Property>
+											<Property name="Значение">
+												<Value xmlns:d13p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d13p1:ChartOfAccountsRef.Хозрасчетный">c0738b59-a0be-11ed-8132-8cdcd43ed5b0</Value>
+											</Property>
+											<Property name="ТипКонтейнера">
+												<Value xsi:type="xs:decimal">0</Value>
+											</Property>
+											<Property name="Контейнер">
+												<Value xmlns:d13p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d13p1:ChartOfAccountsRef.Хозрасчетный">c0738b59-a0be-11ed-8132-8cdcd43ed5b0</Value>
+											</Property>
+										</value>
+										<id xsi:type="xs:decimal">1</id>
+									</item>
+									<item>
+										<value xsi:type="Structure">
+											<Property name="Имя">
+												<Value xsi:type="xs:string">Счет3</Value>
+											</Property>
+											<Property name="ТипЗначения">
+												<Value xsi:type="TypeDescription">
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:ChartOfAccountsRef.Хозрасчетный</Type>
+												</Value>
+											</Property>
+											<Property name="Значение">
+												<Value xmlns:d13p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d13p1:ChartOfAccountsRef.Хозрасчетный">c0738b80-a0be-11ed-8132-8cdcd43ed5b0</Value>
+											</Property>
+											<Property name="ТипКонтейнера">
+												<Value xsi:type="xs:decimal">0</Value>
+											</Property>
+											<Property name="Контейнер">
+												<Value xmlns:d13p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d13p1:ChartOfAccountsRef.Хозрасчетный">c0738b80-a0be-11ed-8132-8cdcd43ed5b0</Value>
+											</Property>
+										</value>
+										<id xsi:type="xs:decimal">2</id>
+									</item>
+									<item>
+										<value xsi:type="Structure">
+											<Property name="Имя">
+												<Value xsi:type="xs:string">Счет4</Value>
+											</Property>
+											<Property name="ТипЗначения">
+												<Value xsi:type="TypeDescription">
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:ChartOfAccountsRef.Хозрасчетный</Type>
+												</Value>
+											</Property>
+											<Property name="Значение">
+												<Value xmlns:d13p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d13p1:ChartOfAccountsRef.Хозрасчетный">c0738aec-a0be-11ed-8132-8cdcd43ed5b0</Value>
+											</Property>
+											<Property name="ТипКонтейнера">
+												<Value xsi:type="xs:decimal">0</Value>
+											</Property>
+											<Property name="Контейнер">
+												<Value xmlns:d13p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d13p1:ChartOfAccountsRef.Хозрасчетный">c0738aec-a0be-11ed-8132-8cdcd43ed5b0</Value>
+											</Property>
+										</value>
+										<id xsi:type="xs:decimal">3</id>
+									</item>
+									<item>
+										<value xsi:type="Structure">
+											<Property name="Имя">
+												<Value xsi:type="xs:string">Контрагент</Value>
+											</Property>
+											<Property name="ТипЗначения">
+												<Value xsi:type="TypeDescription">
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:CatalogRef.ВидыНалоговойДеятельности</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:DocumentRef.ОтчетПроизводстваЗаСмену</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:DocumentRef.ПлатежныйОрдерСписаниеДенежныхСредств</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:CatalogRef.Склады</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:DocumentRef.ПередачаОС</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:CatalogRef.БиологическиеАктивы</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:DocumentRef.СписаниеТоваров</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:DocumentRef.АвансовыйОтчет</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:DocumentRef.ГТДИмпорт</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:CatalogRef.ОсновныеСредства</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:DocumentRef.ОприходованиеТоваров</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:DocumentRef.СписаниеСРасчетногоСчета</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:DocumentRef.ПередачаМалоценныхАктивовВЭксплуатацию</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:DocumentRef.ДокументРасчетовСКонтрагентом</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:CatalogRef.ФинансовыеИнвестиции</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:DocumentRef.ПлатежныйОрдерПоступлениеДенежныхСредств</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:CatalogRef.ЦенныеБумаги</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:CatalogRef.НематериальныеАктивы</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:CatalogRef.ДоговорыКонтрагентов</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:DocumentRef.РасходныйКассовыйОрдер</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:CatalogRef.ДоходыБудущихПериодов</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:DocumentRef.АктОбОказанииПроизводственныхУслуг</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:DocumentRef.ПоступлениеНМА</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:DocumentRef.КорректировкаДолга</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:DocumentRef.ПоступлениеТоваровУслуг</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:CatalogRef.НазначениеЦелевыхСредств</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:CatalogRef.ПрочиеНеоборотныеАктивы</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:DocumentRef.ВозвратТоваровОтПокупателя</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:DocumentRef.СчетНаОплатуПокупателю</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:DocumentRef.ПередачаТоваров</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:DocumentRef.ПоступлениеНаРасчетныйСчет</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:CatalogRef.БанковскиеСчета</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:DocumentRef.ОтчетКомиссионераОПродажах</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:DocumentRef.ОтчетКомитентуОПродажах</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:CatalogRef.ПодразделенияОрганизаций</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:DocumentRef.ВводНачальныхОстатков</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:DocumentRef.ПередачаНМА</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:DocumentRef.ОтчетОРозничныхПродажах</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:CatalogRef.НоменклатурныеГруппы</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:DocumentRef.КомплектацияНоменклатуры</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:CatalogRef.ОбъектыСтроительства</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:DocumentRef.ПриходныйКассовыйОрдер</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:CatalogRef.Субконто</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:DocumentRef.ПоступлениеИзПереработки</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:CatalogRef.СтатьиДоходов</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:CatalogRef.Контрагенты</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:DocumentRef.УдалитьВводНачальныхОстатковМалоценныхАктивовВЭксплуатации</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:CatalogRef.РасходыБудущихПериодов</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:CatalogRef.Гарантии</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:DocumentRef.РеализацияУслугПоПереработке</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:CatalogRef.Резервы</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:DocumentRef.РеализацияТоваровУслуг</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:DocumentRef.ВозвратТоваровПоставщику</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:CatalogRef.СтатьиЗатрат</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:DocumentRef.ПартияМалоценныхАктивовВЭксплуатации</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:CatalogRef.КонтрактныеОбязательства</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:CatalogRef.НазначенияИспользования</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:CatalogRef.Организации</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:DocumentRef.СчетНаОплатуПоставщика</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:EnumRef.СтавкиНДС</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:CatalogRef.СтатьиНеоперационныхРасходов</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:EnumRef.ВидыИспользованияАмортизации</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:CatalogRef.СтатьиОтсроченныхНалоговыхАктивовИОбязательств</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:CatalogRef.СтатьиНалоговыхДеклараций</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:CatalogRef.Номенклатура</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:CatalogRef.НалоговыеНазначенияАктивовИЗатрат</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:DocumentRef.Партия</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:CatalogRef.ОбособленныеПодразделенияОрганизаций</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:CatalogRef.НалоговыеГруппыОсновныхСредств</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:DocumentRef.ПоступлениеДопРасходов</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:CatalogRef.Налоги</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:CatalogRef.СтатьиДвиженияДенежныхСредств</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:DocumentRef.ПеремещениеТоваров</Type>
+													<Type xmlns:d14p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d14p1:CatalogRef.ФизическиеЛица</Type>
+												</Value>
+											</Property>
+											<Property name="Значение">
+												<Value xmlns:d13p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d13p1:CatalogRef.Контрагенты">d162a6f6-ad40-11ed-afe2-24be0520da1d</Value>
+											</Property>
+											<Property name="ТипКонтейнера">
+												<Value xsi:type="xs:decimal">0</Value>
+											</Property>
+											<Property name="Контейнер">
+												<Value xmlns:d13p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d13p1:CatalogRef.Контрагенты">d162a6f6-ad40-11ed-afe2-24be0520da1d</Value>
+											</Property>
+										</value>
+										<id xsi:type="xs:decimal">4</id>
+									</item>
+								</Value>
+							</Property>
+							<Property name="ВременныеТаблицы">
+								<Value xsi:type="ValueListType">
+									<valueType/>
+									<lastId xsi:type="xs:decimal">-1</lastId>
+								</Value>
+							</Property>
+							<Property name="Строки">
+								<Value xsi:type="Array">
+									<Value xsi:type="Structure">
+										<Property name="Имя">
+											<Value xsi:type="xs:string">ХозрасчетнийРегистрПоКонтрагентуПоДокументамЗаПеріод</Value>
+										</Property>
+										<Property name="ТекстЗапроса">
+											<Value xsi:type="xs:string">ВЫБРАТЬ
+	ХозрасчетныйОстаткиИОбороты.Счет КАК Рахунок,
+	ХозрасчетныйОстаткиИОбороты.Субконто1 КАК Контрагент,
+	ХозрасчетныйОстаткиИОбороты.Субконто2 КАК Договір,
+	ХозрасчетныйОстаткиИОбороты.Регистратор КАК Регистратор,
+	СУММА(ХозрасчетныйОстаткиИОбороты.СуммаНачальныйОстатокДт) КАК ПочЗалДт,
+	СУММА(ХозрасчетныйОстаткиИОбороты.СуммаНачальныйОстатокКт) КАК ПочЗалКт,
+	СУММА(ХозрасчетныйОстаткиИОбороты.СуммаОборотДт) КАК ОборотДт,
+	СУММА(ХозрасчетныйОстаткиИОбороты.СуммаОборотКт) КАК ОборотКт,
+	СУММА(ХозрасчетныйОстаткиИОбороты.СуммаКонечныйОстатокДт) КАК КінЗалДт,
+	СУММА(ХозрасчетныйОстаткиИОбороты.СуммаКонечныйОстатокКт) КАК СуммаКонечныйОстатокКт
+ИЗ
+	РегистрБухгалтерии.Хозрасчетный.ОстаткиИОбороты(&amp;ПочатокПеріоду, &amp;ЗавершенняПеріоду, Регистратор, , , , Субконто1.Ссылка = &amp;Контрагент) КАК ХозрасчетныйОстаткиИОбороты
+ГДЕ
+	(ХозрасчетныйОстаткиИОбороты.Счет = &amp;Счет1
+			ИЛИ ХозрасчетныйОстаткиИОбороты.Счет = &amp;Счет2
+			ИЛИ ХозрасчетныйОстаткиИОбороты.Счет = &amp;Счет3
+			ИЛИ ХозрасчетныйОстаткиИОбороты.Счет = &amp;Счет4)
+
+СГРУППИРОВАТЬ ПО
+	ХозрасчетныйОстаткиИОбороты.Субконто1,
+	ХозрасчетныйОстаткиИОбороты.Счет,
+	ХозрасчетныйОстаткиИОбороты.Субконто2,
+	ХозрасчетныйОстаткиИОбороты.Регистратор
+ИТОГИ
+	СУММА(ПочЗалДт),
+	СУММА(ПочЗалКт),
+	СУММА(ОборотДт),
+	СУММА(ОборотКт),
+	СУММА(КінЗалДт),
+	СУММА(СуммаКонечныйОстатокКт)
+ПО
+	Контрагент
+</Value>
+										</Property>
+										<Property name="ТекстКод">
+											<Value xsi:type="xs:string"/>
+										</Property>
+										<Property name="МетодИсполненияКода">
+											<Value xsi:type="xs:decimal">0</Value>
+										</Property>
+										<Property name="ПараметрыЗапроса">
+											<Value xsi:type="ValueListType">
+												<valueType/>
+												<lastId xsi:type="xs:decimal">6</lastId>
+												<item>
+													<value xsi:type="Structure">
+														<Property name="Имя">
+															<Value xsi:type="xs:string">Счет1</Value>
+														</Property>
+														<Property name="ТипЗначения">
+															<Value xsi:type="TypeDescription">
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:ChartOfAccountsRef.Хозрасчетный</Type>
+															</Value>
+														</Property>
+														<Property name="Значение">
+															<Value xmlns:d16p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d16p1:ChartOfAccountsRef.Хозрасчетный">c0738ae5-a0be-11ed-8132-8cdcd43ed5b0</Value>
+														</Property>
+														<Property name="ТипКонтейнера">
+															<Value xsi:type="xs:decimal">0</Value>
+														</Property>
+														<Property name="Контейнер">
+															<Value xmlns:d16p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d16p1:ChartOfAccountsRef.Хозрасчетный">c0738ae5-a0be-11ed-8132-8cdcd43ed5b0</Value>
+														</Property>
+													</value>
+													<id xsi:type="xs:decimal">0</id>
+												</item>
+												<item>
+													<value xsi:type="Structure">
+														<Property name="Имя">
+															<Value xsi:type="xs:string">Счет2</Value>
+														</Property>
+														<Property name="ТипЗначения">
+															<Value xsi:type="TypeDescription">
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:ChartOfAccountsRef.Хозрасчетный</Type>
+															</Value>
+														</Property>
+														<Property name="Значение">
+															<Value xmlns:d16p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d16p1:ChartOfAccountsRef.Хозрасчетный">c0738b59-a0be-11ed-8132-8cdcd43ed5b0</Value>
+														</Property>
+														<Property name="ТипКонтейнера">
+															<Value xsi:type="xs:decimal">0</Value>
+														</Property>
+														<Property name="Контейнер">
+															<Value xmlns:d16p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d16p1:ChartOfAccountsRef.Хозрасчетный">c0738b59-a0be-11ed-8132-8cdcd43ed5b0</Value>
+														</Property>
+													</value>
+													<id xsi:type="xs:decimal">1</id>
+												</item>
+												<item>
+													<value xsi:type="Structure">
+														<Property name="Имя">
+															<Value xsi:type="xs:string">Счет3</Value>
+														</Property>
+														<Property name="ТипЗначения">
+															<Value xsi:type="TypeDescription">
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:ChartOfAccountsRef.Хозрасчетный</Type>
+															</Value>
+														</Property>
+														<Property name="Значение">
+															<Value xmlns:d16p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d16p1:ChartOfAccountsRef.Хозрасчетный">c0738b80-a0be-11ed-8132-8cdcd43ed5b0</Value>
+														</Property>
+														<Property name="ТипКонтейнера">
+															<Value xsi:type="xs:decimal">0</Value>
+														</Property>
+														<Property name="Контейнер">
+															<Value xmlns:d16p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d16p1:ChartOfAccountsRef.Хозрасчетный">c0738b80-a0be-11ed-8132-8cdcd43ed5b0</Value>
+														</Property>
+													</value>
+													<id xsi:type="xs:decimal">2</id>
+												</item>
+												<item>
+													<value xsi:type="Structure">
+														<Property name="Имя">
+															<Value xsi:type="xs:string">Счет4</Value>
+														</Property>
+														<Property name="ТипЗначения">
+															<Value xsi:type="TypeDescription">
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:ChartOfAccountsRef.Хозрасчетный</Type>
+															</Value>
+														</Property>
+														<Property name="Значение">
+															<Value xmlns:d16p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d16p1:ChartOfAccountsRef.Хозрасчетный">c0738aec-a0be-11ed-8132-8cdcd43ed5b0</Value>
+														</Property>
+														<Property name="ТипКонтейнера">
+															<Value xsi:type="xs:decimal">0</Value>
+														</Property>
+														<Property name="Контейнер">
+															<Value xmlns:d16p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d16p1:ChartOfAccountsRef.Хозрасчетный">c0738aec-a0be-11ed-8132-8cdcd43ed5b0</Value>
+														</Property>
+													</value>
+													<id xsi:type="xs:decimal">3</id>
+												</item>
+												<item>
+													<value xsi:type="Structure">
+														<Property name="Имя">
+															<Value xsi:type="xs:string">Контрагент</Value>
+														</Property>
+														<Property name="ТипЗначения">
+															<Value xsi:type="TypeDescription">
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:CatalogRef.ВидыНалоговойДеятельности</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:DocumentRef.ОтчетПроизводстваЗаСмену</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:DocumentRef.ПлатежныйОрдерСписаниеДенежныхСредств</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:CatalogRef.Склады</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:DocumentRef.ПередачаОС</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:CatalogRef.БиологическиеАктивы</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:DocumentRef.СписаниеТоваров</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:DocumentRef.АвансовыйОтчет</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:DocumentRef.ГТДИмпорт</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:CatalogRef.ОсновныеСредства</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:DocumentRef.ОприходованиеТоваров</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:DocumentRef.СписаниеСРасчетногоСчета</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:DocumentRef.ПередачаМалоценныхАктивовВЭксплуатацию</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:DocumentRef.ДокументРасчетовСКонтрагентом</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:CatalogRef.ФинансовыеИнвестиции</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:DocumentRef.ПлатежныйОрдерПоступлениеДенежныхСредств</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:CatalogRef.ЦенныеБумаги</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:CatalogRef.НематериальныеАктивы</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:CatalogRef.ДоговорыКонтрагентов</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:DocumentRef.РасходныйКассовыйОрдер</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:CatalogRef.ДоходыБудущихПериодов</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:DocumentRef.АктОбОказанииПроизводственныхУслуг</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:DocumentRef.ПоступлениеНМА</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:DocumentRef.КорректировкаДолга</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:DocumentRef.ПоступлениеТоваровУслуг</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:CatalogRef.НазначениеЦелевыхСредств</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:CatalogRef.ПрочиеНеоборотныеАктивы</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:DocumentRef.ВозвратТоваровОтПокупателя</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:DocumentRef.СчетНаОплатуПокупателю</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:DocumentRef.ПередачаТоваров</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:DocumentRef.ПоступлениеНаРасчетныйСчет</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:CatalogRef.БанковскиеСчета</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:DocumentRef.ОтчетКомиссионераОПродажах</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:DocumentRef.ОтчетКомитентуОПродажах</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:CatalogRef.ПодразделенияОрганизаций</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:DocumentRef.ВводНачальныхОстатков</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:DocumentRef.ПередачаНМА</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:DocumentRef.ОтчетОРозничныхПродажах</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:CatalogRef.НоменклатурныеГруппы</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:DocumentRef.КомплектацияНоменклатуры</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:CatalogRef.ОбъектыСтроительства</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:DocumentRef.ПриходныйКассовыйОрдер</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:CatalogRef.Субконто</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:DocumentRef.ПоступлениеИзПереработки</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:CatalogRef.СтатьиДоходов</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:CatalogRef.Контрагенты</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:DocumentRef.УдалитьВводНачальныхОстатковМалоценныхАктивовВЭксплуатации</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:CatalogRef.РасходыБудущихПериодов</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:CatalogRef.Гарантии</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:DocumentRef.РеализацияУслугПоПереработке</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:CatalogRef.Резервы</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:DocumentRef.РеализацияТоваровУслуг</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:DocumentRef.ВозвратТоваровПоставщику</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:CatalogRef.СтатьиЗатрат</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:DocumentRef.ПартияМалоценныхАктивовВЭксплуатации</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:CatalogRef.КонтрактныеОбязательства</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:CatalogRef.НазначенияИспользования</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:CatalogRef.Организации</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:DocumentRef.СчетНаОплатуПоставщика</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:EnumRef.СтавкиНДС</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:CatalogRef.СтатьиНеоперационныхРасходов</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:EnumRef.ВидыИспользованияАмортизации</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:CatalogRef.СтатьиОтсроченныхНалоговыхАктивовИОбязательств</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:CatalogRef.СтатьиНалоговыхДеклараций</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:CatalogRef.Номенклатура</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:CatalogRef.НалоговыеНазначенияАктивовИЗатрат</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:DocumentRef.Партия</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:CatalogRef.ОбособленныеПодразделенияОрганизаций</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:CatalogRef.НалоговыеГруппыОсновныхСредств</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:DocumentRef.ПоступлениеДопРасходов</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:CatalogRef.Налоги</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:CatalogRef.СтатьиДвиженияДенежныхСредств</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:DocumentRef.ПеремещениеТоваров</Type>
+																<Type xmlns:d17p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d17p1:CatalogRef.ФизическиеЛица</Type>
+															</Value>
+														</Property>
+														<Property name="Значение">
+															<Value xmlns:d16p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d16p1:CatalogRef.Контрагенты">2fe7afee-b2d6-11ed-afe3-24be0520da1d</Value>
+														</Property>
+														<Property name="ТипКонтейнера">
+															<Value xsi:type="xs:decimal">0</Value>
+														</Property>
+														<Property name="Контейнер">
+															<Value xmlns:d16p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d16p1:CatalogRef.Контрагенты">2fe7afee-b2d6-11ed-afe3-24be0520da1d</Value>
+														</Property>
+													</value>
+													<id xsi:type="xs:decimal">4</id>
+												</item>
+												<item>
+													<value xsi:type="Structure">
+														<Property name="Имя">
+															<Value xsi:type="xs:string">ПочатокПеріоду</Value>
+														</Property>
+														<Property name="ТипЗначения">
+															<Value xsi:type="TypeDescription">
+																<Type>xs:dateTime</Type>
+																<DateQualifiers>
+																	<DateFractions>DateTime</DateFractions>
+																</DateQualifiers>
+															</Value>
+														</Property>
+														<Property name="Значение">
+															<Value xsi:type="xs:dateTime">2026-01-01T00:00:00</Value>
+														</Property>
+														<Property name="ТипКонтейнера">
+															<Value xsi:type="xs:decimal">0</Value>
+														</Property>
+														<Property name="Контейнер">
+															<Value xsi:type="xs:dateTime">2026-01-01T00:00:00</Value>
+														</Property>
+													</value>
+													<id xsi:type="xs:decimal">5</id>
+												</item>
+												<item>
+													<value xsi:type="Structure">
+														<Property name="Имя">
+															<Value xsi:type="xs:string">ЗавершенняПеріоду</Value>
+														</Property>
+														<Property name="ТипЗначения">
+															<Value xsi:type="TypeDescription">
+																<Type>xs:dateTime</Type>
+																<DateQualifiers>
+																	<DateFractions>DateTime</DateFractions>
+																</DateQualifiers>
+															</Value>
+														</Property>
+														<Property name="Значение">
+															<Value xsi:type="xs:dateTime">2026-04-13T00:00:00</Value>
+														</Property>
+														<Property name="ТипКонтейнера">
+															<Value xsi:type="xs:decimal">0</Value>
+														</Property>
+														<Property name="Контейнер">
+															<Value xsi:type="xs:dateTime">2026-04-13T00:00:00</Value>
+														</Property>
+													</value>
+													<id xsi:type="xs:decimal">6</id>
+												</item>
+											</Value>
+										</Property>
+										<Property name="ВременныеТаблицы">
+											<Value xsi:type="ValueListType">
+												<valueType/>
+												<lastId xsi:type="xs:decimal">-1</lastId>
+											</Value>
+										</Property>
+										<Property name="Строки">
+											<Value xsi:type="Array"/>
+										</Property>
+										<Property name="Инфо">
+											<Value xsi:type="xs:string">1 / 00:00:16.023</Value>
+										</Property>
+									</Value>
+								</Value>
+							</Property>
+							<Property name="Инфо">
+								<Value xsi:type="xs:string">5 / 0:00:00.892</Value>
+							</Property>
+						</Value>
+					</Value>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">629 / 0:00:00.318</Value>
+				</Property>
+			</Value>
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">ПродажіПоТижням</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ
+	РасходыДоходыПоМашинамОбороты.Период КАК Период,
+	РасходыДоходыПоМашинамОбороты.Авто КАК Авто,
+	РасходыДоходыПоМашинамОбороты.Номеклатура КАК Номеклатура,
+	РасходыДоходыПоМашинамОбороты.КолвоОборот КАК КолвоОборот,
+	РасходыДоходыПоМашинамОбороты.СуммаОборот КАК СуммаОборот
+ИЗ
+	РегистрНакопления.РасходыДоходыПоМашинам.Обороты(, , Неделя, ) КАК РасходыДоходыПоМашинамОбороты
+ИТОГИ
+	СУММА(КолвоОборот),
+	СУММА(СуммаОборот)
+ПО
+	Период
+</Value>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array">
+						<Value xsi:type="Structure">
+							<Property name="Имя">
+								<Value xsi:type="xs:string">ПродажіПоДням</Value>
+							</Property>
+							<Property name="ТекстЗапроса">
+								<Value xsi:type="xs:string">ВЫБРАТЬ
+	РасходыДоходыПоМашинамОбороты.Период КАК Период,
+	РасходыДоходыПоМашинамОбороты.Авто КАК Авто,
+	РасходыДоходыПоМашинамОбороты.Номеклатура КАК Номеклатура,
+	РасходыДоходыПоМашинамОбороты.КолвоОборот КАК КолвоОборот,
+	РасходыДоходыПоМашинамОбороты.СуммаОборот КАК СуммаОборот
+ИЗ
+	РегистрНакопления.РасходыДоходыПоМашинам.Обороты(, , День, ) КАК РасходыДоходыПоМашинамОбороты
+ИТОГИ
+	СУММА(КолвоОборот),
+	СУММА(СуммаОборот)
+ПО
+	Период
+</Value>
+							</Property>
+							<Property name="ТекстКод">
+								<Value xsi:type="xs:string"/>
+							</Property>
+							<Property name="МетодИсполненияКода">
+								<Value xsi:type="xs:decimal">0</Value>
+							</Property>
+							<Property name="ПараметрыЗапроса">
+								<Value xsi:type="ValueListType">
+									<valueType/>
+									<lastId xsi:type="xs:decimal">-1</lastId>
+								</Value>
+							</Property>
+							<Property name="ВременныеТаблицы">
+								<Value xsi:type="ValueListType">
+									<valueType/>
+									<lastId xsi:type="xs:decimal">-1</lastId>
+								</Value>
+							</Property>
+							<Property name="Строки">
+								<Value xsi:type="Array"/>
+							</Property>
+							<Property name="Инфо">
+								<Value xsi:type="xs:string">18 109 / 0:00:00.281</Value>
+							</Property>
+						</Value>
+					</Value>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">16 224 / 0:00:00.313</Value>
+				</Property>
+			</Value>
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">РегістрВзаєморозрахунки</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ
+	Взаєморозрахунки.Период КАК Период,
+	Взаєморозрахунки.Регистратор КАК Регистратор,
+	Взаєморозрахунки.НомерСтроки КАК НомерСтроки,
+	Взаєморозрахунки.Активность КАК Активность,
+	Взаєморозрахунки.ВидДвижения КАК ВидДвижения,
+	Взаєморозрахунки.Контрагент КАК Контрагент,
+	Взаєморозрахунки.Валюта КАК Валюта,
+	Взаєморозрахунки.Договір КАК Договір,
+	Взаєморозрахунки.АктВиконанихРобіт КАК АктВиконанихРобіт,
+	Взаєморозрахунки.Автомобіль КАК Автомобіль,
+	Взаєморозрахунки.Сума КАК Сума,
+	Взаєморозрахунки.МоментВремени КАК МоментВремени
+ИЗ
+	РегистрНакопления.Взаєморозрахунки КАК Взаєморозрахунки
+</Value>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array"/>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">2 / 0:00:00.000</Value>
+				</Property>
+			</Value>
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">РегістрТовариНаСкладі</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ
+	ТоварыНаСкладе.Период КАК Период,
+	ТоварыНаСкладе.Регистратор КАК Регистратор,
+	ТоварыНаСкладе.НомерСтроки КАК НомерСтроки,
+	ТоварыНаСкладе.Активность КАК Активность,
+	ТоварыНаСкладе.ВидДвижения КАК ВидДвижения,
+	ТоварыНаСкладе.Номенклатура КАК Номенклатура,
+	ТоварыНаСкладе.Организация КАК Организация,
+	ТоварыНаСкладе.Склад КАК Склад,
+	ТоварыНаСкладе.КолВо КАК КолВо,
+	ТоварыНаСкладе.МоментВремени КАК МоментВремени
+ИЗ
+	РегистрНакопления.ТоварыНаСкладе КАК ТоварыНаСкладе
+</Value>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array"/>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">17 588 / 0:00:00.223</Value>
+				</Property>
+			</Value>
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">ВесьХозрасчетнийРегістр</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ
+	Хозрасчетный.Регистратор КАК Регистратор,
+	Хозрасчетный.Сумма КАК Сумма,
+	Хозрасчетный.СчетДт КАК СчетДт,
+	Хозрасчетный.СчетКт КАК СчетКт,
+	Хозрасчетный.Регистратор.Контрагент КАК РегистраторКонтрагент
+ИЗ
+	РегистрБухгалтерии.Хозрасчетный КАК Хозрасчетный
+
+УПОРЯДОЧИТЬ ПО
+	Хозрасчетный.Регистратор.Дата
+</Value>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array"/>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">46 004 / 00:00:06.250</Value>
+				</Property>
+			</Value>
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">ОборотНадходженняКоштівЗаПеріод</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ
+	ВзаєморозрахункиОбороты.Контрагент КАК Контрагент,
+	ВзаєморозрахункиОбороты.Валюта КАК Валюта,
+	ВзаєморозрахункиОбороты.СумаРасход КАК СумаРасход,
+	ВзаєморозрахункиОбороты.СумаПриход КАК СумаПриход,
+	ВзаєморозрахункиОбороты.Регистратор КАК Регистратор
+ИЗ
+	РегистрНакопления.Взаєморозрахунки.Обороты(, , Регистратор, ) КАК ВзаєморозрахункиОбороты
+</Value>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array"/>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">5 / 0:00:00.015</Value>
+				</Property>
+			</Value>
+			<Value xsi:type="Structure">
+				<Property name="Имя">
+					<Value xsi:type="xs:string">ЗалишкиПоТоварамТабличноїЧастиниДокумента</Value>
+				</Property>
+				<Property name="ТекстЗапроса">
+					<Value xsi:type="xs:string">ВЫБРАТЬ
+	ТоварыНаСкладеОстатки.Номенклатура КАК Номенклатура,
+	ТоварыНаСкладеОстатки.Организация КАК Организация,
+	ТоварыНаСкладеОстатки.Склад КАК Склад,
+	ТоварыНаСкладеОстатки.КолВоОстаток КАК КолВоОстаток
+ИЗ
+	РегистрНакопления.ТоварыНаСкладе.Остатки(
+			,
+			Номенклатура В
+				(ВЫБРАТЬ
+					РеализацияТоваровУслугТовары.Номенклатура КАК Номенклатура
+				ИЗ
+					Документ.РеализацияТоваровУслуг.Товары КАК РеализацияТоваровУслугТовары
+				ГДЕ
+					РеализацияТоваровУслугТовары.Ссылка = &amp;Ссылка)) КАК ТоварыНаСкладеОстатки
+</Value>
+				</Property>
+				<Property name="ТекстКод">
+					<Value xsi:type="xs:string"/>
+				</Property>
+				<Property name="МетодИсполненияКода">
+					<Value xsi:type="xs:decimal">0</Value>
+				</Property>
+				<Property name="ПараметрыЗапроса">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">0</lastId>
+						<item>
+							<value xsi:type="Structure">
+								<Property name="Имя">
+									<Value xsi:type="xs:string">Ссылка</Value>
+								</Property>
+								<Property name="ТипЗначения">
+									<Value xsi:type="TypeDescription">
+										<Type xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d11p1:DocumentRef.РеализацияТоваровУслуг</Type>
+									</Value>
+								</Property>
+								<Property name="Значение">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:DocumentRef.РеализацияТоваровУслуг">57e3269b-040c-11f1-8f96-22104d0530d7</Value>
+								</Property>
+								<Property name="ТипКонтейнера">
+									<Value xsi:type="xs:decimal">0</Value>
+								</Property>
+								<Property name="Контейнер">
+									<Value xmlns:d10p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d10p1:DocumentRef.РеализацияТоваровУслуг">57e3269b-040c-11f1-8f96-22104d0530d7</Value>
+								</Property>
+							</value>
+							<id xsi:type="xs:decimal">0</id>
+						</item>
+					</Value>
+				</Property>
+				<Property name="ВременныеТаблицы">
+					<Value xsi:type="ValueListType">
+						<valueType/>
+						<lastId xsi:type="xs:decimal">-1</lastId>
+					</Value>
+				</Property>
+				<Property name="Строки">
+					<Value xsi:type="Array"/>
+				</Property>
+				<Property name="Инфо">
+					<Value xsi:type="xs:string">8 / 0:00:00.015</Value>
+				</Property>
+			</Value>
+		</Value>
+	</Property>
+</Structure>
