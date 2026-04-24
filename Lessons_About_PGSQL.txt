@@ -2,6 +2,7 @@ https://www.microsqlcourse.online/account.html
 
 login: umanproger@ukr.net.
 password: 07092006
+--------------------------------
 
 
 to patch :
@@ -12,8 +13,19 @@ port : 5432
 
 
 dataBase
-oser : postgres
+user : postgres
 password:  07092006
+
+-------------------------------------- 
+create table :
+
+CREATE TABLE Customers (
+	id serial,
+	username varchar(100),
+	age integer,
+	balance	integer
+);
+
 
 
 
