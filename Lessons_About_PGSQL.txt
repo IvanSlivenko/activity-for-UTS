@@ -1,0 +1,24 @@
+https://www.microsqlcourse.online/account.html
+
+login: umanproger@ukr.net.
+password: 07092006
+
+
+to patch :
+C:\Program Files\PostgreSQL\18
+
+adminPasword : 07092006
+port : 5432
+
+
+dataBase
+oser : postgres
+password:  07092006
+
+
+
+
+
+
+----------------------------------------------
+00 : 00 : 00
