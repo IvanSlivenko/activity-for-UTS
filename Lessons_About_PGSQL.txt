@@ -45,3 +45,8 @@ drop table customers
 ----------------------------------------------
 Lessons 5
 00 : 02 : 43
+
+
+lessons about frilance
+
+https://www.youtube.com/watch?v=glwH-_KS634
