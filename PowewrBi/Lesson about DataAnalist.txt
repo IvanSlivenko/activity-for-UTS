@@ -1,6 +1,6 @@
 -----------
 power bi
-tablou
+tableau
 python
 sql
 -----------
@@ -44,7 +44,7 @@ https://www.youtube.com/watch?v=axXJ-f-r28w&t=1s
 Олена Булига
 https://www.youtube.com/@ЕленаБулыга
 
-lesson 1  00 : 01 : 33
+lesson 1  00 : 58 : 21
 
 =================================================
 
