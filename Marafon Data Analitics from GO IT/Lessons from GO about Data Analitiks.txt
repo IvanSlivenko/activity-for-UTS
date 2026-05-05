@@ -1,0 +1,29 @@
+https://www.youtube.com/watch?v=Ebhs6cDTa8U
+
+1.
+Google cloude Console
+https://console.cloud.google.com/welcome?pli=1&project=plucky-stratum-476122-k2
+
+Run a query in BigQuery
+
+Explorer
+
++add Data
+
+Publick Dataset
+
+search : "trends"
+
+result : Google Trends - International
+
+View Dataset
+
+
+
+
+
+-------------------------------------------
+00 : 17 : 04
+
+
+

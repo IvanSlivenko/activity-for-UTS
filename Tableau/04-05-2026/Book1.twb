@@ -1,0 +1,1961 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20261.26.0410.0924                               -->
+<workbook original-version='18.1' source-build='2026.1.1 (20261.26.0410.0924)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Перш (Ліс_Умань_2025)' inline='true' name='federated.1s505861fs9uph1b2v1n50wp74x9' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Ліс_Умань_2025' name='excel-direct.0yd9tna17scsb01dw2hsi0hmjpnx'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='D:/GitHub/activity-for-UTS/Tableau/Ліс_Умань_2025.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.0yd9tna17scsb01dw2hsi0hmjpnx' name='Перш' table='[Перш$]' type='table'>
+          <columns gridOrigin='A1:G7506:no:A1:G7506:0' header='yes' outcome='2'>
+            <column datatype='string' name='Номенклатура' ordinal='0' />
+            <column datatype='string' name='Од. вим.' ordinal='1' />
+            <column datatype='real' name='Кількість' ordinal='2' />
+            <column datatype='real' name='Вартість' ordinal='3' />
+            <column datatype='string' name='Дата' ordinal='4' />
+            <column datatype='integer' name='Місяць' ordinal='5' />
+            <column datatype='real' name='Довжина' ordinal='6' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Перш]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:G7506:no:A1:G7506:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Номенклатура</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Номенклатура]</local-name>
+            <parent-name>[Перш]</parent-name>
+            <remote-alias>Номенклатура</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LRU_RRU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Перш_32BC156AA59F4C0E9809925241BFE47A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Од. вим.</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Од. вим.]</local-name>
+            <parent-name>[Перш]</parent-name>
+            <remote-alias>Од. вим.</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LRU_RRU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Перш_32BC156AA59F4C0E9809925241BFE47A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Кількість</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Кількість]</local-name>
+            <parent-name>[Перш]</parent-name>
+            <remote-alias>Кількість</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Перш_32BC156AA59F4C0E9809925241BFE47A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Вартість</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Вартість]</local-name>
+            <parent-name>[Перш]</parent-name>
+            <remote-alias>Вартість</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Перш_32BC156AA59F4C0E9809925241BFE47A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Дата</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Дата]</local-name>
+            <parent-name>[Перш]</parent-name>
+            <remote-alias>Дата</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LRU_RRU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Перш_32BC156AA59F4C0E9809925241BFE47A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Місяць</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Місяць]</local-name>
+            <parent-name>[Перш]</parent-name>
+            <remote-alias>Місяць</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Перш_32BC156AA59F4C0E9809925241BFE47A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Довжина</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Довжина]</local-name>
+            <parent-name>[Перш]</parent-name>
+            <remote-alias>Довжина</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Перш_32BC156AA59F4C0E9809925241BFE47A]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Перш' datatype='table' name='[__tableau_internal_object_id__].[Перш_32BC156AA59F4C0E9809925241BFE47A]' role='measure' type='quantitative' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Ukraine&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='Перш' id='Перш_32BC156AA59F4C0E9809925241BFE47A'>
+            <properties context=''>
+              <relation connection='excel-direct.0yd9tna17scsb01dw2hsi0hmjpnx' name='Перш' table='[Перш$]' type='table'>
+                <columns gridOrigin='A1:G7506:no:A1:G7506:0' header='yes' outcome='2'>
+                  <column datatype='string' name='Номенклатура' ordinal='0' />
+                  <column datatype='string' name='Од. вим.' ordinal='1' />
+                  <column datatype='real' name='Кількість' ordinal='2' />
+                  <column datatype='real' name='Вартість' ordinal='3' />
+                  <column datatype='string' name='Дата' ordinal='4' />
+                  <column datatype='integer' name='Місяць' ordinal='5' />
+                  <column datatype='real' name='Довжина' ordinal='6' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='Перш (Пінопласт_2025)' inline='true' name='federated.0ypq33y07tyh2016ok5ik1a6qgxk' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Пінопласт_2025' name='excel-direct.0vglm8w13mg3zy189lrli0rp9bbb'>
+            <connection class='excel-direct' cleaning='yes' compat='no' dataRefreshTime='' filename='D:/GitHub/activity-for-UTS/Tableau/04-05-2026/Пінопласт_2025.xlsx' interpretationMode='1' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.0vglm8w13mg3zy189lrli0rp9bbb' name='Перш' table='[Перш$]' type='table'>
+          <columns gridOrigin='A1:K2117:no:A1:K2117:1' header='yes' lost='0' outcome='1' processed='9499'>
+            <column datatype='string' name='Номенклатура' ordinal='0' />
+            <column datatype='string' name='Екструдованість' ordinal='1' />
+            <column datatype='integer' name='Товщина' ordinal='2' />
+            <column datatype='string' name='Щільність' ordinal='3' />
+            <column datatype='string' name='Одиниця Виміру' ordinal='4' />
+            <column datatype='integer' name='Кількість' ordinal='5' />
+            <column datatype='real' name='Сумма' ordinal='6' />
+            <column datatype='string' name='Дата' ordinal='7' />
+            <column datatype='integer' name='Місяць' ordinal='8' />
+            <column datatype='string' name='Назва місяця' ordinal='9' />
+            <column datatype='string' name='Батьківський Елемент' ordinal='10' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Перш]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:K2117:no:A1:K2117:1&quot;</attribute>
+              <attribute datatype='integer' name='lost'>0</attribute>
+              <attribute datatype='integer' name='outcome'>1</attribute>
+              <attribute datatype='integer' name='processed'>9499</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Номенклатура</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Номенклатура]</local-name>
+            <parent-name>[Перш]</parent-name>
+            <remote-alias>Номенклатура</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LRU_RRU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Перш_4A4B41FDE63642829DE3D502D0329C27]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Екструдованість</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Екструдованість]</local-name>
+            <parent-name>[Перш]</parent-name>
+            <remote-alias>Екструдованість</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LRU_RRU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Перш_4A4B41FDE63642829DE3D502D0329C27]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Товщина</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Товщина]</local-name>
+            <parent-name>[Перш]</parent-name>
+            <remote-alias>Товщина</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Перш_4A4B41FDE63642829DE3D502D0329C27]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Щільність</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Щільність]</local-name>
+            <parent-name>[Перш]</parent-name>
+            <remote-alias>Щільність</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LRU_RRU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Перш_4A4B41FDE63642829DE3D502D0329C27]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Одиниця Виміру</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Одиниця Виміру]</local-name>
+            <parent-name>[Перш]</parent-name>
+            <remote-alias>Одиниця Виміру</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LRU_RRU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Перш_4A4B41FDE63642829DE3D502D0329C27]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Кількість</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Кількість]</local-name>
+            <parent-name>[Перш]</parent-name>
+            <remote-alias>Кількість</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Перш_4A4B41FDE63642829DE3D502D0329C27]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Сумма</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Сумма]</local-name>
+            <parent-name>[Перш]</parent-name>
+            <remote-alias>Сумма</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Перш_4A4B41FDE63642829DE3D502D0329C27]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Дата</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Дата]</local-name>
+            <parent-name>[Перш]</parent-name>
+            <remote-alias>Дата</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LRU_RRU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Перш_4A4B41FDE63642829DE3D502D0329C27]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Місяць</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Місяць]</local-name>
+            <parent-name>[Перш]</parent-name>
+            <remote-alias>Місяць</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Перш_4A4B41FDE63642829DE3D502D0329C27]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Назва місяця</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Назва місяця]</local-name>
+            <parent-name>[Перш]</parent-name>
+            <remote-alias>Назва місяця</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LRU_RRU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Перш_4A4B41FDE63642829DE3D502D0329C27]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Батьківський Елемент</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Батьківський Елемент]</local-name>
+            <parent-name>[Перш]</parent-name>
+            <remote-alias>Батьківський Елемент</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LRU_RRU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Перш_4A4B41FDE63642829DE3D502D0329C27]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Продажі за період' datatype='integer' name='[Calculation_1877482908078080]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='WINDOW_SUM(sum([Кількість]))'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Перш' datatype='table' name='[__tableau_internal_object_id__].[Перш_4A4B41FDE63642829DE3D502D0329C27]' role='measure' type='quantitative' />
+      <column aggregation='Sum' datatype='integer' name='[Місяць]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' datatype='integer' name='[Товщина]' role='dimension' type='ordinal' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Ukraine&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='Номенклатура' />
+        <field-sort-custom-order field='Екструдованість' />
+        <field-sort-custom-order field='Товщина' />
+        <field-sort-custom-order field='Щільність' />
+        <field-sort-custom-order field='Одиниця Виміру' />
+        <field-sort-custom-order field='Кількість' />
+        <field-sort-custom-order field='Calculation_1877482908078080' />
+        <field-sort-custom-order field='Сумма' />
+        <field-sort-custom-order field='Дата' />
+        <field-sort-custom-order field='Місяць' />
+        <field-sort-custom-order field='Назва місяця' />
+        <field-sort-custom-order field='Батьківський Елемент' />
+        <field-sort-custom-order field='Geometry (generated)' />
+        <field-sort-custom-order field='Latitude (generated)' />
+        <field-sort-custom-order field='Longitude (generated)' />
+        <field-sort-custom-order field=':Measure Names' />
+        <field-sort-custom-order field='Multiple Values' />
+      </field-sort-info>
+      <object-graph>
+        <objects>
+          <object caption='Перш' id='Перш_4A4B41FDE63642829DE3D502D0329C27'>
+            <properties context=''>
+              <relation connection='excel-direct.0vglm8w13mg3zy189lrli0rp9bbb' name='Перш' table='[Перш$]' type='table'>
+                <columns gridOrigin='A1:K2117:no:A1:K2117:1' header='yes' lost='0' outcome='1' processed='9499'>
+                  <column datatype='string' name='Номенклатура' ordinal='0' />
+                  <column datatype='string' name='Екструдованість' ordinal='1' />
+                  <column datatype='integer' name='Товщина' ordinal='2' />
+                  <column datatype='string' name='Щільність' ordinal='3' />
+                  <column datatype='string' name='Одиниця Виміру' ordinal='4' />
+                  <column datatype='integer' name='Кількість' ordinal='5' />
+                  <column datatype='real' name='Сумма' ordinal='6' />
+                  <column datatype='string' name='Дата' ordinal='7' />
+                  <column datatype='integer' name='Місяць' ordinal='8' />
+                  <column datatype='string' name='Назва місяця' ordinal='9' />
+                  <column datatype='string' name='Батьківський Елемент' ordinal='10' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='Перш (Ліс_Умань_2025) (2)' inline='true' name='federated.0ppl2hx19joldf19ohfo214yqxb9' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Ліс_Умань_2025' name='excel-direct.0a9f34e0x0h0pd10ekdq719gcltd'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='D:/GitHub/activity-for-UTS/Tableau/04-05-2026/Ліс_Умань_2025.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.0a9f34e0x0h0pd10ekdq719gcltd' name='Перш' table='[Перш$]' type='table'>
+          <columns gridOrigin='A1:G7506:no:A1:G7506:0' header='yes' outcome='2'>
+            <column datatype='string' name='Номенклатура' ordinal='0' />
+            <column datatype='string' name='Од. вим.' ordinal='1' />
+            <column datatype='real' name='Кількість' ordinal='2' />
+            <column datatype='real' name='Вартість' ordinal='3' />
+            <column datatype='string' name='Дата' ordinal='4' />
+            <column datatype='integer' name='Місяць' ordinal='5' />
+            <column datatype='real' name='Довжина' ordinal='6' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Перш]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:G7506:no:A1:G7506:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Номенклатура</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Номенклатура]</local-name>
+            <parent-name>[Перш]</parent-name>
+            <remote-alias>Номенклатура</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LRU_RRU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Перш_93E5A41293B246D9A90071D02CF52BE9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Од. вим.</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Од. вим.]</local-name>
+            <parent-name>[Перш]</parent-name>
+            <remote-alias>Од. вим.</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LRU_RRU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Перш_93E5A41293B246D9A90071D02CF52BE9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Кількість</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Кількість]</local-name>
+            <parent-name>[Перш]</parent-name>
+            <remote-alias>Кількість</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Перш_93E5A41293B246D9A90071D02CF52BE9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Вартість</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Вартість]</local-name>
+            <parent-name>[Перш]</parent-name>
+            <remote-alias>Вартість</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Перш_93E5A41293B246D9A90071D02CF52BE9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Дата</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Дата]</local-name>
+            <parent-name>[Перш]</parent-name>
+            <remote-alias>Дата</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LRU_RRU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Перш_93E5A41293B246D9A90071D02CF52BE9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Місяць</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Місяць]</local-name>
+            <parent-name>[Перш]</parent-name>
+            <remote-alias>Місяць</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Перш_93E5A41293B246D9A90071D02CF52BE9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Довжина</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Довжина]</local-name>
+            <parent-name>[Перш]</parent-name>
+            <remote-alias>Довжина</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Перш_93E5A41293B246D9A90071D02CF52BE9]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Перш' datatype='table' name='[__tableau_internal_object_id__].[Перш_93E5A41293B246D9A90071D02CF52BE9]' role='measure' type='quantitative' />
+      <column aggregation='Sum' datatype='real' name='[Довжина]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' datatype='integer' name='[Місяць]' role='dimension' type='ordinal' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Ukraine&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='Перш' id='Перш_93E5A41293B246D9A90071D02CF52BE9'>
+            <properties context=''>
+              <relation connection='excel-direct.0a9f34e0x0h0pd10ekdq719gcltd' name='Перш' table='[Перш$]' type='table'>
+                <columns gridOrigin='A1:G7506:no:A1:G7506:0' header='yes' outcome='2'>
+                  <column datatype='string' name='Номенклатура' ordinal='0' />
+                  <column datatype='string' name='Од. вим.' ordinal='1' />
+                  <column datatype='real' name='Кількість' ordinal='2' />
+                  <column datatype='real' name='Вартість' ordinal='3' />
+                  <column datatype='string' name='Дата' ordinal='4' />
+                  <column datatype='integer' name='Місяць' ordinal='5' />
+                  <column datatype='real' name='Довжина' ordinal='6' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='Перш (ВитратиГладкогоЛиста2025)' inline='true' name='federated.0pfc9gv1q6cb6w10mbt8s0nqvu3v' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='ВитратиГладкогоЛиста2025' name='excel-direct.0gverva0by16nd17crxs117bz9y2'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='D:/GitHub/activity-for-UTS/Tableau/04-05-2026/ВитратиГладкогоЛиста2025.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.0gverva0by16nd17crxs117bz9y2' name='Перш' table='[Перш$]' type='table'>
+          <columns gridOrigin='A1:E10437:no:A1:E10437:0' header='yes' outcome='2'>
+            <column datatype='string' name='Номенклатура' ordinal='0' />
+            <column datatype='real' name='Кількість' ordinal='1' />
+            <column datatype='real' name='Вартість' ordinal='2' />
+            <column datatype='string' name='Дата' ordinal='3' />
+            <column datatype='integer' name='Місяць' ordinal='4' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Перш]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:E10437:no:A1:E10437:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Номенклатура</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Номенклатура]</local-name>
+            <parent-name>[Перш]</parent-name>
+            <remote-alias>Номенклатура</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LRU_RRU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Перш_9AFA568232B7443B9A0C34CD88524DD7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Кількість</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Кількість]</local-name>
+            <parent-name>[Перш]</parent-name>
+            <remote-alias>Кількість</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Перш_9AFA568232B7443B9A0C34CD88524DD7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Вартість</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Вартість]</local-name>
+            <parent-name>[Перш]</parent-name>
+            <remote-alias>Вартість</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Перш_9AFA568232B7443B9A0C34CD88524DD7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Дата</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Дата]</local-name>
+            <parent-name>[Перш]</parent-name>
+            <remote-alias>Дата</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LRU_RRU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Перш_9AFA568232B7443B9A0C34CD88524DD7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Місяць</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Місяць]</local-name>
+            <parent-name>[Перш]</parent-name>
+            <remote-alias>Місяць</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Перш_9AFA568232B7443B9A0C34CD88524DD7]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Перш' datatype='table' name='[__tableau_internal_object_id__].[Перш_9AFA568232B7443B9A0C34CD88524DD7]' role='measure' type='quantitative' />
+      <column aggregation='Sum' datatype='integer' name='[Місяць]' role='dimension' type='ordinal' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Ukraine&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='Перш' id='Перш_9AFA568232B7443B9A0C34CD88524DD7'>
+            <properties context=''>
+              <relation connection='excel-direct.0gverva0by16nd17crxs117bz9y2' name='Перш' table='[Перш$]' type='table'>
+                <columns gridOrigin='A1:E10437:no:A1:E10437:0' header='yes' outcome='2'>
+                  <column datatype='string' name='Номенклатура' ordinal='0' />
+                  <column datatype='real' name='Кількість' ordinal='1' />
+                  <column datatype='real' name='Вартість' ordinal='2' />
+                  <column datatype='string' name='Дата' ordinal='3' />
+                  <column datatype='integer' name='Місяць' ordinal='4' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='Аналіз 3 (МеталоЧерепицяУмань2025_2)' inline='true' name='federated.1bodn3g0xmd1et11qig0s0b2bwb0' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='МеталоЧерепицяУмань2025_2' name='excel-direct.0bmusp31paxk5112cfzl30ezp7lf'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='D:/GitHub/activity-for-UTS/Tableau/04-05-2026/МеталоЧерепицяУмань2025_2.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.0bmusp31paxk5112cfzl30ezp7lf' name='Аналіз 3' table='[&apos;Аналіз 3$&apos;]' type='table'>
+          <columns gridOrigin='B2:J14:no:B2:J14:0' header='yes' outcome='6'>
+            <column datatype='string' name='Місяць' ordinal='0' />
+            <column datatype='real' name='Кількість ПС' ordinal='1' />
+            <column datatype='real' name='Вартість ПС' ordinal='2' />
+            <column datatype='real' name='Середня Ціна ПС' ordinal='3' />
+            <column datatype='real' name='Кількість МЧ' ordinal='4' />
+            <column datatype='real' name='Вартість МЧ' ordinal='5' />
+            <column datatype='real' name='Середня ціна МЧ' ordinal='6' />
+            <column datatype='real' name='КількісьГладкогоЛистаНаВиробництво' ordinal='7' />
+            <column datatype='real' name='ВартістьГладкогоЛистаНаВиробництво' ordinal='8' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Аналіз 3]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;B2:J14:no:B2:J14:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Місяць</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Місяць]</local-name>
+            <parent-name>[Аналіз 3]</parent-name>
+            <remote-alias>Місяць</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LRU_RRU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Аналіз 3_A03BB6A80F914490BD62EA344B8AC6B2]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Кількість ПС</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Кількість ПС]</local-name>
+            <parent-name>[Аналіз 3]</parent-name>
+            <remote-alias>Кількість ПС</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Аналіз 3_A03BB6A80F914490BD62EA344B8AC6B2]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Вартість ПС</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Вартість ПС]</local-name>
+            <parent-name>[Аналіз 3]</parent-name>
+            <remote-alias>Вартість ПС</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Аналіз 3_A03BB6A80F914490BD62EA344B8AC6B2]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Середня Ціна ПС</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Середня Ціна ПС]</local-name>
+            <parent-name>[Аналіз 3]</parent-name>
+            <remote-alias>Середня Ціна ПС</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Аналіз 3_A03BB6A80F914490BD62EA344B8AC6B2]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Кількість МЧ</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Кількість МЧ]</local-name>
+            <parent-name>[Аналіз 3]</parent-name>
+            <remote-alias>Кількість МЧ</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Аналіз 3_A03BB6A80F914490BD62EA344B8AC6B2]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Вартість МЧ</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Вартість МЧ]</local-name>
+            <parent-name>[Аналіз 3]</parent-name>
+            <remote-alias>Вартість МЧ</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Аналіз 3_A03BB6A80F914490BD62EA344B8AC6B2]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Середня ціна МЧ</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Середня ціна МЧ]</local-name>
+            <parent-name>[Аналіз 3]</parent-name>
+            <remote-alias>Середня ціна МЧ</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Аналіз 3_A03BB6A80F914490BD62EA344B8AC6B2]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>КількісьГладкогоЛистаНаВиробництво</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[КількісьГладкогоЛистаНаВиробництво]</local-name>
+            <parent-name>[Аналіз 3]</parent-name>
+            <remote-alias>КількісьГладкогоЛистаНаВиробництво</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Аналіз 3_A03BB6A80F914490BD62EA344B8AC6B2]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ВартістьГладкогоЛистаНаВиробництво</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ВартістьГладкогоЛистаНаВиробництво]</local-name>
+            <parent-name>[Аналіз 3]</parent-name>
+            <remote-alias>ВартістьГладкогоЛистаНаВиробництво</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Аналіз 3_A03BB6A80F914490BD62EA344B8AC6B2]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Аналіз 3' datatype='table' name='[__tableau_internal_object_id__].[Аналіз 3_A03BB6A80F914490BD62EA344B8AC6B2]' role='measure' type='quantitative' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Ukraine&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='Аналіз 3' id='Аналіз 3_A03BB6A80F914490BD62EA344B8AC6B2'>
+            <properties context=''>
+              <relation connection='excel-direct.0bmusp31paxk5112cfzl30ezp7lf' name='Аналіз 3' table='[&apos;Аналіз 3$&apos;]' type='table'>
+                <columns gridOrigin='B2:J14:no:B2:J14:0' header='yes' outcome='6'>
+                  <column datatype='string' name='Місяць' ordinal='0' />
+                  <column datatype='real' name='Кількість ПС' ordinal='1' />
+                  <column datatype='real' name='Вартість ПС' ordinal='2' />
+                  <column datatype='real' name='Середня Ціна ПС' ordinal='3' />
+                  <column datatype='real' name='Кількість МЧ' ordinal='4' />
+                  <column datatype='real' name='Вартість МЧ' ordinal='5' />
+                  <column datatype='real' name='Середня ціна МЧ' ordinal='6' />
+                  <column datatype='real' name='КількісьГладкогоЛистаНаВиробництво' ordinal='7' />
+                  <column datatype='real' name='ВартістьГладкогоЛистаНаВиробництво' ordinal='8' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='ГЛ Кількість ГЦ'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Аналіз 3 (МеталоЧерепицяУмань2025_2)' name='federated.1bodn3g0xmd1et11qig0s0b2bwb0' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1bodn3g0xmd1et11qig0s0b2bwb0'>
+            <column-instance column='[Місяць]' derivation='None' name='[none:Місяць:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Кількість МЧ]' derivation='Sum' name='[sum:Кількість МЧ:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Кількість ПС]' derivation='Sum' name='[sum:Кількість ПС:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[КількісьГладкогоЛистаНаВиробництво]' derivation='Sum' name='[sum:КількісьГладкогоЛистаНаВиробництво:qk]' pivot='key' type='quantitative' />
+            <column datatype='real' name='[Кількість МЧ]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Кількість ПС]' role='measure' type='quantitative' />
+            <column datatype='real' name='[КількісьГладкогоЛистаНаВиробництво]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Місяць]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.1bodn3g0xmd1et11qig0s0b2bwb0].[none:Місяць:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Січень&quot;</bucket>
+              <bucket>&quot;Лютий&quot;</bucket>
+              <bucket>&quot;Березень&quot;</bucket>
+              <bucket>&quot;Квітень&quot;</bucket>
+              <bucket>&quot;Травень&quot;</bucket>
+              <bucket>&quot;Червень&quot;</bucket>
+              <bucket>&quot;Липень&quot;</bucket>
+              <bucket>&quot;Серпень&quot;</bucket>
+              <bucket>&quot;Вересень&quot;</bucket>
+              <bucket>&quot;Жовтень&quot;</bucket>
+              <bucket>&quot;Листопад&quot;</bucket>
+              <bucket>&quot;Грудень&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#e15759' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1bodn3g0xmd1et11qig0s0b2bwb0].[sum:Кількість ПС:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#9d7660' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1bodn3g0xmd1et11qig0s0b2bwb0].[sum:Кількість МЧ:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#e15759' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1bodn3g0xmd1et11qig0s0b2bwb0].[sum:КількісьГладкогоЛистаНаВиробництво:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#c0c0c0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1bodn3g0xmd1et11qig0s0b2bwb0].[sum:Кількість МЧ:qk] + ([federated.1bodn3g0xmd1et11qig0s0b2bwb0].[sum:Кількість ПС:qk] + [federated.1bodn3g0xmd1et11qig0s0b2bwb0].[sum:КількісьГладкогоЛистаНаВиробництво:qk]))</rows>
+        <cols>[federated.1bodn3g0xmd1et11qig0s0b2bwb0].[none:Місяць:nk]</cols>
+      </table>
+      <simple-id uuid='{E8EF6FB4-E46F-4D76-AD5E-EBEFF781E1A6}' />
+    </worksheet>
+    <worksheet name='МЧ ПС'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Аналіз 3 (МеталоЧерепицяУмань2025_2)' name='federated.1bodn3g0xmd1et11qig0s0b2bwb0' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1bodn3g0xmd1et11qig0s0b2bwb0'>
+            <column-instance column='[Місяць]' derivation='None' name='[none:Місяць:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Кількість МЧ]' derivation='Sum' name='[sum:Кількість МЧ:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Кількість ПС]' derivation='Sum' name='[sum:Кількість ПС:qk]' pivot='key' type='quantitative' />
+            <column datatype='real' name='[Кількість МЧ]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Кількість ПС]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Місяць]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.1bodn3g0xmd1et11qig0s0b2bwb0].[none:Місяць:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Січень&quot;</bucket>
+              <bucket>&quot;Лютий&quot;</bucket>
+              <bucket>&quot;Березень&quot;</bucket>
+              <bucket>&quot;Квітень&quot;</bucket>
+              <bucket>&quot;Травень&quot;</bucket>
+              <bucket>&quot;Червень&quot;</bucket>
+              <bucket>&quot;Липень&quot;</bucket>
+              <bucket>&quot;Серпень&quot;</bucket>
+              <bucket>&quot;Вересень&quot;</bucket>
+              <bucket>&quot;Жовтень&quot;</bucket>
+              <bucket>&quot;Листопад&quot;</bucket>
+              <bucket>&quot;Грудень&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1bodn3g0xmd1et11qig0s0b2bwb0].[sum:Кількість МЧ:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#ff9d9a' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1bodn3g0xmd1et11qig0s0b2bwb0].[sum:Кількість ПС:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#ba9582' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1bodn3g0xmd1et11qig0s0b2bwb0].[sum:Кількість МЧ:qk] + [federated.1bodn3g0xmd1et11qig0s0b2bwb0].[sum:Кількість ПС:qk])</rows>
+        <cols>[federated.1bodn3g0xmd1et11qig0s0b2bwb0].[none:Місяць:nk]</cols>
+      </table>
+      <simple-id uuid='{A96217D8-7777-4374-9ABA-3CF61B72FF20}' />
+    </worksheet>
+    <worksheet name='Продажі Ліс'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='20'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Перш (Ліс_Умань_2025) (2)' name='federated.0ppl2hx19joldf19ohfo214yqxb9' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ppl2hx19joldf19ohfo214yqxb9'>
+            <column-instance column='[Місяць]' derivation='None' name='[none:Місяць:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Кількість]' derivation='Sum' name='[sum:Кількість:qk]' pivot='key' type='quantitative' />
+            <column datatype='real' name='[Кількість]' role='measure' type='quantitative' />
+            <column aggregation='Sum' datatype='integer' name='[Місяць]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ppl2hx19joldf19ohfo214yqxb9].[sum:Кількість:qk]</rows>
+        <cols>[federated.0ppl2hx19joldf19ohfo214yqxb9].[none:Місяць:ok]</cols>
+      </table>
+      <simple-id uuid='{037C2304-A34A-45F3-8A06-044F3F3025D8}' />
+    </worksheet>
+    <worksheet name='Продажі Пінопласт'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='20'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Перш (Пінопласт_2025)' name='federated.0ypq33y07tyh2016ok5ik1a6qgxk' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ypq33y07tyh2016ok5ik1a6qgxk'>
+            <column-instance column='[Екструдованість]' derivation='None' name='[none:Екструдованість:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Місяць]' derivation='None' name='[none:Місяць:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Кількість]' derivation='Sum' name='[sum:Кількість:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Сумма]' derivation='Sum' name='[sum:Сумма:qk]' pivot='key' type='quantitative' />
+            <column datatype='string' name='[Екструдованість]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Кількість]' role='measure' type='quantitative' />
+            <column aggregation='Sum' datatype='integer' name='[Місяць]' role='dimension' type='ordinal' />
+            <column datatype='real' name='[Сумма]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ypq33y07tyh2016ok5ik1a6qgxk].[none:Екструдованість:nk]'>
+            <groupfilter function='member' level='[none:Екструдованість:nk]' member='&quot;Не Екструдований&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0ypq33y07tyh2016ok5ik1a6qgxk].[none:Екструдованість:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.0ypq33y07tyh2016ok5ik1a6qgxk].[sum:Сумма:qk]' scope='rows' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#c290b4' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0ypq33y07tyh2016ok5ik1a6qgxk].[sum:Кількість:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#c290b4' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0ypq33y07tyh2016ok5ik1a6qgxk].[sum:Сумма:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#8cd17d' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0ypq33y07tyh2016ok5ik1a6qgxk].[sum:Кількість:qk] + [federated.0ypq33y07tyh2016ok5ik1a6qgxk].[sum:Сумма:qk])</rows>
+        <cols>[federated.0ypq33y07tyh2016ok5ik1a6qgxk].[none:Місяць:ok]</cols>
+      </table>
+      <simple-id uuid='{E730925C-8469-4F47-9059-21327F532365}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='114'>
+    <window class='worksheet' maximized='true' name='Продажі Пінопласт'>
+      <cards>
+        <edge name='left'>
+          <strip size='254'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0ypq33y07tyh2016ok5ik1a6qgxk].[none:Дата:nk]</field>
+            <field>[federated.0ypq33y07tyh2016ok5ik1a6qgxk].[none:Екструдованість:nk]</field>
+            <field>[federated.0ypq33y07tyh2016ok5ik1a6qgxk].[none:Місяць:ok]</field>
+            <field>[federated.0ypq33y07tyh2016ok5ik1a6qgxk].[none:Назва місяця:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{1F9097D5-DAA9-4E74-A248-0E509805EA70}' />
+    </window>
+    <window class='worksheet' name='Продажі Ліс'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0ppl2hx19joldf19ohfo214yqxb9].[none:Місяць:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{73A49F9E-95B6-4C95-9928-911BFF066CC3}' />
+    </window>
+    <window class='worksheet' name='МЧ ПС'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0pfc9gv1q6cb6w10mbt8s0nqvu3v].[none:Місяць:ok]</field>
+            <field>[federated.1bodn3g0xmd1et11qig0s0b2bwb0].[none:Місяць:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{480369FC-0DE2-42CB-819A-19E1289D2E03}' />
+    </window>
+    <window class='worksheet' name='ГЛ Кількість ГЦ'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0pfc9gv1q6cb6w10mbt8s0nqvu3v].[none:Місяць:ok]</field>
+            <field>[federated.1bodn3g0xmd1et11qig0s0b2bwb0].[none:Місяць:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{3F7ECC8A-B406-4E49-8D9A-7030AB275148}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='ГЛ Кількість ГЦ' width='192'>
+      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
+      KObS/H/bqHOhq/CtOQAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='МЧ ПС' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Продажі Ліс' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Продажі Пінопласт' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
