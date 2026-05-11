@@ -1,0 +1,32 @@
+https://youtu.be/HkT_VrzbXZQ
+-------------------------------------
+
+5433
+
+Servers -> register -> server
+
+login: umanproger@ukr.net.
+password: 07092006
+
+
+Data Category
+
+https://www.postgresql.org/docs/current/datatype.html
+-------------------------------------------------------------
+Character -> varchar(255), text
+Numeric -> integer, numeric
+Boolean -> true , false
+Date / Time 
+Other
+
+
+
+
+
+
+
+
+
+
+---------------------------------
+00 : 00 : 00

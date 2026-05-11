@@ -1,3 +1,5 @@
+Lessons 1
+===================================================================================
 https://www.youtube.com/watch?v=Ebhs6cDTa8U
 
 1.
@@ -18,12 +20,126 @@ result : Google Trends - International
 
 View Dataset
 
+"+" SQL Query
+
+or
+
+Query
+
+Reference
+
+-------------------------------------------
+00 : 21 : 37
 
 
+Lessons 2
+==================================================================================
+https://www.youtube.com/watch?v=o5LVDRVzphI
+
+Query Resurses google_trends->top_terms->Query
+
+---------------------------------------------------------------------------------
+SELECT *
+FROM bigquery-public-data.google_trends.international_top_rising_terms
+LIMIT 1000
+
+;
+
+SELECT MIN(refresh_date) as First_reafresh_Date,
+max(refresh_date) as Last_reafresh_Date,
+MAX(week) AS last_week
+FROM bigquery-public-data.google_trends.international_top_rising_terms
+
+;
+
+SELECT DISTINCT country_name
+FROM bigquery-public-data.google_trends.international_top_rising_terms
+
+;
+
+SELECT DISTINCT region_name
+FROM bigquery-public-data.google_trends.international_top_rising_terms
+WHERE country_name = 'Ukraine'
+
+;
+
+SELECT *
+FROM bigquery-public-data.google_trends.international_top_rising_terms
+WHERE country_name = 'Ukraine'
+AND
+region_name = "Cherkas'ka oblast"
+AND 
+refresh_date = '2026-05-07'
+AND
+week = '2026-05-03'
+
+;
+---------------------------------------------------------------------------------
 
 
 -------------------------------------------
-00 : 17 : 04
+00 : 07 : 24
+
+
+
+
+
+Lesson 3
+https://youtu.be/t85K3TZf0D0
+-----------------------------------------------------------------------------------
+SELECT *
+FROM bigquery-public-data.google_trends.international_top_rising_terms
+WHERE country_name = 'Ukraine'
+AND
+--region_name = "Cherkas'ka oblast"
+--AND 
+refresh_date = '2026-05-07'
+AND
+week = '2026-05-03'
+AND
+rank  = 1
+
+--------------------------
+
+SELECT *
+FROM bigquery-public-data.google_trends.international_top_rising_terms
+WHERE country_name = 'Ukraine'
+AND
+region_name  LIKE "%Cherk%"
+AND
+refresh_date = '2026-05-07'
+AND
+week = '2026-05-03'
+AND
+rank  = 1
+
+===========================================
+
+SELECT *
+FROM bigquery-public-data.google_trends.international_top_rising_terms
+WHERE country_name = 'Ukraine'
+--AND
+--region_name  LIKE "%Cherk%"
+--AND
+--refresh_date = '2026-05-07'
+--AND
+--week = '2026-05-03'
+--AND
+--rank  = 1
+AND lower(term) LIKE "%2026%"
+
+===========================================
+
+
+
+
+-----------------------------------------------------------------------------------
+00 : 00 : 00
+
+
+
+
+
 
 
 
