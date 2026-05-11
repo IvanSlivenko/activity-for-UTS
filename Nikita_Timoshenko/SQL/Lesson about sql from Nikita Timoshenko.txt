@@ -13,20 +13,91 @@ Data Category
 
 https://www.postgresql.org/docs/current/datatype.html
 -------------------------------------------------------------
-Character -> varchar(255), text
+Character -> varchar(255) - змінна, char(n) - постійна,   text
 Numeric -> integer, numeric
 Boolean -> true , false
 Date / Time 
 Other
 
 
+===========================================
+
+SELECT *
+FROM
+salaries
+LIMIT 10
+;
+---------------------------------
+SELECT  
+	year
+	, exp_level AS level
+	, emp_type as type
+FROM salaries
+WHERE 
+	year != 2022
+	AND exp_level='SE'
+ORDER BY year ASC	
+LIMIT 20
+;
+
+---------------------------------
 
 
+---- top 5 salary in year 2023
 
+SELECT *
+	, year
+	, job_title
+	, salary_in_usd
+	
+FROM salaries 
+
+WHERE 
+	year = 2023
+	AND
+	job_title='Data Scientist'	
+
+ORDER BY salary_in_usd DESC
+
+LIMIT 5
+===========================================
+
+DISTINCT - унікальні значення
+
+
+-------------------------
+SELECT 
+	year
+	, exp_level
+	, salary_in_usd
+	, salary_in_usd * 43 as salary_in_uah
+	, salary_in_usd * 43 / 12 as salary_in_uah_Mount
+------------------------------------------------------- case
+	-- 'SE' - Senior
+	-- 'MI' - Middle
+	-- Other 
+
+	, CASE 
+		WHEN  exp_level = 'SE' 
+			THEN 'Senior'
+		WHEN  exp_level = 'MI'	
+			THEN 'Middle'
+		ELSE 'Other' 
+	  END	AS full_level	
+			
+FROM salaries
+
+WHERE 
+		year=2023
+ORDER BY salary_in_usd asc
+
+LIMIT 100
+;
+-------------------------
 
 
 
 
 
 ---------------------------------
-00 : 00 : 00
+00 : 53 : 22
