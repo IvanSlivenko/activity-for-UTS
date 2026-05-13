@@ -96,8 +96,346 @@ LIMIT 100
 -------------------------
 
 
+==================================================================== Завдання 1
+-- ML Engineer
+-- 2023
+-- salary_in_usd
+;
+--------------------------
+SELECT 
+	job_title,
+	year,
+	salary_in_usd
+FROM
+	salaries
+WHERE
+	year = '2023'
+	AND
+		job_title='ML Engineer'
+	ORDER BY salary_in_usd DESC
+LIMIT 5
+;
+========================================================================================================================= Завдання 2
+Назвати країну, (company_location), в якій зафіксована найменша ЗП спеціаліста у сфері Data Scientist в 2023 році
+----------------------------------- Завдання 2
+-- emp_location
+-- salary_in_usd
+-- Data Scientist
+
+
+SELECT 
+	emp_location,
+	job_title,
+	year,
+	salary_in_usd
+FROM
+	salaries
+WHERE
+	year = '2023'
+	AND
+		job_title='Data Scientist'
+	ORDER BY salary_in_usd ASC
+LIMIT 10
+;
+
+=============================================================================================================================== Завдання 3
+Вивести ТОП 5 З/П серед усіх спеціалістів, що працюють повністю відділено.
+SELECT *
+FROM
+salaries
+;
+--//////////////////////////////////
+
+-- salary_ib_usd
+-- remote_ration
+
+SELECT 
+	remote_ration
+	emp_location,
+	job_title,
+	salary_in_usd
+FROM
+	salaries
+WHERE
+	remote_ration = '100'
+	
+	ORDER BY salary_in_usd DESC
+LIMIT 5
+
+=============================================================================================================================== Завдання 4
+Вивести унікальні значення для колонки
+SELECT *
+FROM
+salaries
+LIMIT 1
+;
+--//////////////////////////////////
+
+SELECT DISTINCT
+	-- emp_location
+	-- remote_ration
+	job_title
+FROM
+	salaries
+ORDER BY job_title ASC 	
+
+=============================================================================================================================== Завдання 5
+Вивести кількість унікальних значень по колонці
+
+SELECT COUNT(DISTINCT job_title) AS job_title 
+FROM
+	salaries
+
+=============================================================================================================================== Завдання 6
+Вивести Середню, Мінімальну та максимальну  ЗП для 2023
+
+SELECT 
+	ROUND(AVG(salary_in_usd),0)  AS avg_Sallary
+	, MIN(salary_in_usd) AS min_Sallary
+	, MAX(salary_in_usd) AS max_Sallary	
+
+FROM
+	salaries
+WHERE year ='2023'	
+
+=============================================================================================================================== Завдання 7
+Вивести 5 найвищих зарплат в 2023 році для представників спеціальності ML Engineer. Заробітні плати перевести в грн.
+-- ML Engineer
+SELECT 
+	year
+	, job_title
+	, salary_in_usd
+	, (salary_in_usd * 43) AS salary_in_uah
+	
+FROM
+	salaries
+	
+WHERE year = '2023'
+AND 
+	job_title='ML Engineer'
+ORDER BY salary_in_usd DESC	
+LIMIT 5
+;
+--//////////////////////////////////
+============================================================================================================================== Завдання 8
+Вивести унікальні значення колонки "remote_ratio",  
+формат данних має бути дробовим з двома знаками після коми ( 50 має відображатись , як 0,50)
+
+--//////////////////////////////////
+SELECT 
+ DISTINCT ROUND((remote_ration /100.0),2) AS remote_frac
+	
+FROM
+	salaries
+
+============================================================================================================================== Завдання 9  CASE WHEN ELSE END
+Вивести данні таблиц, додавши колонку "exp_level_full" з повною назвою рівнів досвіду працівників відповідно до колонки exp_level
+
+
+SELECT *
+	FROM
+	salaries
+;
+--//////////////////////////////////	
+--EX Executive-level
+--MI Mid-level
+--EN Entry-level
+--SE Senior-level
+
+SELECT *
+	-- ,DISTINCT exp_level
+	,CASE
+		WHEN exp_level='MI' THEN 'Mid-level'
+		WHEN exp_level='EN' THEN 'Entry-level'
+		WHEN exp_level='SE' THEN 'Senior-level'
+		
+		ELSE 'Executive-level'	
+		
+		END AS exp_level_full
+		
+FROM
+	salaries
+
+-------------------------------------------------------
+SELECT *
+	-- ,DISTINCT exp_level
+	,CASE
+		WHEN salary_in_usd < 50000 THEN 'Category 1'
+		WHEN salary_in_usd < 100000 THEN 'Category 2'
+		WHEN salary_in_usd < 150000 THEN 'Category 3'
+		
+		ELSE 'Category 4'	
+		
+		END AS salari_level
+		
+FROM
+	salaries
+============================================================================================================================== Завдання 10
+Дослідити всі колонки на наявність відсутніх значень
+
+SELECT 
+	COUNT(*) - COUNT(salary_in_usd)
+FROM salaries
+
+==================================================================================================================================================== Filters
+
+--------------------------------------------- Filters
+SELECT * 
+FROM 
+	salaries 
+WHERE
+	year < '2023'
+LIMIT 20
+;
+------------------------------------
+
+SELECT * 
+FROM 
+	salaries 
+WHERE
+	exp_level ='SE'
+LIMIT 20
+;
+------------------------------------
+SELECT * 
+FROM 
+	salaries
+WHERE 
+		exp_level = 'MI'
+	OR
+		exp_level = 'SE' 
+	OR
+		exp_level = 'MI'
+	-- NOT
+	
+LIMIT 20
+;
+-------------------------------------
+SELECT 
+	-- *
+	DISTINCT year
+FROM 
+	salaries
+WHERE 1=1
+	AND
+		year > '2020'
+	AND 
+		year < '2023'
+	ORDER BY year 
+LIMIT 20
+
+-------------------------------------  BETWEEN
+SELECT 
+	-- *
+	DISTINCT year
+FROM 
+	salaries
+WHERE 1=1
+	AND year BETWEEN 2020 AND 2023 
+	
+	-- AND
+	-- 	year > '2020'
+	-- AND 
+	-- 	year < '2023'
+	ORDER BY year 
+LIMIT 20
+
+------------------------------------- NOT BETWEEN
+SELECT 
+	-- *
+	DISTINCT year
+FROM 
+	salaries
+WHERE 1=1
+	AND year NOT BETWEEN 2021 AND 2023 
+	
+	-- AND
+	-- 	year > '2020'
+	-- AND 
+	-- 	year < '2023'
+	ORDER BY year 
+LIMIT 20
+
+--------------------------------------- IN
+SELECT 
+	-- *
+	DISTINCT year
+FROM 
+	salaries
+WHERE 1=1
+	AND year IN(2020, 2021) 
+	
+	-- AND
+	-- 	year > '2020'
+	-- AND 
+	-- 	year < '2023'
+	ORDER BY year 
+LIMIT 20
+
+--------------------------------------- NOT IN
+SELECT 
+	-- *
+	DISTINCT year
+FROM 
+	salaries
+WHERE 1=1
+	AND year NOT IN(2020, 2021) 
+	
+	ORDER BY year 
+LIMIT 20
+
+
+--------------------------------------- IN ('text')
+SELECT 
+	-- *
+	DISTINCT job_title
+FROM 
+	salaries
+WHERE 1=1
+	AND job_title IN('Data Scientist', 'Product Data Analyst') 
+	
+LIMIT 20
+
+		
+--------------------------------------- LIKE ('text ' приблизно)
+SELECT 
+	-- *
+	DISTINCT job_title
+FROM 
+	salaries
+WHERE 1=1
+	-- AND job_title LIKE ('Data S%')
+	-- AND job_title NOT LIKE ('Data_A%')
+	-- AND job_title LIKE ('Data_A%')---------------- Відчутний до регістрів
+	AND job_title LIKE ('_ata_A%')
+	
+LIMIT 20
+;
+
+--------------------------------------- iLIKE ('text ' приблизно)
+SELECT 
+	-- *
+	DISTINCT job_title
+FROM 
+	salaries
+WHERE 1=1
+	
+	AND job_title iLIKE ('data_A%')
+	
+LIMIT 20
+
+
+
+
+
+
+
+
+
+
+-----------------------------------
 
 
 
 ---------------------------------
-00 : 53 : 22
+01 : 18 :  06
