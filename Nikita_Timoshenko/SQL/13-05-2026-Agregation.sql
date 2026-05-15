@@ -19,15 +19,42 @@ LIMIT 20
 
 */
 
-SELECT  
-	job_title
+SELECT 
+	year
+	, job_title
+	, exp_level
 	, COUNT(*) AS job_nmb
 	, ROUND(AVG(salary_in_usd*44),2) AS salary_avg_in_uah
 FROM salaries
-GROUP BY job_title
-ORDER BY salary_avg_in_uah DESC
+WHERE year ='2023'
+GROUP BY job_title, exp_level, year
+ORDER BY job_title, exp_level
 ;
 
+------------------------------------------------------- HAVING
+/*
+
+Для професій, що зустрічаються лише 2 раз
+навести заробітну плату
+
+*/
+
+
+SELECT 
+	year
+	, job_title
+	-- , COUNT(*) AS job_nmb
+	, ROUND(AVG(salary_in_usd*44),2) AS salary_avg_in_uah
+FROM salaries
+WHERE year =2023
+GROUP BY job_title, year
+HAVING COUNT(*)=2
+	AND ROUND(AVG(salary_in_usd*44),2) > 4000000
+ORDER BY 2
+;
+
+
+---------------------------------------------
 
 
 
