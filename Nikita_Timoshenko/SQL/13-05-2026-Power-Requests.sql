@@ -83,7 +83,7 @@ WHERE emp_location IN
 
 
 
-
+---------------------------------------- Варіант 1 
 SELECT  MIN(t.max_salary_in_usd)
 FROM 
 	(
@@ -95,6 +95,7 @@ FROM
 	) AS t
 ;	
 
+----------------------------------------- Варіант 2
 SELECT compani_location
 		, MAX(salary_in_usd) AS max_salary_in_usd 
 	FROM salaries
@@ -103,6 +104,62 @@ SELECT compani_location
 	ORDER BY 2
 LIMIT 1	
 ;
+
+----------------------------------------------------------------- Завдання 4
+-- По кожній професцї вивести різницю між середньою зп та 
+-- максимальною зп усіх спеціалістів
+
+-- 1. Максимальна ЗП 
+SELECT MAX(salary_in_usd) AS max_salary_in_usd 
+FROM salaries
+;
+
+--2. Середня зп по всіх професіях
+SELECT 
+	job_title 
+	, AVG(salary_in_usd) -
+	(
+		SELECT MAX(salary_in_usd) AS max_salary_in_usd 
+		FROM salaries
+	) AS  avg_dif_max_salary_in_usd
+	 
+FROM salaries
+GROUP BY 1
+;
+
+-------------------------------------------------------------- Завдання 5
+-- Вивести данні по співробітнику, який отримує другу за розміром зп таблиці
+
+-------------------- Варіант 1
+SELECT *
+FROM
+	(
+	SELECT 
+		job_title
+		, salary_in_usd 
+	FROM  salaries
+	ORDER BY salary_in_usd DESC
+	LIMIT 2
+	)
+ORDER BY salary_in_usd ASC	
+LIMIT 1
+;
+-------------------- Варіант 2
+SELECT 
+		job_title
+		, salary_in_usd 
+	FROM  salaries
+	ORDER BY salary_in_usd DESC
+	LIMIT 1 OFFSET 1 
+
+
+	
+
+
+
+
+
+
 
 
 
