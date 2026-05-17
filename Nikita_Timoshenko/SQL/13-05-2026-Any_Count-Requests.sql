@@ -25,7 +25,7 @@ FROM
 	salaries	
 ;
 
---------------------------
+-------------------------- Кількість відсутніх значень в колонці job_title
 SELECT
 	job_title
 	, COUNT (*)
@@ -36,7 +36,7 @@ GROUP BY job_title
 ORDER BY missing_values_job_title DESC
 ;
 
------------------------------------------------
+----------------------------------------------- 
 SELECT 
 	job_title
 	, COUNT(*)
@@ -85,6 +85,18 @@ SELECT
 	, COUNT(*)
 FROM salaries
 GROUP BY 1
+
+;
+------------------------------------------------------ Зв'язок між 
+-- remote_ration та salary_in_usd
+SELECT 
+	corr(remote_ration, salary_in_usd)
+FROM salaries
+;
+
+------------------------------------------------------
+
+
 
 
 
