@@ -52,8 +52,43 @@ Surrogate Key - Комбінований ключ, що  складається 
 
 DDL Constrains - обмеження 
 
+Common Table Expression - 
+--------------------------------------------------------------------
+---------------------------------------------------------------------------------- tab 1
+WITH melomaniacs AS (
+SELECT  
+	c.CustomerId 
+	, c.FirstName 
+	, c.LastName 
+	, COUNT(DISTINCT g.GenreId) AS nmb_genres
+FROM InvoiceLine il
+LEFT JOIN Track t  ON il.TrackId 
+LEFT JOIN Genre g   ON t.GenreId = g.GenreId  
+LEFT JOIN Invoice i ON il.InvoiceId = i.InvoiceId 
+LEFT JOIN Customer c ON i.CustomerId  = c.CustomerId 
+GROUP BY 1,2,2
+HAVING COUNT(DISTINCT g.GenreId) >= 3
 
+)
+----------------------------------------------------------------------------------- tab 2
+, invoices AS (
 
+SELECT *
+FROM Invoice i 
+WHERE i.InvoiceDate BETWEEN '2009-01-01' AND '2010-01-01'
+
+)
+
+-------------------------------------------------------
+
+----------------------------------------------------------------------------------- tab result
+SELECT 
+--*
+
+FROM melomaniacs m
+LEFT JOIN invoices i ON m.CustomerId = i.CustomerId
+WHERE i.CustomerId IS NOT NULL 
+-------------------------------------------------------------------------
 
  
 

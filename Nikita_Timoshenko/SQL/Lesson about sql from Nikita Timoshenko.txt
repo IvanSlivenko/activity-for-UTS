@@ -536,6 +536,75 @@ LEFT JOIN Customer c ON i.CustomerId  = c.CustomerId
 GROUP BY 1,2,2
 HAVING COUNT(DISTINCT g.GenreId) >= 3 
 
+============================================================================
+WITH melomaniacs AS (
+
+SELECT  
+	c.CustomerId 
+	, c.FirstName 
+	, c.LastName 
+	, COUNT(DISTINCT g.GenreId) AS nmb_genres
+FROM InvoiceLine il
+LEFT JOIN Track t  ON il.TrackId 
+LEFT JOIN Genre g   ON t.GenreId = g.GenreId  
+LEFT JOIN Invoice i ON il.InvoiceId = i.InvoiceId 
+LEFT JOIN Customer c ON i.CustomerId  = c.CustomerId 
+GROUP BY 1,2,2
+HAVING COUNT(DISTINCT g.GenreId) >= 3
+
+)
+, invoices AS (
+
+SELECT *
+FROM Invoice i 
+WHERE i.InvoiceDate BETWEEN '2009-01-01' AND '2010-01-01'
+
+)
+
+
+
+SELECT 
+*
+FROM melomaniacs m
+WHERE m.CustomerId IN (SELECT CustomerId FROM invoices)
+
+===========================================================================
+
+------------------------------------------------------------------------------------ Віконні функції  ///////////////////////////////
+Функції агрегації
+-------------------------
+with cte as (
+select 
+	s.job_title as job_title 
+	, salary_in_usd
+	, ROUND(AVG(salary_in_usd)   OVER(partition by job_title),2) as avg_salary_in_usd
+	, ROUND(MAX(salary_in_usd)   OVER(partition by job_title),2) as max_salary_in_usd
+	, ROUND(MIN(salary_in_usd)   OVER(partition by job_title),2) as min_salary_in_usd
+	, emp_location
+from salaries s	
+where year = '2023'
+)
+
+select 
+*
+, ROUND(salary_in_usd  / max_salary_in_usd, 2) as ratio_max
+, ROUND(salary_in_usd  / avg_salary_in_usd, 2) as ratio_avg
+from cte
+
+--where 
+--	job_title = 'Data Analyst'
+--	and 
+--emp_location = 'UA'
+--order by salary_in_usd
+;
+
+
+-------------------------
+функції ранжування
+функції зміщення
+
+
+
 
 
 
@@ -547,4 +616,4 @@ HAVING COUNT(DISTINCT g.GenreId) >= 3
 
 
 ---------------------------------
-02 : 35 :  53
+02 : 51 :  42
