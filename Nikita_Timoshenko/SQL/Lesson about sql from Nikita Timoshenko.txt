@@ -629,12 +629,66 @@ FROM Invoice i
 
 функції ранжування - правила визначення   рейтингу
 //////////////////////////////////////////////////////////////////////////////////
+----------------------------------------------------------------------------------------------------------------------- row_number, rank, dense_rank
+select 
+--*
+i.InvoiceId
+, i.CustomerId  
+, Total
+, ROW_NUMBER()  OVER(partition by CustomerId  order by Total DESC) as invoise_nmb
+, RANK()        OVER(partition by CustomerId  order by Total DESC) as invoise_rank
+, DENSE_RANK()  OVER(partition by CustomerId  order by Total DESC) as invoise__dance_rank
+FROM Invoice i 
+order by CustomerId
 
+-----------------------------------------------------------------------------------------------
 
+with cte as(
+select 
+--*
+i.InvoiceId
+, i.CustomerId  
+, Total
+, ROW_NUMBER()  OVER(partition by CustomerId  order by Total DESC) as invoice_nmb
+, RANK()        OVER(partition by CustomerId  order by Total DESC) as invoice_rank
+, DENSE_RANK()  OVER(partition by CustomerId  order by Total DESC) as invoice__dance_rank
+FROM Invoice i 
+order by CustomerId
+)
 
+select 
+*
+from cte
+where invoice_nmb = 1
+
+-----------------------------------------------------------------------------------------------
 
 функції зміщення
 
+////////////////////////////////////////////////////////////////////////////////////////////// 
+----------------------------------------------------------------------------------------------------------------------- LAG, JULIANDAY, LEAD, FIRST_VALUE
+select 
+--*
+i.InvoiceId 
+, i.CustomerId 
+, i.InvoiceDate 
+, i.Total 
+, LAG(Total, 1) OVER(partition  by i.CustomerId Order by i.InvoiceDate) as lag_total
+, LAG(i.InvoiceDate , 1) OVER(partition  by i.CustomerId Order by i.InvoiceDate) as lag_invoiceDate
+, JULIANDAY(InvoiceDate) - JULIANDAY(LAG(i.InvoiceDate , 1) OVER(partition  by i.CustomerId Order by i.InvoiceDate)) as diff_in_days
+, LEAD(Total, 1) OVER(partition  by i.CustomerId Order by i.InvoiceDate) as lead_total
+FROM Invoice i
+order by CustomerId 
+
+--------
+SELECT 
+--	*
+	i.InvoiceId 
+	, i.CustomerId 
+	, i.InvoiceDate 
+	, i.Total 
+	, FIRST_VALUE(i.Total ) OVER (PARTITION BY i.CustomerId ORDER BY i.InvoiceDate ASC) AS first_amount
+FROM Invoice i 	
 
 
 
@@ -648,4 +702,4 @@ FROM Invoice i
 
 
 ---------------------------------
-03 : 06 :  55
+03 : 15 :  50
