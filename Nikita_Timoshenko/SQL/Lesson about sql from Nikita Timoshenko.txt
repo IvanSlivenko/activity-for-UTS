@@ -666,7 +666,7 @@ where invoice_nmb = 1
 функції зміщення
 
 ////////////////////////////////////////////////////////////////////////////////////////////// 
------------------------------------------------------------------------------------------------------------------------ LAG, JULIANDAY, LEAD, FIRST_VALUE
+----------------------------------------------------------------------------------------------------------------------- LAG, JULIANDAY, LEAD, FIRST_VALUE, LAST_VALUE
 select 
 --*
 i.InvoiceId 
@@ -690,9 +690,54 @@ SELECT
 	, FIRST_VALUE(i.Total ) OVER (PARTITION BY i.CustomerId ORDER BY i.InvoiceDate ASC) AS first_amount
 FROM Invoice i 	
 
+-----------------------------------------------
+SELECT 
+--	*
+	i.InvoiceId 
+	, i.CustomerId 
+	, i.InvoiceDate 
+	, i.Total 
+	, FIRST_VALUE(i.Total ) OVER (PARTITION BY i.CustomerId ORDER BY i.InvoiceDate ASC) AS first_amount
+	, LAST_VALUE(i.Total) OVER (
+        PARTITION BY i.CustomerId 
+        ORDER BY i.InvoiceDate ASC
+        ROWS BETWEEN UNBOUNDED PRECEDING 
+        AND UNBOUNDED FOLLOWING
+    ) AS last_amount
+FROM Invoice i
 
 
 
+//////////////////////////////////////////////////////////////////////////////// 
+------------------------------------------------------------------------------------------------------------------------- Адміністрування баз данних
+CREATE
+ALTER
+INSERT
+DROP
+
+----------------------------------------
+select *
+from information_schema."columns" c 
+;
+------------------------------------------------- Створюємо таблицю
+create table test (
+col_1 text,
+col_2 int
+)
+;
+
+------------------------------------------------- Додаємо колонку у таблицю
+alter table  test 
+add column col_3 text;
+
+
+------------------------------------------------- Переіменовуємо колонку у таблиці
+alter table  test
+rename column col_3 to col_4;
+
+------------------------------------------------- Видаляємо колонку
+alter table test
+drop column col_4;
 
 
 
@@ -702,4 +747,4 @@ FROM Invoice i
 
 
 ---------------------------------
-03 : 15 :  50
+03 : 19 :  47
