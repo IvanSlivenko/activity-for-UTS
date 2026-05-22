@@ -6,13 +6,51 @@
 
 3.Візуалізація
 
+https://github.com/Youtube-NikitaTymoshenko/googleSheets-course
+
+////////////////////////////////////////////////////////////////////////
+Створення робочого файлу
+Налаштування робочої книги
+МЕТА-данні та Change log
+
+
+
+---------------------------------------------------------------------- import from localhostUrl
+file -> import -> upload
+
+
+
+---------------------------------------------------------------------- import from GoogleShets
+=importRange(localURL,nameShet!A:Z) 
+
+
+
+---------------------------------------------------------------------- import from WEB 
+=importData(url) ---- import from WEB
+
+
+Сайт, inspect HTML права клавіша -> Copy -> FULLXPASS
+
+=IMPORTHTML('МЕТА'!D9;"table";2)
+
+ МЕТА'!D9 = https://en.wikipedia.org/wiki/States_and_territories_of_Australia
 
 
 
 
---------------------------------------------------------
+
+
+
+
+--------------------------------------------------------	
+---------------------------------------------------------------- google acount
+adekvatofarvater@gmail.com
+https://drive.google.com/drive/u/1/home
+----------------------------------------------------------------
+
+
 
 https://youtu.be/gYjQRW6N6Ws
 
 -------------------------------------------
-00 : 02 : 47
+00 : 37 : 14
