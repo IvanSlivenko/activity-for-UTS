@@ -739,6 +739,28 @@ rename column col_3 to col_4;
 alter table test
 drop column col_4;
 
+------------------------------------------------- Додаємо данні в колонки таблиці test
+insert into test (col_1, col_2)
+values ('text', 1) 
+;
+
+------------------------------------------------- Копіювання таблиці
+create  table test_copy as
+select * from test
+;
+
+
+------------------------------------------------- Переглядаємо всю таблицю test
+select *
+from test t 
+;
+
+------------------------------------------------- Переглядаємо всю таблицю test_copy
+select *
+from test_copy t_c 
+;
+
+
 
 
 
