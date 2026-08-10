@@ -31,3 +31,8 @@ python -m pip install python-dotenv
 --------------------------------
 source .venv/Scripts/activate
 --------------------------------
+
+----------------------------------------- Lesson 2
+https://youtu.be/KGxpEjGUk4U
+-----------------------------------------
+00 : 14 : 43

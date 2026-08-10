@@ -26,19 +26,16 @@ async def start(update, context):
 
     await send_photo(update, context, "opener")
     await send_text(update, context,"Очікую повідомлень...")
-
-async def gpt(update, context):
-    dialog.mode = "gpt"
-    await send_photo(update, context,"gpt")
-    msg_gpt = load_message("gpt")
-    await send_text(update, context, msg_gpt)
-
-async def gpt_dialog(update, context):
-    pass
-
 async def hello(update, context):
-    if(dialog.mode == "gpt"):
-        await send_text(update, context, "GPT-mode")
+
+    await send_text_buttons(update, context, "Доброго дня " + update.message.text, {
+        "start": "START",
+        "stop": "STOP"
+    })
+
+async def hello_2(update, context):
+
+    await send_text(update, context, "Доброго дня " + update.message.text )
 
 async def buttons_handler(update, context):
     query = update.callback_query.data
@@ -47,16 +44,11 @@ async def buttons_handler(update, context):
     elif query == "stop":
         await send_text(update, context, "Stopped")
 
-dialog = Dialog()
-dialog.mode = None
-
-# chatgpt = ChatGptService(token=)
-
 app = ApplicationBuilder().token(TOKEN).build()
 app.add_handler(CommandHandler("Start", start))
-app.add_handler(CommandHandler("gpt", gpt))
 
 app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, hello ))
-# app.add_handler(CallbackQueryHandler(buttons_handler))
+
+app.add_handler(CallbackQueryHandler(buttons_handler))
 
 app.run_polling()
