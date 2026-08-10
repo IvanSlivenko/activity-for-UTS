@@ -1,0 +1,33 @@
+----------------------------- lesson 0
+https://youtu.be/MzCj0AiECH8
+
+python -m venv .venv
+
+source .venv/Scripts/activate
+
+which python
+
+python -m pip install -r requirements.txt
+
+-----------------------------
+
+------------------------------------------ Lesson 1
+https://youtu.be/z7EtHovp71A
+
+telegramm
+-------
+name
+GPT_UmanProger_bot
+
+Use this token to access the HTTP API:
+8204102926:AAF_2GsktArUZ6uZxIbItjlV2Rr94HLNn9M
+
+python -m pip install python-dotenv
+-------
+------------------------------------------
+00 : 00 : 00
+
+
+--------------------------------
+source .venv/Scripts/activate
+--------------------------------
