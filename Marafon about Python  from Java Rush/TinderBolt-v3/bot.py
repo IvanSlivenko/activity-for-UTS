@@ -2,7 +2,7 @@ from telegram.ext import ApplicationBuilder, MessageHandler, filters, CallbackQu
 
 from gpt import *
 from util import *
-
+# ------------------------------------------------------ telegramm
 with open("pass.txt", "r", encoding="utf-8") as file:
     line = file.read().strip()
 
@@ -10,6 +10,14 @@ TELEGRAM_BOT_TOKEN = line.split("=", 1)[1]
 
 TOKEN = TELEGRAM_BOT_TOKEN
 
+# ---------------------------------------------------------- GPT
+with open("GPT_KEY.txt", "r", encoding="utf-8") as file:
+    line_2 = file.read().strip()
+
+GPT_TOKEN = line_2.split("=", 1)[1]
+
+TOKEN_GPT = GPT_TOKEN
+# --------------------------------
 async def start(update, context):
 
     msg = load_message("main")
@@ -34,12 +42,16 @@ async def gpt(update, context):
     await send_text(update, context, msg_gpt)
 
 async def gpt_dialog(update, context):
-    pass
+    text = update.message.text
+    prompt = load_prompt("gpt")
+    answer = await chatgpt.send_question(prompt, text)
+    await send_text(update, context, answer)
+
 
 async def hello(update, context):
     if(dialog.mode == "gpt"):
-        await send_text(update, context, "GPT-mode")
-
+        # await send_text(update, context, "GPT-mode")
+        await gpt_dialog(update, context)
 async def buttons_handler(update, context):
     query = update.callback_query.data
     if query == "start":
@@ -50,7 +62,7 @@ async def buttons_handler(update, context):
 dialog = Dialog()
 dialog.mode = None
 
-# chatgpt = ChatGptService(token=)
+chatgpt = ChatGptService(token=TOKEN_GPT)
 
 app = ApplicationBuilder().token(TOKEN).build()
 app.add_handler(CommandHandler("Start", start))
