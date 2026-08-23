@@ -8,25 +8,22 @@ from kivy.core.window import Window
 #from kivy.uix.floatlayout import FloatLayout
 #from kivy.uix.image import Image
 
-Builder.load_file('kivygui/update_label.kv')
+#Set the app size
+Window.size = (500,700)
+
+Builder.load_file('kivygui/calc.kv')
 
 
 
 class MyLayout(Widget):
-    def press(self):
-        #Create variables for our widgets
-        name = self.ids.name_input.text
-        #print("name : ",name)
+    def clear(self):
+        self.ids.calc_input.text=0
 
-        #Update the Label
-        self.ids.name_label.text=f'Ви написали : {name}'
 
-        #Clear input box
-        self.ids.name_input.text = ''
 
-class AwesomeApp(App):
+class CalculatorApp(App):
     def build(self):
         return MyLayout()
 
 if __name__ == "__main__":
-    AwesomeApp().run()
+    CalculatorApp().run()
