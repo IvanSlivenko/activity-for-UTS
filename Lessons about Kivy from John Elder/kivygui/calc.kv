@@ -41,6 +41,8 @@
                 size_hint: (.2,.2)
                 font_size: 32
                 text: "/"
+                on_press: root.divide()
+
 #-------------------------------------------------------
 #Row 2
             Button:
@@ -49,6 +51,7 @@
                 font_size: 32
                 text: "7"
                 background_color: (157/255,157/255,157/255,1)
+                on_press: root.button_press(7)
 
             Button:
                 id: id_8
@@ -56,6 +59,7 @@
                 font_size: 32
                 text: "8"
                 background_color: (157/255,157/255,157/255,1)
+                on_press: root.button_press(8)
 
             Button:
                 id: id_9
@@ -63,12 +67,14 @@
                 font_size: 32
                 text: "9"
                 background_color: (157/255,157/255,157/255,1)
+                on_press: root.button_press(9)
 
             Button:
                 id: id_x
                 size_hint: (.2,.2)
                 font_size: 32
                 text: "X"
+                on_press: root.multiply()
 
 #--------------------------------------------------------------
 #Row 3
@@ -78,6 +84,7 @@
                 font_size: 32
                 text: "4"
                 background_color: (157/255,157/255,157/255,1)
+                on_press: root.button_press(4)
 
             Button:
                 id: id_5
@@ -85,6 +92,8 @@
                 font_size: 32
                 text: "5"
                 background_color: (157/255,157/255,157/255,1)
+                on_press: root.button_press(5)
+
 
             Button:
                 id: id_6
@@ -92,12 +101,14 @@
                 font_size: 32
                 text: "6"
                 background_color: (157/255,157/255,157/255,1)
+                on_press: root.button_press(6)
 
             Button:
                 id: id_minus
                 size_hint: (.2,.2)
                 font_size: 32
                 text: "-"
+                on_press: root.subtract()
 
 #----------------------------------------------------------
 #Row 4
@@ -107,6 +118,7 @@
                 font_size: 32
                 text: "1"
                 background_color: (157/255,157/255,157/255,1)
+                on_press: root.button_press(1)
 
             Button:
                 id: id_2
@@ -114,6 +126,7 @@
                 font_size: 32
                 text: "2"
                 background_color: (157/255,157/255,157/255,1)
+                on_press: root.button_press(2)
 
             Button:
                 id: id_3
@@ -121,12 +134,14 @@
                 font_size: 32
                 text: "3"
                 background_color: (157/255,157/255,157/255,1)
+                on_press: root.button_press(3)
 
             Button:
                 id: id_plus
                 size_hint: (.2,.2)
                 font_size: 32
                 text: "+"
+                on_press: root.add()
 
 #------------------------------------------------------------
 #Row 5
@@ -142,6 +157,7 @@
                 font_size: 32
                 text: "0"
                 background_color: (157/255,157/255,157/255,1)
+                on_press: root.button_press(0)
 
             Button:
                 id: id_n3
@@ -154,6 +170,7 @@
                 size_hint: (.2,.2)
                 font_size: 32
                 text: "="
+                on_press: root.eguals()
 
 
 

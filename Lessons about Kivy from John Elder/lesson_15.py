@@ -19,6 +19,17 @@ class MyLayout(Widget):
     def clear(self):
         self.ids.calc_input.text=0
 
+    #Create a button pressing function
+    def button_press(self, button):
+        #pass
+        prior=self.ids.calc_input.text
+
+        if prior == '0':
+            self.ids.calc_input.text = ''
+            self.ids.calc_input.text = f'{button}'
+        else:
+            self.ids.calc_input.text += str(button)
+
 
 
 class CalculatorApp(App):
