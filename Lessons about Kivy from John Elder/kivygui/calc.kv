@@ -27,7 +27,8 @@
                 id: id_CE
                 size_hint: (.2,.2)
                 font_size: 32
-                text: "CE"
+                text: "<<"
+
 
             Button:
                 id: id_clear
@@ -41,7 +42,7 @@
                 size_hint: (.2,.2)
                 font_size: 32
                 text: "/"
-                on_press: root.divide()
+                on_press: root.math_sign("/")
 
 #-------------------------------------------------------
 #Row 2
@@ -74,7 +75,7 @@
                 size_hint: (.2,.2)
                 font_size: 32
                 text: "X"
-                on_press: root.multiply()
+                on_press: root.math_sign("*")
 
 #--------------------------------------------------------------
 #Row 3
@@ -108,7 +109,7 @@
                 size_hint: (.2,.2)
                 font_size: 32
                 text: "-"
-                on_press: root.subtract()
+                on_press: root.math_sign("-")
 
 #----------------------------------------------------------
 #Row 4
@@ -141,7 +142,7 @@
                 size_hint: (.2,.2)
                 font_size: 32
                 text: "+"
-                on_press: root.add()
+                on_press: root.math_sign("+")
 
 #------------------------------------------------------------
 #Row 5
