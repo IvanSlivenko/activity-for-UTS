@@ -19,6 +19,11 @@ class MyLayout(Widget):
     def clear(self):
         self.ids.calc_input.text=str(0)
 
+    def remove(self):
+        prior = self.ids.calc_input.text
+        prior=prior[:-1]
+        self.ids.calc_input.text=prior
+
     #Create a button pressing function
     def button_press(self, button):
         #pass
@@ -34,23 +39,37 @@ class MyLayout(Widget):
         prior = self.ids.calc_input.text
         self.ids.calc_input.text = f'{prior}{sign}'
 
+    def dot(self):
+        prior = self.ids.calc_input.text
+        if "." in prior:
+            pass
+        else:
+            prior = f'{prior}.'
+            self.ids.calc_input.text = prior
+
+    def pos_neg(self):
+        prior = self.ids.calc_input.text
+        if "-" in prior:
+            self.ids.calc_input.text = f'{prior.replace("-","")}'
+        else:
+            self.ids.calc_input.text = f'-{prior}'
 
     def eguals(self):
-        prior = self.ids.calc_input.text
-        if "+" in prior:
-            num_list=prior.split("+")
-            #print('num_list',num_list)
-            answer = 0
-            for number in num_list:
-                answer = answer + int(number)
-            self.ids.calc_input.text = str(answer)
-        if "+" in prior:
-            num_list=prior.split("+")
-            #print('num_list',num_list)
-            answer = 0
-            for number in num_list:
-                answer = answer + int(number)
-            self.ids.calc_input.text = str(answer)
+            prior = self.ids.calc_input.text
+            if "+" in prior:
+                num_list=prior.split("+")
+                #print('num_list',num_list)
+                answer = 0.0
+                for number in num_list:
+                    answer = answer + float(number)
+                self.ids.calc_input.text = str(answer)
+            if "+" in prior:
+                num_list=prior.split("+")
+                #print('num_list',num_list)
+                answer = 0
+                for number in num_list:
+                    answer = answer + float(number)
+                self.ids.calc_input.text = str(answer)
 
 
 

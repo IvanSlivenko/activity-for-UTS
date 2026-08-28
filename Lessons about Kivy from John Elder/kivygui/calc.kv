@@ -24,18 +24,19 @@
                 text: "%"
 
             Button:
-                id: id_CE
-                size_hint: (.2,.2)
-                font_size: 32
-                text: "<<"
-
-
-            Button:
                 id: id_clear
                 size_hint: (.2,.2)
                 font_size: 32
                 text: "C"
                 on_press: root.clear()
+
+            Button:
+                # <<
+                id: id_CE
+                size_hint: (.2,.2)
+                font_size: 32
+                text: u"\u00AB"
+                on_press: root.remove()
 
             Button:
                 id: id_slash
@@ -151,6 +152,7 @@
                 size_hint: (.2,.2)
                 font_size: 32
                 text: "+/-"
+                on_press: root.pos_neg()
 
             Button:
                 id: id_n2
@@ -165,6 +167,7 @@
                 size_hint: (.2,.2)
                 font_size: 32
                 text: "."
+                on_press: root.dot()
 
             Button:
                 id: id_n4
