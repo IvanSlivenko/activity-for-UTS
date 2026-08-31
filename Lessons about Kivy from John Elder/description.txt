@@ -5,6 +5,11 @@ source virt/Scripts/activate  --------------------Увімкнути вірту�
 
 python -m pip install kivy
 
+pip install PyInstaller
+
+pyinstaller lesson_20.py -w
+
+
 
 -----------------------------------------------------------------------
 https://youtu.be/dLgquj0c5_U?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg
@@ -149,7 +154,12 @@ https://youtu.be/xeXCrZrJazI?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg
 
 https://youtu.be/NEko7jWYKiE?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg
 ---------------------------------------------------------------------
-00 : 00 : 35
+pip install PyInstaller
+
+pyinstaller lesson_20.py -w
+
+---------------------------------------------------------------------
+00 : 04 : 57
 
 
 
