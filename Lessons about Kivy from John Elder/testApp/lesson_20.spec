@@ -1,3 +1,5 @@
+
+
 # -*- mode: python ; coding: utf-8 -*-
 
 
@@ -5,7 +7,9 @@ a = Analysis(
     ['lesson_20.py'],
     pathex=[],
     binaries=[],
-    datas=[],
+    datas=[
+    ('calc.kv', '.'),
+],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
@@ -15,6 +19,8 @@ a = Analysis(
     optimize=0,
 )
 pyz = PYZ(a.pure)
+
+
 
 exe = EXE(
     pyz,

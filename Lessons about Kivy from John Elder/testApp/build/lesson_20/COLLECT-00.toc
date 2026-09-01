@@ -35,6 +35,10 @@
    'D:\\GitHub\\activity-for-UTS\\Lessons about Kivy from John '
    'Elder\\testApp\\build\\lesson_20\\base_library.zip',
    'DATA'),
+  ('calc.kv',
+   'D:\\GitHub\\activity-for-UTS\\Lessons about Kivy from John '
+   'Elder\\testApp\\calc.kv',
+   'DATA'),
   ('certifi\\cacert.pem',
    'D:\\GitHub\\activity-for-UTS\\Lessons about Kivy from John '
    'Elder\\virt\\Lib\\site-packages\\certifi\\cacert.pem',

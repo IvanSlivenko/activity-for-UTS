@@ -89,7 +89,7 @@
  [],
  False,
  False,
- 1788203030,
+ 1788291743,
  [('runw.exe',
    'D:\\GitHub\\activity-for-UTS\\Lessons about Kivy from John '
    'Elder\\virt\\Lib\\site-packages\\PyInstaller\\bootloader\\Windows-64bit-intel\\runw.exe',

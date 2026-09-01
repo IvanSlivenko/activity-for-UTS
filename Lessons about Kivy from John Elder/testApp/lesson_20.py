@@ -11,8 +11,19 @@ from kivy.core.window import Window
 #Set the app size
 Window.size = (500,700)
 
-Builder.load_file('kivygui/calc.kv')
+#Builder.load_file('calc.kv')
 
+#---------------------------------
+import os
+import sys
+
+if getattr(sys, 'frozen', False):
+    BASE_DIR = sys._MEIPASS
+else:
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+Builder.load_file(os.path.join(BASE_DIR, "calc.kv"))
+#---------------------------------
 
 
 class MyLayout(Widget):
