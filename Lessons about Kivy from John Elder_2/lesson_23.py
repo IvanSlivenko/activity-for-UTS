@@ -11,7 +11,7 @@ from kivy.core.window import Window
 #Set the app size
 Window.size = (700,500)
 
-Builder.load_file('round_buttons.kv')
+Builder.load_file('menu_23.kv')
 
 
 
@@ -21,7 +21,7 @@ class MyLayout(Widget):
 
 class CalculatorApp(App):
     def build(self):
-        Window.clearcolor = (1,1,1,1)
+        Window.clearcolor = (0,0,0,0)
         return MyLayout()
 
 if __name__ == "__main__":
