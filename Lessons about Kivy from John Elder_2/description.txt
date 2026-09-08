@@ -198,10 +198,12 @@ https://youtu.be/YlRd4rw_vBw?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg
 ---------------------------------------------------------------------
 pip install PyEnchant
 pip freeze
+
+pip install pyenchant
 ---------------------------------------------------------------------
 https://youtu.be/NjUV_QxWNEQ?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg
 ---------------------------------------------------------------------
-00 : 04 : 57
+00 : 08 : 57
 
 
 
