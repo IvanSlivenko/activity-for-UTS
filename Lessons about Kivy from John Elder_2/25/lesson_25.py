@@ -8,7 +8,6 @@ from kivy.core.spelling import Spelling
 
 
 
-
 #print("Spelling",Spelling)
 
 #from kivy.uix.floatlayout import FloatLayout
@@ -17,29 +16,13 @@ from kivy.core.spelling import Spelling
 #Set the app size
 Window.size = (700,500)
 
-Builder.load_file('spell_24.kv')
-
-
+Builder.load_file('slider_25.kv')
 
 class MyLayout(Widget):
-    def press(self):
-        #print(self.ids.word_input.text)
-        s = Spelling()
-        #s.select_language('uk_UA')
-        #s.select_language('en_US')
-        s.select_language('uk_UA')
-        #print(s.list_languages())
-
-        word = self.ids.word_input.text
-
-        options = s.suggest(word)
-        x = ''
-
-        for item in options:
-            x=f'{x} {item}'
-
-
-        self.ids.word_label.text = f'Suggestions: {x}'
+    def slide_it(self, *args):
+        self.ids.slider_label.text=str(args[1])
+        self.ids.slider_label.font_size = self.ids.slider_label.font_size+args[1]
+        # print(args[1])
 class AwesomeApp(App):
     def build(self):
         Window.clearcolor = (0,0,0,0)
