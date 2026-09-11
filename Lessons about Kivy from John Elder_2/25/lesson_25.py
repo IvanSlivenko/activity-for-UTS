@@ -20,8 +20,8 @@ Builder.load_file('slider_25.kv')
 
 class MyLayout(Widget):
     def slide_it(self, *args):
-        self.ids.slider_label.text=str(args[1])
-        self.ids.slider_label.font_size = self.ids.slider_label.font_size+args[1]
+        self.ids.slider_label.text=str(int(args[1]))
+        self.ids.slider_label.font_size = str(int(args[1])*5)
         # print(args[1])
 class AwesomeApp(App):
     def build(self):
