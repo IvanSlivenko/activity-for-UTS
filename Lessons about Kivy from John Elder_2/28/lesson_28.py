@@ -10,7 +10,7 @@ from kivy.core.spelling import Spelling
 #Set the app size
 Window.size = (700,500)
 
-Builder.load_file('CheckBoxes_28.kv.kv')
+Builder.load_file('CheckBoxes_28.kv')
 
 class MyLayout(Widget):
     pass
