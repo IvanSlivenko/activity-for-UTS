@@ -10,7 +10,7 @@ from kivy.core.spelling import Spelling
 #Set the app size
 Window.size = (700,500)
 
-Builder.load_file('CheckBoxes_29.kv')
+Builder.load_file('Radio_29.kv')
 
 class MyLayout(Widget):
     checs = []
