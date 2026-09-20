@@ -14,18 +14,21 @@ class FirstWindow(Screen):
 class SecondWindow(Screen):
     pass
 
+class WindowManager(ScreenManager):
+    pass
+
+
 
 #Set the app size
 Window.size = (700,500)
 
-Builder.load_file('new_window_31.kv')
+kv = Builder.load_file('new_window_31.kv')
 
-class MyLayout(Widget):
-    pass
+
 class AwesomeApp(App):
     def build(self):
         Window.clearcolor = (0,0,0,0)
-        return MyLayout()
+        return kv
 
 if __name__ == "__main__":
     AwesomeApp().run()
