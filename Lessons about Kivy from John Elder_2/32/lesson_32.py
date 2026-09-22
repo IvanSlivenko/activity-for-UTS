@@ -8,7 +8,8 @@ from kivy.core.spelling import Spelling
 from kivy.uix.screenmanager import ScreenManager, Screen
 
 class MyLayout(Widget):
-    pass
+    def spinner_clicked(self, value):
+        self.ids.click_label.text = f'Your selected:  {value}'
 
 
 
