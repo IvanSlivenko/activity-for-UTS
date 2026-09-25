@@ -1,6 +1,15 @@
 <MyLayout>
     do_default_tab: False
 
+    size_hint: 1, 1
+    pos_hint: { 'center_x': .5, 'center_y': .5 }
+
+    #tab_pos: 'bottom_mid'
+    #tab_pos: 'top_mid'
+    #tab_pos: 'right_top'
+    #tab_pos: 'right_mid'
+    tab_pos: 'left_mid'
+
     TabbedPanelItem:
         text: "Tab 1"
         Label:
@@ -20,6 +29,12 @@
 
         Image:
             source: "../images/jungle.jpg"
+
+    TabbedPanelItem:
+        text: "Tab 4"
+
+        Image:
+            source: "../images/jungle-canopy-image.webp"
 
 
 
