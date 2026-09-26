@@ -9,7 +9,7 @@ from kivy.uix.tabbedpanel import TabbedPanel
 #Set the app size
 Window.size = (700,500)
 
-Builder.load_file('button_image_35.kv')
+Builder.load_file('button_image_36.kv')
 
 class MyLayout(Widget):
     def hello_on(self):
