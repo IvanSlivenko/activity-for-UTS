@@ -9,7 +9,7 @@ from kivy.animation import Animation
 #Set the app size
 Window.size = (700,500)
 
-Builder.load_file('animations_36.kv')
+Builder.load_file('animations_37.kv')
 
 class MyLayout(Widget):
 
