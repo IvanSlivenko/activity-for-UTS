@@ -8,7 +8,7 @@ from kivy.core.window import Window
 #Set the app size
 Window.size = (700,500)
 
-Builder.load_file('switch_39.kv')
+Builder.load_file('switch_40.kv')
 
 class MyLayout(Widget):
     def switch_click(self, switchObject, switchValue):
