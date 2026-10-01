@@ -339,10 +339,15 @@ https://youtu.be/4-PASskUCW0?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg
 -------------------------------------------------------------------------- Lesson 40
 ---------------------------------------------------------------------
 kivy MD
+------------------------------------------
+(virt)
+Vanya@DESKTOP-96JTJ1S MINGW64 /d/GitHub/activity-for-UTS/Lessons about Kivy from John Elder_2/40/kiviMD/KivyMD (master)
+$ python -m examples.button
+
 ---------------------------------------------------------------------
 https://youtu.be/ycoKlFV3-iU?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg
 ---------------------------------------------------------------------
-00 : 02 : 12
+00 : 09 : 36
 
 
 
