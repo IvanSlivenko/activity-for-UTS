@@ -8,16 +8,10 @@ from kivy.core.window import Window
 #Set the app size
 Window.size = (700,500)
 
-Builder.load_file('switch_40.kv')
+Builder.load_file('testing_40.kv')
 
 class MyLayout(Widget):
-    def switch_click(self, switchObject, switchValue):
-        #print(switchValue)
-        if(switchValue):
-            self.ids.my_label.text="You clicked the Switch On!"
-        else:
-            self.ids.my_label.text = "You clicked the Switch OFF!"
-            self.ids.my_switch.disabled=True
+    pass
 
 
 class AwesomeApp(App):

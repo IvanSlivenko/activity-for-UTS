@@ -340,9 +340,22 @@ https://youtu.be/4-PASskUCW0?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg
 ---------------------------------------------------------------------
 kivy MD
 ------------------------------------------
+source virt/Scripts/activate  --------------------Увімкнути віртуальне середовище
+
 (virt)
 Vanya@DESKTOP-96JTJ1S MINGW64 /d/GitHub/activity-for-UTS/Lessons about Kivy from John Elder_2/40/kiviMD/KivyMD (master)
 $ python -m examples.button
+
+-----------------------------------------------------------------------------------
+Vanya@DESKTOP-96JTJ1S MINGW64 /d/GitHub/activity-for-UTS/Lessons about Kivy from John Elder_2/40/kiviMD/KivyMD/examples (master)
+$ ls
+__pycache__  bg.jpg           card.py      common_app.py    dynamic_color_image.py    hero.py       loadingindicator.py    navigation_bar.py     ripple_m3.py         snackbar.py   timepicker.py
+appbar.py    bottomappbar.py  carousel.py  datepicker.py    dynamic_color_schemes.py  imagelist.py  material_scroll.py     navigation_rail.py    search.py            switch.py     tooltip.py
+avatar.png   bottomsheet.py   checkbox.py  dialog.py        expansionpanel.py         label.py      md_axis_transition.py  navigationdrawer.py   segmented_button.py  tab.py
+badge.py     button.py        chip.py      dropdownitem.py  exprogressindicator.py    list.py       md_transitions.py      progressindicator.py  slider.py            textfield.py
+-----------------------------------------------------------------------------------
+
+
 
 ---------------------------------------------------------------------
 https://youtu.be/ycoKlFV3-iU?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg
