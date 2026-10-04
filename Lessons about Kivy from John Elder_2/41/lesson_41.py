@@ -9,7 +9,7 @@ from kivymd.app import MDApp
 #Set the app size
 Window.size = (700,500)
 
-Builder.load_file('testing_40.kv')
+Builder.load_file('Card_41.kv')
 
 
 

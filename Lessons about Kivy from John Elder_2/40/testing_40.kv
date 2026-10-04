@@ -3,17 +3,15 @@
         orientation: "vertical"
         size: root.width, root.height
 
-        Label:
-            id: my_label
-            font_size: 32
-            text: "The Switch Is On!"
+        Screen:
 
-        Switch:
-            id:  my_switch
-            active: False
-            disabled: False
-            font_size: 32
-            on_active: root.switch_click(self, self.active)
+            MDCard:
+                size_hint: None, None
+                size: "280dp", "180dp"
+                pos_hint: {"center_x": .5, "center_y": .5}
+
+
+
 
 
 
