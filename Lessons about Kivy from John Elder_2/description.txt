@@ -402,7 +402,7 @@ https://youtu.be/bcWi_H2OqLQ?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg
 
 -------------------------------------------------------------------------- Lesson 43
 ---------------------------------------------------------------------
-
+source virt/Scripts/activate
 ------------------------------------ start file python
 (virt)
 Vanya@DESKTOP-96JTJ1S MINGW64 /d/GitHub/activity-for-UTS/Lessons about Kivy from John Elder_2/43 (main)
