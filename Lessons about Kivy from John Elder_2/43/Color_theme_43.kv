@@ -1,25 +1,38 @@
+#:import get_color_from_hex kivy.utils.get_color_from_hex
 Screen:
 
     MDButton:
         style: "filled"
+        radius: [5, 5, 0, 0]
         pos_hint: {"center_x": .5, "center_y": .7}
-        md_bg_color: 0.7, 0.7, 0.7, 1
+        theme_bg_color: "Custom"
+        md_bg_color: get_color_from_hex("#FF1493")
 
         MDButtonText:
             text: "First button light"
+            theme_text_color: "Custom"
+            text_color: get_color_from_hex("#000000")
 
     MDButton:
         style: "filled"
+        radius: [5, 5, 5, 5]
         pos_hint: {"center_x": .5, "center_y": .5}
-        md_bg_color: 0.4, 0.4, 0.4, 1
+        theme_bg_color: "Custom"
+        md_bg_color: get_color_from_hex("#00CED1")
 
         MDButtonText:
             text: "Second button Primary"
+            theme_text_color: "Custom"
+            text_color: get_color_from_hex("#000000")
 
     MDButton:
         style: "filled"
+        radius: [0, 0, 5, 5]
         pos_hint: {"center_x": .5, "center_y": .3}
-        md_bg_color: 0.15, 0.15, 0.15, 1
+        theme_bg_color: "Custom"
+        md_bg_color: get_color_from_hex("#8A2BE2")
 
         MDButtonText:
             text: "Third button Dark"
+            theme_text_color: "Custom"
+            text_color: get_color_from_hex("#000000")
