@@ -1,0 +1,72 @@
+Screen:
+
+    MDButton:
+        style: "filled"
+        radius: [5, 5, 0, 0]
+        pos_hint: {"center_x": .5, "center_y": .7}
+
+        theme_bg_color: "Custom"
+        md_bg_color: app.button_1_color
+
+        MDButtonText:
+            text: "First button light"
+            theme_text_color: "Custom"
+            text_color: app.text_color
+#----------------------------------------------------------- 1
+    MDButton:
+        style: "filled"
+        radius: [5, 5, 5, 5]
+        pos_hint: {"center_x": .5, "center_y": .5}
+
+        theme_bg_color: "Custom"
+        md_bg_color: app.button_2_color
+
+        MDButtonText:
+            text: "Second button Primary"
+            theme_text_color: "Custom"
+            text_color: app.text_color
+#----------------------------------------------------------- 2
+    MDButton:
+        style: "filled"
+        radius: [0, 0, 5, 5]
+        pos_hint: {"center_x": .5, "center_y": .3}
+
+        theme_bg_color: "Custom"
+        md_bg_color: app.button_3_color
+
+        MDButtonText:
+            text: "Third button Dark"
+            theme_text_color: "Custom"
+            text_color: app.text_color
+#----------------------------------------------------------- 3
+    MDButton:
+        style: "outlined"
+        pos_hint: {"center_x": .2, "center_y": .1}
+
+        #on_release: app.change_theme()
+        on_release: app.light_theme()
+
+        MDButtonText:
+            text: "Світла тема"
+#-------------------------------------------------------------------- Light Theme
+    MDButton:
+        style: "outlined"
+        pos_hint: {"center_x": .5, "center_y": .1}
+
+        on_release: app.change_theme()
+        #on_release: app.dark_theme()
+
+        MDButtonText:
+            text: "Змінити тему"
+#-------------------------------------------------------------------- Change Theme
+    MDButton:
+        style: "outlined"
+        pos_hint: {"center_x": .8, "center_y": .1}
+
+        #on_release: app.change_theme()
+        on_release: app.dark_theme()
+
+        MDButtonText:
+            text: "Темна тема"
+#-------------------------------------------------------------------- Dark Theme
+
