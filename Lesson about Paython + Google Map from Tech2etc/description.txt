@@ -1,0 +1,17 @@
+https://youtu.be/Dz3rSZHnKkM?list=PL9bD98LkBR7MiD-jeRLfaakke09zYSXrD
+
+pip install  phonenumbers
+
+pip install opencage
+
+pip install folium
+
+----------------------------------------------
+https://opencagedata.com/dashboard#geocoding
+umanproger@ukr.net
+iv07092006sl
+
+
+----------------------------------------------
+00 : 08 : 39
+
