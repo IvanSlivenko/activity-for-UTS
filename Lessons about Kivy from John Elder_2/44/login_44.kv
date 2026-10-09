@@ -1,3 +1,4 @@
+#:import get_color_from_hex kivy.utils.get_color_from_hex
 Screen:
     MDCard:
         size_hint: None, None
@@ -7,4 +8,41 @@ Screen:
         padding: 25
         spacing: 25
         orientation: 'vertical'
+
+
+        md_bg_color: get_color_from_hex("#2F2F2F")
         
+        MDLabel:
+            id: welcome_label
+            text: 'Welcome'
+            font_size: 40
+            halign: 'center'
+            size_hint_y: None
+            height: self.texture_size[1]
+            padding_y: 15
+
+        MDTextField:
+            id: user
+            size_hint_x: None
+            width: 200
+            font_size: 18
+            pos_hint: {"center_x": 0.5}
+
+            theme_line_color: "Custom"
+            line_color_normal: get_color_from_hex("#f1ecec")
+            line_color_focus: get_color_from_hex("#ecd553")
+
+
+            MDTextFieldHintText:
+                text: "Username"
+                text_color_normal: get_color_from_hex("#f1ecec")
+                text_color_focus: get_color_from_hex("#ecd553")
+
+            
+            MDTextFieldTrailingIcon:
+                icon: "account"
+                theme_icon_color: "Custom"
+                icon_color_normal: get_color_from_hex("#f1ecec")
+                icon_color_focus: get_color_from_hex("#ecd553")    
+
+            
