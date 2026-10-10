@@ -15,12 +15,12 @@ Screen:
         MDLabel:
             id: welcome_label
             text: 'Welcome'
-            font_size: 40
+            font_size: 80
             halign: 'center'
             size_hint_y: None
             height: self.texture_size[1]
             padding_y: 15
-
+#--------------------------------------------------------------------- user
         MDTextField:
             id: user
             size_hint_x: None
@@ -43,6 +43,83 @@ Screen:
                 icon: "account"
                 theme_icon_color: "Custom"
                 icon_color_normal: get_color_from_hex("#f1ecec")
-                icon_color_focus: get_color_from_hex("#ecd553")    
+                icon_color_focus: get_color_from_hex("#ecd553")
+#--------------------------------------------------------------------- password
+        MDTextField:
+            id: pasword
+            size_hint_x: None
+            width: 200
+            font_size: 18
+            pos_hint: {"center_x": 0.5}
+            password: True
+
+            theme_line_color: "Custom"
+            line_color_normal: get_color_from_hex("#f1ecec")
+            line_color_focus: get_color_from_hex("#ecd553")
+
+
+            MDTextFieldHintText:
+                text: "Password"
+                text_color_normal: get_color_from_hex("#f1ecec")
+                text_color_focus: get_color_from_hex("#ecd553")
 
             
+            MDTextFieldTrailingIcon:
+                icon: "eye-off"
+                theme_icon_color: "Custom"
+                icon_color_normal: get_color_from_hex("#f1ecec")
+                icon_color_focus: get_color_from_hex("#ecd553")                     
+
+#----------------------------------------------------------------------- Button Login
+        MDButton:
+            style: "filled"
+            font_size: 12
+            pos_hint: {"center_x": 0.5}
+            radius: [dp(10), dp(10), dp(10), dp(10)]
+
+            theme_bg_color: "Custom"
+            # Колір 1 — звичайний стан
+            md_bg_color: get_color_from_hex("#ecd553")
+
+            # Колір 2 — курсор наведений
+            on_enter: self.md_bg_color = get_color_from_hex("#7e12e4")
+
+            # Колір 1 — курсор пішов
+            on_leave: self.md_bg_color = get_color_from_hex("#ecd553")
+
+            # Колір 3 — натискання
+            on_press: self.md_bg_color = get_color_from_hex("#ac09ec")
+
+            # Після натискання — колір наведення або звичайний
+            on_release: self.md_bg_color = get_color_from_hex("#09ec7b") if self.hovering else get_color_from_hex("#05f3d3")
+
+
+            MDButtonText:
+                text: "LOG In"
+
+#----------------------------------------------------------------------- Button Login
+        MDButton:
+            style: "filled"
+            font_size: 12
+            pos_hint: {"center_x": 0.5}
+            radius: [dp(10), dp(10), dp(10), dp(10)]
+
+            theme_bg_color: "Custom"
+            # Колір 1 — звичайний стан
+            md_bg_color: get_color_from_hex("#8153ec")
+
+            # Колір 2 — курсор наведений
+            on_enter: self.md_bg_color = get_color_from_hex("#e4ac12")
+
+            # Колір 1 — курсор пішов
+            on_leave: self.md_bg_color = get_color_from_hex("#8153ec")
+
+            # Колір 3 — натискання
+            on_press: self.md_bg_color = get_color_from_hex("#09ecce")
+
+            # Після натискання — колір наведення або звичайний
+            on_release: self.md_bg_color = get_color_from_hex("#09ec7b") if self.hovering else get_color_from_hex("#05f3d3")
+
+
+            MDButtonText:
+                text: "Clear"            
