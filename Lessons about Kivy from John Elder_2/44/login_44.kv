@@ -11,16 +11,21 @@ Screen:
 
 
         md_bg_color: get_color_from_hex("#2F2F2F")
-        
+#------------------------------------------------------------------- label Welcome        
         MDLabel:
             id: welcome_label
             text: 'Welcome'
-            font_size: 80
+            #------------------------- font-size
+            font_style: "Welcome"
+            role: "large"
+            #------------------------- font-size
             halign: 'center'
             size_hint_y: None
-            height: self.texture_size[1]
-            padding_y: 15
-#--------------------------------------------------------------------- user
+            height: self.texture_size[1] - dp(30) # padding_y
+
+
+       
+#--------------------------------------------------------------------- field user
         MDTextField:
             id: user
             size_hint_x: None
@@ -44,7 +49,7 @@ Screen:
                 theme_icon_color: "Custom"
                 icon_color_normal: get_color_from_hex("#f1ecec")
                 icon_color_focus: get_color_from_hex("#ecd553")
-#--------------------------------------------------------------------- password
+#--------------------------------------------------------------------- field password
         MDTextField:
             id: pasword
             size_hint_x: None
@@ -72,8 +77,14 @@ Screen:
 
 #----------------------------------------------------------------------- Button Login
         MDButton:
+            on_press: app.logger()
             style: "filled"
             font_size: 12
+
+            theme_width: "Custom"
+            size_hint_x: None
+            width: dp(200)
+
             pos_hint: {"center_x": 0.5}
             radius: [dp(10), dp(10), dp(10), dp(10)]
 
@@ -82,13 +93,13 @@ Screen:
             md_bg_color: get_color_from_hex("#ecd553")
 
             # Колір 2 — курсор наведений
-            on_enter: self.md_bg_color = get_color_from_hex("#7e12e4")
+            on_enter: self.md_bg_color = get_color_from_hex("#e45f12")
 
             # Колір 1 — курсор пішов
             on_leave: self.md_bg_color = get_color_from_hex("#ecd553")
 
             # Колір 3 — натискання
-            on_press: self.md_bg_color = get_color_from_hex("#ac09ec")
+            on_press: self.md_bg_color = get_color_from_hex("#09ecb3")
 
             # Після натискання — колір наведення або звичайний
             on_release: self.md_bg_color = get_color_from_hex("#09ec7b") if self.hovering else get_color_from_hex("#05f3d3")
@@ -97,29 +108,42 @@ Screen:
             MDButtonText:
                 text: "LOG In"
 
-#----------------------------------------------------------------------- Button Login
+#----------------------------------------------------------------------- Button Clear
         MDButton:
+            on_press: app.clear()
+
             style: "filled"
             font_size: 12
+            
+            theme_width: "Custom"
+            size_hint_x: None
+            width: dp(200)
+
             pos_hint: {"center_x": 0.5}
+            
             radius: [dp(10), dp(10), dp(10), dp(10)]
 
             theme_bg_color: "Custom"
             # Колір 1 — звичайний стан
-            md_bg_color: get_color_from_hex("#8153ec")
+            md_bg_color: get_color_from_hex("#aaec53")
 
             # Колір 2 — курсор наведений
-            on_enter: self.md_bg_color = get_color_from_hex("#e4ac12")
+            on_enter: self.md_bg_color = get_color_from_hex("#12e4c1")
 
             # Колір 1 — курсор пішов
-            on_leave: self.md_bg_color = get_color_from_hex("#8153ec")
+            on_leave: self.md_bg_color = get_color_from_hex("#aaec53")
 
             # Колір 3 — натискання
-            on_press: self.md_bg_color = get_color_from_hex("#09ecce")
+            on_press: self.md_bg_color = get_color_from_hex("#772808")
 
             # Після натискання — колір наведення або звичайний
-            on_release: self.md_bg_color = get_color_from_hex("#09ec7b") if self.hovering else get_color_from_hex("#05f3d3")
+            on_release: self.md_bg_color = get_color_from_hex("#195236") if self.hovering else get_color_from_hex("#195236")
 
 
             MDButtonText:
                 text: "Clear"            
+
+        
+        Widget:
+            size_hint_y: None
+            height: 10

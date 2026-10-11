@@ -416,12 +416,12 @@ https://youtu.be/bcWi_H2OqLQ?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg
 
 
 
--------------------------------------------------------------------------- Lesson 44
+-------------------------------------------------------------------------- Lesson 44 (form registration)
 ---------------------------------------------------------------------
 source virt/Scripts/activate
 ------------------------------------ start file python
 (virt)
-Vanya@DESKTOP-96JTJ1S MINGW64 /d/GitHub/activity-for-UTS/Lessons about Kivy from John Elder_2/43 (main)
+Vanya@DESKTOP-96JTJ1S MINGW64 /d/GitHub/activity-for-UTS/Lessons about Kivy from John Elder_2/44 (main)
 $ python "lesson 44.py"
 
 
@@ -429,5 +429,19 @@ $ python "lesson 44.py"
 https://youtu.be/G-Rp41BzGxg?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg
 ---------------------------------------------------------------------
 00 : 07 : 54
+
+-------------------------------------------------------------------------- Lesson 45 ()
+---------------------------------------------------------------------
+source virt/Scripts/activate
+------------------------------------ start file python
+(virt)
+Vanya@DESKTOP-96JTJ1S MINGW64 /d/GitHub/activity-for-UTS/Lessons about Kivy from John Elder_2/45 (main)
+$ python "lesson 45.py"
+
+
+---------------------------------------------------------------------
+
+---------------------------------------------------------------------
+00 : 00 : 00
 
 
