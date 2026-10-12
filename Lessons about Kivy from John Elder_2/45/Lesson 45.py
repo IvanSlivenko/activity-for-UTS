@@ -13,15 +13,6 @@ class MainApp(MDApp):
             # self.theme_cls.theme_style = "Light"
             self.theme_cls.primary_palette = "Blue"
 
-    def logger(self):
-        self.root.ids.welcome_label.text = f'Sup {self.root.ids.user.text}!'
-          
-
-    def clear(self):
-        self.root.ids.welcome_label.text = 'Welcome'
-        self.root.ids.user.text = '' 
-        self.root.ids.pasword.text = ''    
-
 
 
     def build(self):
@@ -46,7 +37,7 @@ class MainApp(MDApp):
     }
         #------------------------------------------------ font_style       
 
-        return Builder.load_file("login_45.kv") 
+        return Builder.load_file("botomButton_45.kv") 
 
 
 MainApp().run()

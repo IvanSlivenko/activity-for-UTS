@@ -1,0 +1,36 @@
+#:import get_color_from_hex kivy.utils.get_color_from_hex
+
+
+
+MDBoxLayout:
+    orientation: "vertical"
+
+    MDTopAppBar:
+        type: "small"
+
+        MDTopAppBarLeadingButtonContainer:
+            MDActionTopAppBarButton:
+                icon: "menu"
+
+        MDTopAppBarTitle:
+            text: "Our Top Toolbar"
+
+        MDTopAppBarTrailingButtonContainer:
+            MDActionTopAppBarButton:
+                icon: "dots-vertical"
+
+    MDLabel:
+        id: my_label
+        text: "Some stuff"
+        halign: "center"
+
+    Widget:
+        size_hint_y: 1
+
+    MDBottomAppBar:
+        MDActionBottomAppBarButton:
+            icon: "git"
+            
+            # type:'bottom'
+            # mode: "gree-end"
+            
