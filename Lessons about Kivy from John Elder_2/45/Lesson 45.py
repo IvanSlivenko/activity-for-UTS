@@ -12,7 +12,8 @@ class MainApp(MDApp):
             self.theme_cls.theme_style = "Dark"
             # self.theme_cls.theme_style = "Light"
             self.theme_cls.primary_palette = "Blue"
-
+    def button_clicked(self):
+        print("test button")
 
 
     def build(self):

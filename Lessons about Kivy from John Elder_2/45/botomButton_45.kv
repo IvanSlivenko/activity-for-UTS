@@ -4,9 +4,13 @@
 
 MDBoxLayout:
     orientation: "vertical"
+    theme_bg_color: "Custom"
+    md_bg_color: get_color_from_hex("#464646")
 
     MDTopAppBar:
         type: "small"
+        theme_bg_color: "Custom"
+        md_bg_color: get_color_from_hex("#716c75")
 
         MDTopAppBarLeadingButtonContainer:
             MDActionTopAppBarButton:
@@ -27,10 +31,28 @@ MDBoxLayout:
     Widget:
         size_hint_y: 1
 
-    MDBottomAppBar:
+
+        
+    FloatLayout:
+        size_hint_y: None
+        height: dp(100)
+
+        MDBottomAppBar:
+            size_hint_y: None
+            height: dp(56)
+            pos_hint: {"x": 0, "y": 0}
+            theme_bg_color: "Custom"
+            md_bg_color: get_color_from_hex("#716c75")
+
         MDActionBottomAppBarButton:
             icon: "git"
+            pos_hint: {"right": 0.95, "center_y": 0.5}
+            theme_bg_color: "Custom"
+            md_bg_color: get_color_from_hex("#201e22")
+
+            on_release: app.button_clicked()
+                
+        
             
-            # type:'bottom'
-            # mode: "gree-end"
+            
             
