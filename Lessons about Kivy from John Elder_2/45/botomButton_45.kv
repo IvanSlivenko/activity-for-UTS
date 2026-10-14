@@ -38,11 +38,26 @@ MDBoxLayout:
         height: dp(100)
 
         MDBottomAppBar:
+            
             size_hint_y: None
             height: dp(56)
             pos_hint: {"x": 0, "y": 0}
             theme_bg_color: "Custom"
             md_bg_color: get_color_from_hex("#716c75")
+
+        MDTopAppBarLeadingButtonContainer:
+            MDActionTopAppBarButton:
+                icon: "menu"
+                pos_hint: {"x": 0.05, "center_y": 0.27}
+                on_release: app.presser_bottom_title()
+
+        MDLabel:
+            text: "Bottom menu"
+            theme_text_color: "Custom"
+            text_color: get_color_from_hex("#FFFFFF")
+            size_hint: None, None
+            size: dp(120), dp(40)
+            pos_hint: {"x": 0.07, "center_y": 0.25}
 
         MDActionBottomAppBarButton:
             icon: "git"
@@ -50,8 +65,11 @@ MDBoxLayout:
             theme_bg_color: "Custom"
             md_bg_color: get_color_from_hex("#201e22")
 
-            on_release: app.button_clicked()
-                
+            #Click the button
+            on_release: app.presser()
+
+
+
         
             
             

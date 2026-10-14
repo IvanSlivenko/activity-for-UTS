@@ -1,0 +1,115 @@
+#:import get_color_from_hex kivy.utils.get_color_from_hex
+
+
+
+MDBoxLayout:
+    orientation: "vertical"
+    theme_bg_color: "Custom"
+    md_bg_color: get_color_from_hex("#464646")
+
+    MDTopAppBar:
+        type: "small"
+        theme_bg_color: "Custom"
+        md_bg_color: get_color_from_hex("#716c75")
+
+        
+        MDTopAppBarTitle:
+            text: "Bottom NavBar"
+
+        
+
+
+    MDLabel:
+        id: my_label
+        text: "Some stuff"
+        halign: "center"
+
+    Widget:
+        size_hint_y: 1
+
+
+        
+    FloatLayout:
+        size_hint_y: None
+        height: dp(100)
+
+        MDBottomAppBar:
+            
+            size_hint_y: None
+            height: dp(56)
+            pos_hint: {"x": 0, "y": 0}
+            theme_bg_color: "Custom"
+            md_bg_color: get_color_from_hex("#716c75")
+
+        
+        #------------------------------------------------------ left
+        MDBoxLayout:
+            orientation: "vertical"
+            size_hint: None, None
+            size: dp(70), dp(80)
+            pos_hint: {"x": 0.02, "center_y": 0.27}
+            spacing: dp(2)
+
+            MDActionTopAppBarButton:
+                icon: "menu"
+                pos_hint: {"center_x": 0.5}
+                on_release: app.presser_left_button()
+
+            MDLabel:
+                text: "Home"
+                halign: "center"
+                valign: "middle"
+                font_size: "12sp"
+                theme_text_color: "Custom"
+                text_color: get_color_from_hex("#FFFFFF")
+        #------------------------------------------------------ Midle        
+        MDBoxLayout:
+            orientation: "vertical"
+            size_hint: None, None
+            size: dp(70), dp(80)
+            pos_hint: {"x": 0.48, "center_y": 0.27}
+            spacing: dp(2)
+
+            MDActionTopAppBarButton:
+                icon: "menu"
+                pos_hint: {"center_x": 0.5}
+                on_release: app.presser_midle_button()
+
+            MDLabel:
+                text: "Home"
+                halign: "center"
+                valign: "middle"
+                font_size: "12sp"
+                theme_text_color: "Custom"
+                text_color: get_color_from_hex("#FFFFFF")
+
+        #------------------------------------------------------ Right
+        MDBoxLayout:
+            orientation: "vertical"
+            size_hint: None, None
+            size: dp(70), dp(80)
+            pos_hint: {"x": 0.90, "center_y": 0.27}
+            spacing: dp(2)
+
+            MDActionTopAppBarButton:
+                icon: "menu"
+                pos_hint: {"center_x": 0.5}
+                on_release: app.presser_right_button()
+
+            MDLabel:
+                text: "Home"
+                halign: "center"
+                valign: "middle"
+                font_size: "12sp"
+                theme_text_color: "Custom"
+                text_color: get_color_from_hex("#FFFFFF")
+        
+               
+        
+        
+
+
+        
+            
+            
+            

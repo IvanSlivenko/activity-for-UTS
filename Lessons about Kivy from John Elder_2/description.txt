@@ -440,8 +440,22 @@ $ python "lesson 45.py"
 
 
 ---------------------------------------------------------------------
-
+https://youtu.be/TjloR7XLTF4?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg
 ---------------------------------------------------------------------
 00 : 06 : 32
+
+-------------------------------------------------------------------------- Lesson 46 ()
+---------------------------------------------------------------------
+source virt/Scripts/activate
+------------------------------------ start file python
+(virt)
+Vanya@DESKTOP-96JTJ1S MINGW64 /d/GitHub/activity-for-UTS/Lessons about Kivy from John Elder_2/45 (main)
+$ python "lesson 45.py"
+
+
+---------------------------------------------------------------------
+https://youtu.be/YynbD-netKg?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg
+---------------------------------------------------------------------
+00 : 02 : 22
 
 

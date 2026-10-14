@@ -12,9 +12,13 @@ class MainApp(MDApp):
             self.theme_cls.theme_style = "Dark"
             # self.theme_cls.theme_style = "Light"
             self.theme_cls.primary_palette = "Blue"
-    def button_clicked(self):
-        print("test button")
+    def presser(self):
+        self.root.ids.my_label.text = "You pressed bottom_button!!"
 
+    def presser_bottom_title(self):
+        self.root.ids.my_label.text = "You pressed bottom_title!!"
+    presser_bottom_title
+        
 
     def build(self):
 
