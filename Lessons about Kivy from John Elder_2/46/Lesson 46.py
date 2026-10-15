@@ -19,7 +19,6 @@ class MainApp(MDApp):
     def presser_midle_button(self):
         self.root.ids.my_label.text = "You pressed midle_button!!"
 
-
     def presser_right_button(self):
         self.root.ids.my_label.text = "You pressed right_button!!"
     

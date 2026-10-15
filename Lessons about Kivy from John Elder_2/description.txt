@@ -450,7 +450,7 @@ source virt/Scripts/activate
 ------------------------------------ start file python
 (virt)
 Vanya@DESKTOP-96JTJ1S MINGW64 /d/GitHub/activity-for-UTS/Lessons about Kivy from John Elder_2/45 (main)
-$ python "lesson 45.py"
+$ python "lesson 46.py"
 
 
 ---------------------------------------------------------------------

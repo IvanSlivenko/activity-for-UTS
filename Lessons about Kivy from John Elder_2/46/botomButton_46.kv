@@ -47,16 +47,20 @@ MDBoxLayout:
             orientation: "vertical"
             size_hint: None, None
             size: dp(70), dp(80)
-            pos_hint: {"x": 0.02, "center_y": 0.27}
+            pos_hint: {"x": 0.02, "center_y": 0.45}
             spacing: dp(2)
 
             MDActionTopAppBarButton:
-                icon: "menu"
+                icon: "language-python"
+                size_hint_y: None
+                height: dp(25)
                 pos_hint: {"center_x": 0.5}
                 on_release: app.presser_left_button()
 
             MDLabel:
-                text: "Home"
+                text: "Python"
+                size_hint_y: None
+                height: dp(20)
                 halign: "center"
                 valign: "middle"
                 font_size: "12sp"
@@ -67,16 +71,21 @@ MDBoxLayout:
             orientation: "vertical"
             size_hint: None, None
             size: dp(70), dp(80)
-            pos_hint: {"x": 0.48, "center_y": 0.27}
+            pos_hint: {"x": 0.46, "center_y": 0.45}
             spacing: dp(2)
+            
 
             MDActionTopAppBarButton:
-                icon: "menu"
+                icon: "youtube"
+                size_hint_y: None
+                height: dp(25)
                 pos_hint: {"center_x": 0.5}
                 on_release: app.presser_midle_button()
 
             MDLabel:
-                text: "Home"
+                text: "Youtube"
+                size_hint_y: None
+                height: dp(20)
                 halign: "center"
                 valign: "middle"
                 font_size: "12sp"
@@ -87,17 +96,22 @@ MDBoxLayout:
         MDBoxLayout:
             orientation: "vertical"
             size_hint: None, None
-            size: dp(70), dp(80)
-            pos_hint: {"x": 0.90, "center_y": 0.27}
+            size: dp(80), dp(80)
+            pos_hint: {"x": 0.88, "center_y": 0.47}
             spacing: dp(2)
+               
 
             MDActionTopAppBarButton:
-                icon: "menu"
+                icon: "instagram"
+                size_hint_y: None
+                height: dp(25)
                 pos_hint: {"center_x": 0.5}
                 on_release: app.presser_right_button()
 
             MDLabel:
-                text: "Home"
+                text: "Instagram"
+                size_hint_y: None
+                height: dp(15)
                 halign: "center"
                 valign: "middle"
                 font_size: "12sp"
