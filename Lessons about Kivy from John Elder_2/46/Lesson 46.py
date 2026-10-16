@@ -3,8 +3,13 @@ from kivy.properties import ColorProperty
 from kivymd.app import MDApp
 from kivy.utils import get_color_from_hex
 
+from kivy.uix.behaviors import ButtonBehavior
+from kivymd.uix.boxlayout import MDBoxLayout
+
 from kivy.metrics import sp
 
+class ClickableBox(ButtonBehavior, MDBoxLayout):
+    pass
 
 class MainApp(MDApp):
 

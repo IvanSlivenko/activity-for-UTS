@@ -15,6 +15,8 @@ MDBoxLayout:
         
         MDTopAppBarTitle:
             text: "Bottom NavBar"
+            theme_text_color: "Custom"
+            text_color: get_color_from_hex("#ebb810")
 
         
 
@@ -23,6 +25,8 @@ MDBoxLayout:
         id: my_label
         text: "Some stuff"
         halign: "center"
+        theme_text_color: "Custom"
+        text_color: get_color_from_hex("#ebb810")
 
     Widget:
         size_hint_y: 1
@@ -39,16 +43,21 @@ MDBoxLayout:
             height: dp(56)
             pos_hint: {"x": 0, "y": 0}
             theme_bg_color: "Custom"
-            md_bg_color: get_color_from_hex("#716c75")
+            md_bg_color: get_color_from_hex("#313031")
 
         
         #------------------------------------------------------ left
-        MDBoxLayout:
+        # MDBoxLayout:
+        ClickableBox:
             orientation: "vertical"
             size_hint: None, None
-            size: dp(70), dp(80)
-            pos_hint: {"x": 0.02, "center_y": 0.45}
+            size: dp(70), dp(50)
+            pos_hint: {"x": 0.02, "center_y": 0.28}
             spacing: dp(2)
+            # theme_bg_color: "Custom"
+            # md_bg_color: get_color_from_hex("#130f16")
+
+            on_release: app.presser_left_button()
 
             MDActionTopAppBarButton:
                 icon: "language-python"
@@ -67,13 +76,17 @@ MDBoxLayout:
                 theme_text_color: "Custom"
                 text_color: get_color_from_hex("#FFFFFF")
         #------------------------------------------------------ Midle        
-        MDBoxLayout:
+        # MDBoxLayout:
+        ClickableBox:
             orientation: "vertical"
             size_hint: None, None
-            size: dp(70), dp(80)
-            pos_hint: {"x": 0.46, "center_y": 0.45}
+            size: dp(70), dp(50)
+            pos_hint: {"x": 0.46, "center_y": 0.28}
             spacing: dp(2)
-            
+            # theme_bg_color: "Custom"
+            # md_bg_color: get_color_from_hex("#130f16")
+
+            on_release: app.presser_midle_button()
 
             MDActionTopAppBarButton:
                 icon: "youtube"
@@ -89,27 +102,33 @@ MDBoxLayout:
                 halign: "center"
                 valign: "middle"
                 font_size: "12sp"
-                theme_text_color: "Custom"
-                text_color: get_color_from_hex("#FFFFFF")
+                # theme_text_color: "Custom"
+                # text_color: get_color_from_hex("#FFFFFF")
 
         #------------------------------------------------------ Right
-        MDBoxLayout:
+        # MDBoxLayout:
+        ClickableBox:    
             orientation: "vertical"
             size_hint: None, None
-            size: dp(80), dp(80)
-            pos_hint: {"x": 0.88, "center_y": 0.47}
+            size: dp(80), dp(50)
+            pos_hint: {"x": 0.88, "center_y": 0.28}
             spacing: dp(2)
+            # theme_bg_color: "Custom"
+            # md_bg_color: get_color_from_hex("#130f16")
+
+            on_release: app.presser_right_button()
                
 
             MDActionTopAppBarButton:
-                icon: "instagram"
+                # icon: "instagram"
+                icon: "email"
                 size_hint_y: None
                 height: dp(25)
                 pos_hint: {"center_x": 0.5}
                 on_release: app.presser_right_button()
 
             MDLabel:
-                text: "Instagram"
+                text: "Email"
                 size_hint_y: None
                 height: dp(15)
                 halign: "center"

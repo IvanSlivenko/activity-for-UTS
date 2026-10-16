@@ -1,0 +1,70 @@
+#:import get_color_from_hex kivy.utils.get_color_from_hex
+
+
+
+MDBoxLayout:
+    orientation: "vertical"
+    theme_bg_color: "Custom"
+    md_bg_color: get_color_from_hex("#464646")
+#------------------------------------------------------------ label
+    MDLabel:
+        id: my_label
+        text: "Some Stuff"
+        size_hint_y: None
+        height: dp(150)
+        halign: "center"
+        valign: "middle"
+        font_size: "12sp"
+        theme_text_color: "Custom"
+        text_color: get_color_from_hex("#FFFFFF")
+        
+    MDFloatingActionButtonSpeedDial:
+        data: app.data
+        root_button_anim: True
+
+    
+        #-------------------------------------------------------------- vertical panel
+            # MDBoxLayout:
+            #     orientation: "vertical"
+            #     size_hint_y: None
+            #     height: dp(250)
+
+            #     ClickableBox:    
+            #         orientation: "vertical"
+            #         size_hint: None, None
+            #         size: dp(80), dp(50)
+            #         pos_hint: {"x": 0.88, "center_y": 0.28}
+            #         spacing: dp(2)
+            #         # theme_bg_color: "Custom"
+            #         # md_bg_color: get_color_from_hex("#130f16")
+
+            #         on_release: app.presser_right_button()
+                
+
+            #         MDActionTopAppBarButton:
+            #             # icon: "instagram"
+            #             icon: "email"
+            #             size_hint_y: None
+            #             height: dp(25)
+            #             pos_hint: {"center_x": 0.5}
+            #             on_release: app.presser_right_button()
+
+            #         MDLabel:
+            #             text: "Email"
+            #             size_hint_y: None
+            #             height: dp(15)
+            #             halign: "center"
+            #             valign: "middle"
+            #             font_size: "12sp"
+            #             theme_text_color: "Custom"
+            #             text_color: get_color_from_hex("#FFFFFF")
+
+                          
+        
+        
+
+
+        
+            
+            
+            
