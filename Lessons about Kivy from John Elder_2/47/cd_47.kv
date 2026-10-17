@@ -1,12 +1,13 @@
 #:import get_color_from_hex kivy.utils.get_color_from_hex
-
-
+#:import sp kivy.metrics.sp
 
 MDBoxLayout:
     orientation: "vertical"
     theme_bg_color: "Custom"
     md_bg_color: get_color_from_hex("#464646")
-#------------------------------------------------------------ label
+    padding: dp(20)
+    spacing: dp(10)
+
     MDLabel:
         id: my_label
         text: "Some Stuff"
@@ -14,57 +15,109 @@ MDBoxLayout:
         height: dp(150)
         halign: "center"
         valign: "middle"
-        font_size: "12sp"
+        # font_size: "18sp"
+        font_style: "Welcome"
+        role: "large"
+
         theme_text_color: "Custom"
         text_color: get_color_from_hex("#FFFFFF")
-        
-    MDFloatingActionButtonSpeedDial:
-        data: app.data
-        root_button_anim: True
 
-    
-        #-------------------------------------------------------------- vertical panel
-            # MDBoxLayout:
-            #     orientation: "vertical"
-            #     size_hint_y: None
-            #     height: dp(250)
+    Widget:
 
-            #     ClickableBox:    
-            #         orientation: "vertical"
-            #         size_hint: None, None
-            #         size: dp(80), dp(50)
-            #         pos_hint: {"x": 0.88, "center_y": 0.28}
-            #         spacing: dp(2)
-            #         # theme_bg_color: "Custom"
-            #         # md_bg_color: get_color_from_hex("#130f16")
+    MDBoxLayout:
+        orientation: "vertical"
+        size_hint: (None, None)
+        width: dp(220)
+        height: dp(56)
+        pos_hint: {"right": 1}
+        spacing: dp(8)
 
-            #         on_release: app.presser_right_button()
+    MDBoxLayout:
+        id: speed_menu
+        orientation: "vertical"
+        size_hint: (1, None)
+        height: 0
+        opacity: 0
+        disabled: True
+        spacing: dp(16)
+
+        # Кнопка "Папка"
+        MDBoxLayout:
+            orientation: "horizontal"
+            size_hint_y: None
+            height: dp(48)
+            spacing: dp(12)
+            
+
+            MDLabel:
+                text: app.data["folder"]
+                halign: "right"
+                valign: "middle"
+                theme_text_color: "Custom"
+                text_color: 1, 1, 1, 1
+                theme_bg_color: "Custom"
+                md_bg_color: get_color_from_hex("#40168d")
                 
 
-            #         MDActionTopAppBarButton:
-            #             # icon: "instagram"
-            #             icon: "email"
-            #             size_hint_y: None
-            #             height: dp(25)
-            #             pos_hint: {"center_x": 0.5}
-            #             on_release: app.presser_right_button()
-
-            #         MDLabel:
-            #             text: "Email"
-            #             size_hint_y: None
-            #             height: dp(15)
-            #             halign: "center"
-            #             valign: "middle"
-            #             font_size: "12sp"
-            #             theme_text_color: "Custom"
-            #             text_color: get_color_from_hex("#FFFFFF")
-
-                          
-        
-        
+            MDFabButton:
+                icon: "folder"
+                theme_bg_color: "Custom"
+                md_bg_color: get_color_from_hex("#40168d")
+                on_release: app.menu_action(app.data["folder"])
 
 
-        
-            
-            
+        # Кнопка "Редагувати"
+        MDBoxLayout:
+            orientation: "horizontal"
+            size_hint_y: None
+            height: dp(48)
+            spacing: dp(12)
+
+            MDLabel:
+                text: app.data["pencil"]
+                halign: "right"
+                valign: "middle"
+                theme_text_color: "Custom"
+                text_color: 1, 1, 1, 1
+                theme_bg_color: "Custom"
+                md_bg_color: get_color_from_hex("#40168d")
+
+            MDFabButton:
+                icon: "pencil"
+                theme_bg_color: "Custom"
+                md_bg_color: get_color_from_hex("#40168d")
+                on_release: app.menu_action(app.data["pencil"])
+
+        # Кнопка "Налаштування"
+        MDBoxLayout:
+            orientation: "horizontal"
+            size_hint_y: None
+            height: dp(48)
+            spacing: dp(12)
+
+            MDLabel:
+                text: app.data["cog"]
+                halign: "right"
+                valign: "middle"
+                theme_text_color: "Custom"
+                text_color: 1, 1, 1, 1
+                theme_bg_color: "Custom"
+                md_bg_color: get_color_from_hex("#40168d")
+
+            MDFabButton:
+                icon: "cog"
+                theme_bg_color: "Custom"
+                md_bg_color: get_color_from_hex("#40168d")
+                on_release: app.menu_action(app.data["cog"])
+
+    # Головна кнопка
+    MDFabButton:
+        id: main_button
+        icon: "plus"
+        pos_hint: {"right": 1}
+        theme_bg_color: "Custom"
+        md_bg_color: get_color_from_hex("#40168d")
+        on_release: app.toggle_speed_dial()
+
+
             

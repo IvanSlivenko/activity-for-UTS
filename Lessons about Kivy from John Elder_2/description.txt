@@ -465,12 +465,12 @@ source virt/Scripts/activate
 ------------------------------------ start file python
 (virt)
 Vanya@DESKTOP-96JTJ1S MINGW64 /d/GitHub/activity-for-UTS/Lessons about Kivy from John Elder_2/45 (main)
-$ python "lesson 47.py"
+$ python "sd_47.py"
 
 
 ---------------------------------------------------------------------
 https://youtu.be/2IuAQ1HUpU4?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg
 ---------------------------------------------------------------------
-00 : 03 : 12
+00 : 06 : 22
 
 
