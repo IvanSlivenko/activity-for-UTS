@@ -1,0 +1,24 @@
+#:import get_color_from_hex kivy.utils.get_color_from_hex
+#:import sp kivy.metrics.sp
+
+MDBoxLayout:
+    orientation: "vertical"
+    theme_bg_color: "Custom"
+    md_bg_color: get_color_from_hex("#464646")
+    padding: dp(20)
+    spacing: dp(10)
+
+    MDScreen:
+        MDButton:
+            style: "outlined"
+            radius: dp(10)
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            on_release: app.show_alert_dialog()
+
+            MDButtonText:
+                text: "Alert Popup !"
+
+        MDLabel:
+            id: my_label
+            text: "Some Stuff"
+            pos_hint: {"center_x": 0.95, "center_y": 0.4}

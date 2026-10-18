@@ -465,7 +465,7 @@ source virt/Scripts/activate
 ------------------------------------ start file python
 (virt)
 Vanya@DESKTOP-96JTJ1S MINGW64 /d/GitHub/activity-for-UTS/Lessons about Kivy from John Elder_2/45 (main)
-$ python "sd_47.py"
+$ python "sd_46.py"
 
 
 ---------------------------------------------------------------------
@@ -473,4 +473,32 @@ https://youtu.be/2IuAQ1HUpU4?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg
 ---------------------------------------------------------------------
 00 : 06 : 22
 
+
+-------------------------------------------------------------------------- Lesson 47 (buttons menu )
+---------------------------------------------------------------------
+source virt/Scripts/activate
+------------------------------------ start file python
+(virt)
+Vanya@DESKTOP-96JTJ1S MINGW64 /d/GitHub/activity-for-UTS/Lessons about Kivy from John Elder_2/45 (main)
+$ python "sd_47.py"
+
+
+---------------------------------------------------------------------
+https://youtu.be/bcy2iksM3bc?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg
+---------------------------------------------------------------------
+00 : 06 : 22
+
+-------------------------------------------------------------------------- Lesson 48 (alert )
+---------------------------------------------------------------------
+source virt/Scripts/activate
+------------------------------------ start file python
+(virt)
+Vanya@DESKTOP-96JTJ1S MINGW64 /d/GitHub/activity-for-UTS/Lessons about Kivy from John Elder_2/45 (main)
+$ python "sd_48.py"
+
+
+---------------------------------------------------------------------
+https://youtu.be/tToJBfDgCsc?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg
+---------------------------------------------------------------------
+00 : 07 : 21
 
