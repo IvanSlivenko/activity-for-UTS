@@ -1,0 +1,36 @@
+#:import get_color_from_hex kivy.utils.get_color_from_hex
+#:import dp kivy.metrics.dp
+
+<MySwiper@MDSwiperItem>:
+    FitImage:
+        source: "../images/jungle-canopy-image.webp"
+        radius: [dp(20), dp(20), dp(20), dp(20)]
+
+MDScreen:
+    md_bg_color: get_color_from_hex("#6e6c6c")
+
+    MDTopAppBar:
+        id: toolbar
+        size_hint: 1, None
+        height: dp(64)
+        pos_hint: {"top": 1}
+        theme_bg_color: "Custom"
+        md_bg_color: get_color_from_hex("#141414")
+
+
+        MDTopAppBarTitle:
+            text: "Our Swiper App"
+            theme_text_color: "Custom"
+            text_color: get_color_from_hex("#FFFFFF")
+        
+
+    MDSwiper:
+        size_hint: 1, None
+        height: root.height * 0.8 - dp(40)
+        y: dp(50)
+
+        MySwiper:
+        MySwiper:
+        MySwiper:
+        MySwiper:
+        MySwiper:
