@@ -2,9 +2,7 @@
 #:import dp kivy.metrics.dp
 
 <MySwiper@MDSwiperItem>:
-    FitImage:
-        source: "../images/jungle-canopy-image.webp"
-        radius: [dp(20), dp(20), dp(20), dp(20)]
+    
 
 MDScreen:
     md_bg_color: get_color_from_hex("#6e6c6c")
@@ -25,12 +23,49 @@ MDScreen:
         
 
     MDSwiper:
+        id: my_swiper
         size_hint: 1, None
         height: root.height * 0.8 - dp(40)
         y: dp(50)
 
         MySwiper:
+            FitImage:
+                source: "../images/jungle-canopy-image.webp"
+                radius: [dp(20), dp(20), dp(20), dp(20)]
+        
         MySwiper:
+            FitImage:
+                source: "../images/jungle.jpg"
+                radius: [dp(20), dp(20), dp(20), dp(20)]
+        
         MySwiper:
+            FitImage:
+                source: "../images/jungle-canopy-image.webp"
+                radius: [dp(20), dp(20), dp(20), dp(20)]
+        
         MySwiper:
+            FitImage:
+                source: "../images/jungle.jpg"
+                radius: [dp(20), dp(20), dp(20), dp(20)]
+        
         MySwiper:
+            FitImage:
+                source: "../images/jungle-canopy-image.webp"
+                radius: [dp(20), dp(20), dp(20), dp(20)]
+
+    BoxLayout:
+        orientation: 'horizontal'
+
+        MDButton:
+            on_release: my_swiper.set_current(my_swiper.get_current_index() - 1) if my_swiper.get_current_index() > 0 else None
+
+            MDButtonText:
+                text: "Previous"
+
+        MDButton:
+            on_release: my_swiper.set_current(my_swiper.get_current_index() + 1) if my_swiper.get_current_index() < len(my_swiper.get_items()) - 1 else None
+
+            MDButtonText:
+                text: "Next"         
+
+            # len(my_swiper.get_items())    
