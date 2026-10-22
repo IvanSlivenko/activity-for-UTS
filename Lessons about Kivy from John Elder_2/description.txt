@@ -517,7 +517,7 @@ https://youtu.be/gDLjaMF15mk?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg
 00 : 05 : 36
 
 
--------------------------------------------------------------------------- Lesson 50 (image swiper )
+-------------------------------------------------------------------------- Lesson 50 (image swiper mit button )
 ---------------------------------------------------------------------
 source virt/Scripts/activate
 ------------------------------------ start file python
@@ -530,3 +530,17 @@ $ python "sd_49.py"
 https://youtu.be/MpCUGq9aM5k?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg
 ---------------------------------------------------------------------
 00 : 07 : 54
+
+-------------------------------------------------------------------------- Lesson 51 ( date picker )
+---------------------------------------------------------------------
+source virt/Scripts/activate
+------------------------------------ start file python
+(virt)
+Vanya@DESKTOP-96JTJ1S MINGW64 /d/GitHub/activity-for-UTS/Lessons about Kivy from John Elder_2/45 (main)
+$ python "sd_49.py"
+
+
+---------------------------------------------------------------------
+https://youtu.be/LmuhbQnSHLU?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg
+---------------------------------------------------------------------
+00 : 00 : 00

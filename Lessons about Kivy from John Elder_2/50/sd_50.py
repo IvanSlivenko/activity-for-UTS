@@ -36,8 +36,14 @@ class MainApp(MDApp):
             # self.theme_cls.theme_style = "Light"
             self.theme_cls.primary_palette = "Blue"
     
-   
+    def on_swipe_left(self):
+        self.root.ids.toolbar_text.text="You swiped left"
+        
 
+    def on_swipe_right(self):
+        self.root.ids.toolbar_text.text="You swiped right"
+        
+    
 
     def build(self):
         self.theme_cls.font_styles["Welcome"] = {

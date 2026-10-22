@@ -17,6 +17,7 @@ MDScreen:
 
 
         MDTopAppBarTitle:
+            id: toolbar_text
             text: "Our Swiper App"
             theme_text_color: "Custom"
             text_color: get_color_from_hex("#FFFFFF")
@@ -27,6 +28,9 @@ MDScreen:
         size_hint: 1, None
         height: root.height * 0.8 - dp(40)
         y: dp(50)
+
+        on_swipe_left:  app.on_swipe_left()
+        on_swipe_right: app.on_swipe_right()     
 
         MySwiper:
             FitImage:
