@@ -544,3 +544,17 @@ $ python "sd_49.py"
 https://youtu.be/LmuhbQnSHLU?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg
 ---------------------------------------------------------------------
 00 : 00 : 00
+
+-------------------------------------------------------------------------- Lesson 52 ( time picker )
+---------------------------------------------------------------------
+source virt/Scripts/activate
+------------------------------------ start file python
+(virt)
+Vanya@DESKTOP-96JTJ1S MINGW64 /d/GitHub/activity-for-UTS/Lessons about Kivy from John Elder_2/45 (main)
+$ python "sd_49.py"
+
+
+---------------------------------------------------------------------
+https://youtu.be/TSFyN6gE5U4?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg
+---------------------------------------------------------------------
+00 : 06 : 02
