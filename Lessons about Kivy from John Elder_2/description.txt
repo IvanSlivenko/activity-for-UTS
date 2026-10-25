@@ -569,6 +569,8 @@ Vanya@DESKTOP-96JTJ1S MINGW64 /d/GitHub/activity-for-UTS/Lessons about Kivy from
 $ python "sd_53.py"
 
 
+
+
 ---------------------------------------------------------------------
 https://youtu.be/0xRsheQ4cKc?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg
 ---------------------------------------------------------------------
