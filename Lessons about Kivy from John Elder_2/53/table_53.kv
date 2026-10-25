@@ -1,0 +1,17 @@
+#:import get_color_from_hex kivy.utils.get_color_from_hex
+#:import dp kivy.metrics.dp
+#:import dp kivy.metrics.dp
+
+MDFloatLayout:
+    MDButton:
+        style: "elevated"
+        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+        on_release: app.show_time_picker()
+
+        MDButtonText:
+            text: "Open Time Picker"
+
+    MDLabel:
+        id: time_label
+        text: "Some stuff"
+        pos_hint: {"center_x": 0.95, "center_y": 0.4}

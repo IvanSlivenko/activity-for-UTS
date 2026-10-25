@@ -523,7 +523,7 @@ source virt/Scripts/activate
 ------------------------------------ start file python
 (virt)
 Vanya@DESKTOP-96JTJ1S MINGW64 /d/GitHub/activity-for-UTS/Lessons about Kivy from John Elder_2/45 (main)
-$ python "sd_49.py"
+$ python "sd_50.py"
 
 
 ---------------------------------------------------------------------
@@ -537,7 +537,7 @@ source virt/Scripts/activate
 ------------------------------------ start file python
 (virt)
 Vanya@DESKTOP-96JTJ1S MINGW64 /d/GitHub/activity-for-UTS/Lessons about Kivy from John Elder_2/45 (main)
-$ python "sd_49.py"
+$ python "sd_51.py"
 
 
 ---------------------------------------------------------------------
@@ -551,10 +551,25 @@ source virt/Scripts/activate
 ------------------------------------ start file python
 (virt)
 Vanya@DESKTOP-96JTJ1S MINGW64 /d/GitHub/activity-for-UTS/Lessons about Kivy from John Elder_2/45 (main)
-$ python "sd_49.py"
+$ python "sd_52.py"
 
 
 ---------------------------------------------------------------------
 https://youtu.be/TSFyN6gE5U4?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg
 ---------------------------------------------------------------------
 00 : 06 : 02
+
+
+-------------------------------------------------------------------------- Lesson 53 ( data tables )
+---------------------------------------------------------------------
+source virt/Scripts/activate
+------------------------------------ start file python
+(virt)
+Vanya@DESKTOP-96JTJ1S MINGW64 /d/GitHub/activity-for-UTS/Lessons about Kivy from John Elder_2/45 (main)
+$ python "sd_53.py"
+
+
+---------------------------------------------------------------------
+https://youtu.be/0xRsheQ4cKc?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg
+---------------------------------------------------------------------
+00 : 08 : 00

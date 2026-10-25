@@ -22,6 +22,8 @@ from kivymd.uix.pickers import MDModalDatePicker
 # from kivymd.uix.pickers import MDTimePicker
 from kivymd.uix.pickers import MDTimePickerDialVertical
 from kivymd.uix.pickers import MDTimePickerInput
+from datetime import datetime
+
 
 class ClickableBox(ButtonBehavior, MDBoxLayout):
     pass
@@ -43,8 +45,27 @@ class MainApp(MDApp):
         self.root.ids.time_label.text = "You clicked Cancel"  
     
 
+    # def show_time_picker(self, *args):
+
+    #     default_time = datetime.strtime("04:20:10", "%H:%M:%S").time()
+    #     time_dialog.set_time(default_time)
+    #     time_dialog = MDTimePickerDialVertical()
+
+    #     time_dialog.bind(
+    #         on_ok=self.get_time,
+    #         on_cancel=self.on_cancel,
+    #     )
+
+    #     time_dialog.open()
+
+        #-----------------------------------
     def show_time_picker(self, *args):
+        default_time = datetime.strptime(
+            "07:15:00", "%H:%M:%S"
+        ).time()
+
         time_dialog = MDTimePickerDialVertical()
+        time_dialog.set_time(default_time)
 
         time_dialog.bind(
             on_ok=self.get_time,
