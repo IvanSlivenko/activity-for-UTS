@@ -50,6 +50,7 @@ class MainApp(MDApp):
         table = MDDataTable(
             pos_hint = {"center_x": 0.5, "center_y": 0.5},
             size_hint = (0.9, 0.6),
+            check=True,
             column_data= [
                 ("First Name", dp(30)),
                 ("Last Name", dp(30)),
@@ -64,6 +65,10 @@ class MainApp(MDApp):
             ]
 
         )
+
+        table.bind(on_check_press=self.checked)
+        table.bind(on_row_press=self.row_checked)
+
 
 
 
@@ -95,6 +100,11 @@ class MainApp(MDApp):
         screen.add_widget(table)
         return screen
 
-    
+    def checked(self, instance_table, current_row):
+        print(instance_table, current_row)
+
+
+    def row_checked(self, instance_table, instance_row):    
+        print(instance_table, instance_row)
 
 MainApp().run()
