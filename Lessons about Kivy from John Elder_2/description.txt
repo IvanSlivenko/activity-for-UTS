@@ -575,3 +575,40 @@ $ python "sd_53.py"
 https://youtu.be/0xRsheQ4cKc?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg
 ---------------------------------------------------------------------
 00 : 08 : 00
+
+
+-------------------------------------------------------------------------- Lesson 54 ( data tables )
+---------------------------------------------------------------------
+source virt/Scripts/activate
+------------------------------------ start file python
+(virt)
+Vanya@DESKTOP-96JTJ1S MINGW64 /d/GitHub/activity-for-UTS/Lessons about Kivy from John Elder_2/45 (main)
+$ python "sd_53.py"
+
+
+
+
+---------------------------------------------------------------------
+https://youtu.be/Wk31pSy1g6s?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg
+---------------------------------------------------------------------
+00 : 08 : 00
+
+-------------------------------------------------------------------------- Lesson 55 ( data tables )
+---------------------------------------------------------------------
+source virt/Scripts/activate
+------------------------------------ start file python
+(virt)
+Vanya@DESKTOP-96JTJ1S MINGW64 /d/GitHub/activity-for-UTS/Lessons about Kivy from John Elder_2/45 (main)
+$ python "sd_53.py"
+
+
+
+
+---------------------------------------------------------------------
+https://youtu.be/X2MkC1ru3cQ?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg
+---------------------------------------------------------------------
+00 : 08 : 57
+
+
+
+
