@@ -593,13 +593,13 @@ https://youtu.be/Wk31pSy1g6s?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg
 ---------------------------------------------------------------------
 00 : 08 : 00
 
--------------------------------------------------------------------------- Lesson 55 ( data tables )
+-------------------------------------------------------------------------- Lesson 55 ( dataBase LiteSQL )
 ---------------------------------------------------------------------
 source virt/Scripts/activate
 ------------------------------------ start file python
 (virt)
 Vanya@DESKTOP-96JTJ1S MINGW64 /d/GitHub/activity-for-UTS/Lessons about Kivy from John Elder_2/45 (main)
-$ python "sd_53.py"
+$ python "sd_55.py"
 
 
 
@@ -611,4 +611,21 @@ https://youtu.be/X2MkC1ru3cQ?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg
 
 
 
+
+-------------------------------------------------------------------------- Lesson 56 ( dataBase MySQL )
+---------------------------------------------------------------------
+source virt/Scripts/activate
+------------------------------------ start file python
+(virt)
+Vanya@DESKTOP-96JTJ1S MINGW64 /d/GitHub/activity-for-UTS/Lessons about Kivy from John Elder_2/45 (main)
+$ python "sd_56.py"
+
+pip install mysql-connector mysql-connector-python mysql-connector-python-rf
+
+
+
+---------------------------------------------------------------------
+https://youtu.be/uswyR2qwxzc?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg
+---------------------------------------------------------------------
+00 : 05 : 38
 

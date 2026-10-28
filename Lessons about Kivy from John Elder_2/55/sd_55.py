@@ -100,7 +100,7 @@ class MainApp(MDApp):
         word = ""
         
         for record in records:
-            word = f'{word}\n{record}'
+            word = f'{word}\n{record[0]}'
             self.root.ids.word_label.text = f'{word}'
 
         # Збереження змін
