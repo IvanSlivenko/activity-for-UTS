@@ -622,10 +622,18 @@ $ python "sd_56.py"
 
 pip install mysql-connector mysql-connector-python mysql-connector-python-rf
 
+mydb = mysql.connetor.connect(
+            host ="localhost", 
+            user = "root"
+            password= "UmanProger07092006"
 
+
+            )
+
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'UmanProger07092006';
 
 ---------------------------------------------------------------------
 https://youtu.be/uswyR2qwxzc?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg
 ---------------------------------------------------------------------
-00 : 05 : 38
+00 : 19 : 09
 

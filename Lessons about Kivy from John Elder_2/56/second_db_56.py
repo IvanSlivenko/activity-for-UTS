@@ -4,7 +4,8 @@ from kivymd.uix.boxlayout import MDBoxLayout
 from kivy.lang import Builder
 from kivymd.app import MDApp
 from kivy.metrics import sp
-import sqlite3
+#import sqlite3
+import mysql.connector
 
 
 class ClickableBox(ButtonBehavior, MDBoxLayout):
@@ -38,38 +39,72 @@ class MainApp(MDApp):
         }
 
         # Створення або підключення до бази даних
-        conn = sqlite3.connect("first_db_.db")
+        #conn = sqlite3.connect("first_db_.db")
+        mydb = mysql.connector.connect(
+            host = "localhost", 
+            user = "root",
+            password = "UmanProger07092006",
+            database = "second_db"
+
+            )
+
 
         # Створення курсора
-        c = conn.cursor()
+        c = mydb.cursor()
+
+        #Create an actual database
+        c.execute("CREATE DATABASE IF NOT EXISTS second_db")
+
+        #Check to see if database was created
+        #---------------------------------------
+        # c.execute("SHOW DATABASES")
+
+        # for db in c:
+        #     print(db)
+        #---------------------------------------
+
+
 
         # Створення таблиці
         c.execute("""
             CREATE TABLE IF NOT EXISTS customers (
-                name TEXT
-            )
+                name VARCHAR(100))
         """)
 
-        # Збереження змін
-        conn.commit()
+        #Check to see if table created
+        # c.execute("SELECT *  FROM customers")
+        # print(c.description)
 
-        # Закриття з'єднання
-        conn.close()
+        # # Збереження змін
+        mydb.commit()
 
-        return Builder.load_file("first_db_55.kv")
+        # # Закриття з'єднання
+        mydb.close()
+
+        return Builder.load_file("first_db_56.kv")
 
     def submit(self):
         # Створення або підключення до бази даних
-        conn = sqlite3.connect("first_db_.db")
+        # conn = sqlite3.connect("first_db_.db")
+
+        mydb = mysql.connector.connect(
+            host = "localhost", 
+            user = "root",
+            password = "UmanProger07092006",
+            database = "second_db"
+
+            )
 
         # Створення курсора
-        c = conn.cursor()
+        c = mydb.cursor()
 
         #Add a Records
-        c.execute("INSERT INTO customers VALUES (:first)",
-            {
-                'first': self.root.ids.word_input.text
-            })
+        sql_command = "INSERT INTO customers (name) VALUES (%s)" 
+        values =  (self.root.ids.word_input.text,)
+
+        #Execute SQL Command
+        c.execute(sql_command,values)
+        
 
         # Add a litle message    
         self.root.ids.word_label.text = f'{self.root.ids.word_input.text} Added'
@@ -79,17 +114,25 @@ class MainApp(MDApp):
 
 
         # Збереження змін
-        conn.commit()
+        mydb.commit()
 
         # Закриття з'єднання
-        conn.close()
+        mydb.close()
 
     def show_records(self):
          # Створення або підключення до бази даних
-        conn = sqlite3.connect("first_db_.db")
+        # conn = sqlite3.connect("first_db_.db")
+
+        mydb = mysql.connector.connect(
+            host = "localhost", 
+            user = "root",
+            password = "UmanProger07092006",
+            database = "second_db"
+
+            )
 
         # Створення курсора
-        c = conn.cursor()
+        c = mydb.cursor()
 
        
         #Grab records from database
@@ -104,10 +147,10 @@ class MainApp(MDApp):
             self.root.ids.word_label.text = f'{word}'
 
         # Збереження змін
-        conn.commit()
+        mydb.commit()
 
         # Закриття з'єднання
-        conn.close()
+        mydb.close()
 
 
 MainApp().run()
