@@ -1,4 +1,9 @@
 
+from kivy.config import Config
+Config.set('graphics', 'position', 'custom')
+Config.set('graphics', 'left', 1110)
+Config.set('graphics', 'top', 400)
+
 from kivy.uix.behaviors import ButtonBehavior
 from kivymd.uix.boxlayout import MDBoxLayout
 from kivy.lang import Builder

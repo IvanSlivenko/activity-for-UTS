@@ -683,3 +683,24 @@ https://youtu.be/zVMwbarvDu8?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg
 ---------------------------------------------------------------------
 00 : 00 : 00
 
+
+-------------------------------------------------------------------------- Lesson 59 (  )
+---------------------------------------------------------------------
+source virt/Scripts/activate
+------------------------------------ start file python
+(virt)
+Vanya@DESKTOP-96JTJ1S MINGW64 /d/GitHub/activity-for-UTS/Lessons about Kivy from John Elder_2/45 (main)
+$ python "Lesson_59.py"
+
+pip install kivy_garden
+python -m pip install kivy-garden.matplotlib
+
+
+
+---------------------------------------------------------------------
+https://youtu.be/83C4tl8scoY?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg
+---------------------------------------------------------------------
+00 : 01 : 30
+
+
+
