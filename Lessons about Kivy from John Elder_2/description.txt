@@ -637,3 +637,49 @@ https://youtu.be/uswyR2qwxzc?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg
 ---------------------------------------------------------------------
 00 : 19 : 09
 
+-------------------------------------------------------------------------- Lesson 57 ( dataBase PostGress )
+---------------------------------------------------------------------
+source virt/Scripts/activate
+------------------------------------ start file python
+(virt)
+Vanya@DESKTOP-96JTJ1S MINGW64 /d/GitHub/activity-for-UTS/Lessons about Kivy from John Elder_2/45 (main)
+$ python "sd_56.py"
+
+Heroku CLI
+
+PATH 1552 -> 1024
+
+pip install pstcopg2
+
+-------------------------
+Heroku :
+login : umanproger@ukr.net
+password : 07092006UmanProger
+
+-------------------------
+
+Двофакторна аутентифікація через KeePassXC
+
+umanproger@ukr.net
+iv07092006sl
+
+---------------------------------------------------------------------
+https://youtu.be/jIhpYTq2jLI?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg
+---------------------------------------------------------------------
+00 : 00 : 00
+
+-------------------------------------------------------------------------- Lesson 58 ( deleted title window )
+---------------------------------------------------------------------
+source virt/Scripts/activate
+------------------------------------ start file python
+(virt)
+Vanya@DESKTOP-96JTJ1S MINGW64 /d/GitHub/activity-for-UTS/Lessons about Kivy from John Elder_2/45 (main)
+$ python "Lesson_58.py"
+
+
+
+---------------------------------------------------------------------
+https://youtu.be/zVMwbarvDu8?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg
+---------------------------------------------------------------------
+00 : 00 : 00
+
