@@ -1,8 +1,15 @@
-<Matty>
+Matty:
     BoxLayout:
-        orientation: 'vertical'
-        size: root.width, root.height 
+        id: box
+        size_hint_y: 1
 
-       
-                 
+    BoxLayout:
+        size_hint_y: 0.1
 
+        TextInput:
+            id: namer
+            multiline: False
+
+        Button:
+            text: "Save It !!"
+            on_release: root.save_it()
