@@ -684,7 +684,7 @@ https://youtu.be/zVMwbarvDu8?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg
 00 : 00 : 00
 
 
--------------------------------------------------------------------------- Lesson 59 (  )
+-------------------------------------------------------------------------- Lesson 59 ( Grafics )
 ---------------------------------------------------------------------
 source virt/Scripts/activate
 ------------------------------------ start file python
@@ -701,6 +701,27 @@ python -m pip install kivy-garden.matplotlib
 https://youtu.be/83C4tl8scoY?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg
 ---------------------------------------------------------------------
 00 : 08 : 14
+
+
+-------------------------------------------------------------------------- Lesson 60 ( Map )
+---------------------------------------------------------------------
+source virt/Scripts/activate
+------------------------------------ start file python
+(virt)
+Vanya@DESKTOP-96JTJ1S MINGW64 /d/GitHub/activity-for-UTS/Lessons about Kivy from John Elder_2/45 (main)
+$ python "Lesson_60.py"
+
+pip install mapview
+python -m pip install kivy-garden.mapview
+
+
+
+
+
+---------------------------------------------------------------------
+https://youtu.be/f3FL_tfqhyg?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg
+---------------------------------------------------------------------
+00 : 04 : 57
 
 
 
