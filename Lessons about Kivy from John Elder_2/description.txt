@@ -715,13 +715,26 @@ pip install mapview
 python -m pip install kivy-garden.mapview
 
 
-
-
-
 ---------------------------------------------------------------------
 https://youtu.be/f3FL_tfqhyg?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg
 ---------------------------------------------------------------------
 00 : 04 : 57
+
+-------------------------------------------------------------------------- Lesson 61 (  )
+---------------------------------------------------------------------
+source virt/Scripts/activate
+------------------------------------ start file python
+(virt)
+Vanya@DESKTOP-96JTJ1S MINGW64 /d/GitHub/activity-for-UTS/Lessons about Kivy from John Elder_2/45 (main)
+$ python "Lesson_61.py"
+
+
+
+
+---------------------------------------------------------------------
+https://youtu.be/SAaeWX_RBKc?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg
+---------------------------------------------------------------------
+00 : 00 : 39
 
 
 
