@@ -1,4 +1,4 @@
-
+from kivy.metrics import sp
 from kivy.lang import Builder
 from kivymd.app import MDApp
 
@@ -12,6 +12,8 @@ class MainApp(MDApp):
         # self.theme_cls.theme_style = "Light"
         self.theme_cls.primary_palette = "Blue"
 
+    some_text = "Hello World!"
+    our_list = ["John", "Mary", "Tina"]
     def build(self):
         self.theme_cls.font_styles["Welcome"] = {
             "large": {
@@ -30,7 +32,7 @@ class MainApp(MDApp):
                 "font-size": sp(24),
             },
         }
-        return Builder.load_file('map_2_61.kv')
+        return Builder.load_file('Lesson_62.kv')
 
-MainApp().run()        
+MainApp().run()       
 
