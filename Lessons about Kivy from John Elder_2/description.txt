@@ -754,4 +754,36 @@ https://youtu.be/lmW23R3vjaU?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg
 ---------------------------------------------------------------------
 00 : 00 : 39
 
+-------------------------------------------------------------------------- Lesson 63 (  )
+---------------------------------------------------------------------
+source virt/Scripts/activate
+------------------------------------ start file python
+(virt)
+Vanya@DESKTOP-96JTJ1S MINGW64 /d/GitHub/activity-for-UTS/Lessons about Kivy from John Elder_2/45 (main)
+$ python "Lesson_63.py"
+
+
+
+
+---------------------------------------------------------------------
+https://youtu.be/PAnpsrEOQ4s?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg
+---------------------------------------------------------------------
+00 : 00 : 39
+
+-------------------------------------------------------------------------- Lesson 66 ( Lists  )
+---------------------------------------------------------------------
+source virt/Scripts/activate
+------------------------------------ start file python
+(virt)
+Vanya@DESKTOP-96JTJ1S MINGW64 /d/GitHub/activity-for-UTS/Lessons about Kivy from John Elder_2/45 (main)
+$ python "Lesson_66.py"
+
+
+
+
+---------------------------------------------------------------------
+https://youtu.be/CJ18PcYFozA?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg
+---------------------------------------------------------------------
+00 : 00 : 39
+
 

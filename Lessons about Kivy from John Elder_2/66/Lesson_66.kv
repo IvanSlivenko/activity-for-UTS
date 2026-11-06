@@ -1,0 +1,20 @@
+#:import get_color_from_hex kivy.utils.get_color_from_hex
+
+MDFloatLayout:
+    MDButton:
+        style: "outlined"
+        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+        
+                
+
+        MDButtonText:
+            text: "example"
+            theme_text_color: "Custom"
+            text_color: get_color_from_hex("#00CED1")
+
+    MDLabel:
+        id: our_label
+        text: "Hello"
+        theme_text_color: "Custom"
+        text_color: get_color_from_hex("#FF1493")
+        pos_hint: {'center_x': 0.95, 'center_y': 0.4}  
