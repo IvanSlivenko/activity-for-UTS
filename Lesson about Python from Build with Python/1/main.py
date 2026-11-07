@@ -4,7 +4,7 @@ from kivymd.app import MDApp
 from kivymd.uix.label import MDLabel
 
 
-class MainApp(MDApp):
+class Lesson_1_App(MDApp):
 
     def build(self):
         self.theme_cls.theme_style = "Dark"
@@ -17,4 +17,4 @@ class MainApp(MDApp):
         )
 
 
-MainApp().run()
+Lesson_1_App().run()
