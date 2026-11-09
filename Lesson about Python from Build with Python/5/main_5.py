@@ -1,14 +1,14 @@
+from kivymd.uix.pickers.datepicker.datepicker import MDTextField
 from kivymd.uix.button import MDFloatingActionButton
 
 from kivymd.uix.boxlayout import MDBoxLayout
 from kivymd.app import MDApp
 from kivymd.uix.label import MDLabel, MDIcon
 from kivymd.uix.button import MDFlatButton, MDRectangleFlatButton, MDIconButton, MDFloatingActionButton
+from kivymd.uix.textfield import MDTextField
 
 from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.screenmanager import Screen
-
-
 
 from kivy.utils import get_color_from_hex
 
@@ -23,14 +23,17 @@ class Lesson_5_App(MDApp):
         # -------------------------------------------- block Thene Togle
         screen = Screen()
 
-        btn_rectangle = MDRectangleFlatButton(
-            text="Flat Button",
-            pos_hint={'center_x':0.5, 'center_y':0.4}
+        username = MDTextField(
+            text= 'Enter username',
+            pos_hint={'center_x': 0.5, 'center_y': 0.5},
+            # size_hint=(0.5, 1)
+            size_hint_x = None,
+            width=300
+
         )
-
-
         
-        screen.add_widget(btn_rectangle)    
+
+        screen.add_widget(username)    
         
 
         return screen   
