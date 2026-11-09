@@ -16,6 +16,11 @@ from kivy.lang import Builder
 user_name_helper = """ 
 MDTextField:
     hint_text: "Enter username"
+    helper_text: "or click on forgot username"
+    # helper_text_mode: "persistent"
+    helper_text_mode: "on_focus"
+    icon_right: "android"
+    icon_right_color: app.theme_cls.primary_color
     pos_hint: {'center_x': 0.5, 'center_y': 0.5}
     size_hint_x: None
     width: 300
@@ -26,7 +31,7 @@ class Lesson_5_App(MDApp):
     def build(self):
         # -------------------------------------------- block Thene Togle
         self.theme_cls.theme_style = "Dark"
-        self.theme_cls.primary_palette = "Brown"
+        self.theme_cls.primary_palette = "Green"
         self.theme_cls.primary_hue = "500"
         # -------------------------------------------- block Thene Togle
         screen = Screen()

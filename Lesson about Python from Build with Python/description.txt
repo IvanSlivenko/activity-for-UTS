@@ -38,3 +38,23 @@ https://github.com/attreyabhatt/KivyMD-Basics
 https://youtu.be/6uGZfBTl8Xc
 -------------------------------
 00 : 02 : 09
+
+
+------------------------------------- Lesson 6 ()
+
+---------------------- Створити віртуальне середовище
+py -3.9 -m venv .venv
+
+--------------------------------- активувати віртуальне середовище
+source .venv/Scripts/activate
+
+
+
+
+
+-------------------------------
+https://github.com/attreyabhatt/KivyMD-Basics
+=================================
+https://youtu.be/VqLpDaTRGLo
+-------------------------------
+00 : 02 : 09
