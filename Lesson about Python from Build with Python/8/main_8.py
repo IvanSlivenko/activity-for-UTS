@@ -37,12 +37,21 @@ class Lesson_8_App(MDApp):
 
         screen = Screen()
 
+        list_view = MDList() 
+
         self.item_1 = OneLineListItem(
             text = 'Item 1'
         )
+
+        self.item_2 = OneLineListItem(
+            text = 'Item 2'
+        )
         
 
-        screen.add_widget(self.item_1)    
+        list_view.add_widget(self.item_1)
+        list_view.add_widget(self.item_2)
+
+        screen.add_widget(list_view)    
         
 
         return screen   
