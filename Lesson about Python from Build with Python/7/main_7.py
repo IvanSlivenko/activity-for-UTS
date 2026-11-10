@@ -1,9 +1,11 @@
-from kivymd.uix.behaviors.toggle_behavior import MDRectangleFlatButton
+from kivymd.uix.banner.banner import MDFlatButton
 from kivymd.uix.boxlayout import MDBoxLayout
 from kivymd.app import MDApp
 from kivymd.uix.label import MDLabel, MDIcon
-from kivymd.uix.button import MDFlatButton, MDRectangleFlatButton, MDIconButton, MDFloatingActionButton
+from kivymd.uix.button import (MDFlatButton, MDRectangleFlatButton, 
+    MDIconButton, MDFloatingActionButton, MDFlatButton)
 from kivymd.uix.textfield import MDTextField
+from kivymd.uix.dialog import MDDialog
 
 from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.screenmanager import Screen
@@ -26,7 +28,7 @@ class Lesson_5_App(MDApp):
 
         button = MDRectangleFlatButton(
             text="Show",
-            pos_hint= {'center_x': 0.65, 'center_y': 0.4},
+            pos_hint= {'center_x': 0.5, 'center_y': 0.4},
             on_release=self.show_data
             
             )
@@ -40,8 +42,34 @@ class Lesson_5_App(MDApp):
         return screen   
 
     def  show_data(self, obj):
-        print(self.username.text)
+        if self.username.text is "":
+            check_string = "Pleese enter a username"
+        else:
+            check_string = self.username.text + ' does not exist'
+
+        close_button = MDFlatButton(
+            text="Close",
+            on_release=self.close_diflog
+            )
+
+        more_button = MDFlatButton(
+            text="More..."
+            )
+
+        self.dialog = MDDialog(
+            title='Username Check',
+            text=check_string,
+            size_hint = (0.7, 1),
+            buttons=[close_button, more_button]
+        )
         self.username.text=""
+        self.dialog.open()
+
+    def close_diflog(self, obj):
+        self.dialog.dismiss()
+
+
+
 
 Lesson_5_App().run()
 
