@@ -1,3 +1,4 @@
+from kivymd.uix.banner.banner import OneLineListItem
 
 #--------------------------------------------------------------------
 from kivymd.uix.boxlayout import MDBoxLayout
@@ -24,8 +25,6 @@ from kivymd.uix.list import (
     MDList
 )
 
-
-
 class Lesson_8_App(MDApp):
 
     def build(self):
@@ -35,43 +34,36 @@ class Lesson_8_App(MDApp):
         self.theme_cls.primary_hue = "500"
         # -------------------------------------------- block Thene Togle
 
+        
+        # --------------------------------------------------------- list_view
+        list_view = MDList()
+
+        for i in range(20):
+            # items = OneLineListItem(text='Item '+ str(i+1))
+            # items = TwoLineListItem(text='Item '+ str(i+1), secondary_text= 'Description '+ str(i+1))
+            items = ThreeLineIconListItem(
+                text='First Name '+ str(i+1), 
+                secondary_text= 'Last Name '+ str(i+1),
+                tertiary_text= 'Age '+ str(i+1)
+                )
+            list_view.add_widget(items)
+
+
+        
+        
+        # ---------------------------------------------------- ScrollView
+        scroll = ScrollView()
+        scroll.add_widget(list_view) 
+
+
+        #----------------------------------------------------- Screen
         screen = Screen()
+        screen.add_widget(scroll)    
 
-        list_view = MDList() 
-
-        self.item_1 = OneLineListItem(
-            text = 'Item 1'
-        )
-
-        self.item_2 = OneLineListItem(
-            text = 'Item 2'
-        )
-        
-
-        list_view.add_widget(self.item_1)
-        list_view.add_widget(self.item_2)
-
-        screen.add_widget(list_view)    
-        
 
         return screen   
 
-#---------------------------------------------------------
-        # scroll = ScrollView()
-        # list_view = MDList()
 
-        # list_view.add_widget(
-        #     OneLineListItem(text="First item")
-        # )
-
-        # list_view.add_widget(
-        #     OneLineListItem(text="Second item")
-        # )
-
-        # scroll.add_widget(list_view)
-
-        # return scroll
-#----------------------------------------------------------
 
 
 
