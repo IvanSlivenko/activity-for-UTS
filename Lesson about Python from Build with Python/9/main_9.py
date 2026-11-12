@@ -1,3 +1,5 @@
+from kivymd.uix.list import ImageRightWidget
+from kivymd.uix.list import ThreeLineIconListItem
 from kivymd.uix.banner.banner import OneLineListItem
 
 #--------------------------------------------------------------------
@@ -13,6 +15,7 @@ from kivy.lang import Builder
 #--------------------------------------------------------------------
 from kivy.uix.screenmanager import Screen
 from kivy.uix.scrollview import ScrollView
+# from kivy.uix.scrollview import IconLeftWidget
 
 from kivymd.app import MDApp
 from kivymd.uix.list import (
@@ -22,7 +25,11 @@ from kivymd.uix.list import (
     OneLineIconListItem,
     TwoLineIconListItem,
     ThreeLineIconListItem,
-    MDList
+    ThreeLineAvatarIconListItem,
+    MDList,
+    IconLeftWidget,
+    IconRightWidget,
+    ImageRightWidget
 )
 
 class Lesson_8_App(MDApp):
@@ -41,19 +48,31 @@ class Lesson_8_App(MDApp):
         for i in range(20):
             # items = OneLineListItem(text='Item '+ str(i+1))
             # items = TwoLineListItem(text='Item '+ str(i+1), secondary_text= 'Description '+ str(i+1))
-            items = ThreeLineIconListItem(
+            # items = ThreeLineIconListItem(
+
+            items = ThreeLineAvatarIconListItem(    
                 text='First Name '+ str(i+1), 
                 secondary_text= 'Last Name '+ str(i+1),
                 tertiary_text= 'Age '+ str(i+1)
                 )
+            
+            icon_L = IconLeftWidget(icon="android")    
+            # icon_R = IconRightWidget(icon="home")
+            icon_R = ImageRightWidget(source="programmer.png")  
+
+            items.add_widget(icon_L)
+            items.add_widget(icon_R)    
+            
             list_view.add_widget(items)
+            
 
 
         
         
         # ---------------------------------------------------- ScrollView
         scroll = ScrollView()
-        scroll.add_widget(list_view) 
+        scroll.add_widget(list_view)
+
 
 
         #----------------------------------------------------- Screen
