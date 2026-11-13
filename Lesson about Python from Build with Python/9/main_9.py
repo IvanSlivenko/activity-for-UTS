@@ -32,6 +32,8 @@ from kivymd.uix.list import (
     ImageRightWidget
 )
 
+list_helper = """ """
+
 class Lesson_8_App(MDApp):
 
     def build(self):
