@@ -5,7 +5,6 @@ from kivymd.uix.list import ThreeLineIconListItem
 from kivymd.uix.banner.banner import OneLineListItem
 from kivy.utils import get_color_from_hex
 
-
 #--------------------------------------------------------------------
 from kivymd.uix.boxlayout import MDBoxLayout
 from kivymd.uix.label import MDLabel, MDIcon
@@ -13,10 +12,11 @@ from kivymd.uix.button import (MDFlatButton, MDRectangleFlatButton,
     MDIconButton, MDFloatingActionButton, MDFlatButton)
 from kivymd.uix.textfield import MDTextField
 from kivymd.uix.dialog import MDDialog
-from kivy.uix.floatlayout import FloatLayout
-
+# from kivymd.uix.toolbar import MDToolbar
+from kivymd.uix.toolbar import MDTopAppBar
 
 #--------------------------------------------------------------------
+from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.screenmanager import Screen
 from kivy.uix.scrollview import ScrollView
 from kivy.lang import Builder
@@ -42,8 +42,11 @@ screen_helper = """
 Screen:
     BoxLayout:
         orientation: 'vertical'
-        MDToolbar:
+        MDTopAppBar:
             title: 'Lesson_11'
+        MDLabel:
+            text: 'Label Lesson_11'
+            halign: 'center'
 
 """
 
@@ -56,7 +59,7 @@ class Lesson_11_App(MDApp):
         self.theme_cls.primary_hue = "500"
         #---------------------------------------------------- Togle Theme
 
-        screen = 
+        screen = Builder.load_string(screen_helper) 
 
         
         return screen   
