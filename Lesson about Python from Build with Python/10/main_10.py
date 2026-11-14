@@ -50,25 +50,42 @@ class Lesson_10_App(MDApp):
         #---------------------------------------------------- Togle Theme
 
         screen = Screen()
-        table = MDDataTable(column_data=[
-            ("Food", dp(30)),
-            ("Calories", dp(30))
-        ],
-        row_data = [
-            ("Burger","300"),
-            ("Toast","150")
-            
-        ]
+        table = MDDataTable(
+            pos_hint={'center_x': 0.5,'center_y': 0.5},
+            size_hint=(0.9, 0.6),
+            check=True,    
+            rows_num=10, 
+            column_data=[
+                ("No", dp(18)),
+                ("Food", dp(20)),
+                ("Calories", dp(20))
+            ],
+            row_data = [
+                ("1", "Burger","300"),
+                ("2", "Toast","150"),
+                ("3", "Toast","150"),
+                ("4", "Toast","150"),
+                ("5", "Toast","150"),
+                ("6", "Toast","150"),
+                ("7", "Toast","150"),
+                ("8", "Toast","150"),
+                ("9", "Toast","150"),
+                
+            ]
         )
         
 
-
+        table.bind(on_check_press=self.chek_press)
+        table.bind(on_row_press=self.row_press)
         screen.add_widget(table)
         
-
-
-
         return screen   
+
+    def chek_press(self, instance_table, current_row):
+        print(instance_table, current_row)
+
+    def row_press(self, instance_table, instance_row):
+        print(instance_table, instance_row)    
 
 
 
