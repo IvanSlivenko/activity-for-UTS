@@ -1,0 +1,36 @@
+1	Підключення до Excel через openpyxl
+2	Завантаження довідника товарів
+3	Реалізація надходження
+4	Реалізація FIFO
+5	Розрахунок залишків
+6	Облік місяців, кварталів та років
+7	Інтерфейс KivyMD
+8	Збірка Android APK
+
+-----------------------------------------------
+main.py
+│
+├── database/
+│   └── excel_manager.py
+│
+├── models/
+│   ├── product.py
+│   ├── receipt.py
+│   └── fifo.py
+│
+├── services/
+│   ├── receipt_service.py
+│   ├── expense_service.py
+│   └── balance_service.py
+│
+├── screens/
+│   ├── dashboard.py
+│   ├── products.py
+│   ├── receipts.py
+│   ├── expenses.py
+│   ├── balances.py
+│   └── reports.py
+│
+└── main.kv
+
+----------------------------------------
