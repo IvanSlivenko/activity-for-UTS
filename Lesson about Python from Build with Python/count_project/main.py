@@ -60,7 +60,7 @@ from datetime import datetime
 #         result = excel.add_receipt(
 #             code="1",
 #             quantity=10,
-#             price=650
+#             price=800
 
 #         )
 
@@ -96,7 +96,7 @@ def main():
 
         result = expense.write_off(          
             code="1",
-            quantity=10
+            quantity=15
 
         )
 

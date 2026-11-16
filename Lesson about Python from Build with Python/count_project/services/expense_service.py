@@ -84,14 +84,12 @@ class ExpenseService:
         if isinstance(value, str):
 
             try:
-                return datetime.fromisoformat(
-                    value.strip()
-                )
+                return datetime.fromisoformat(value.strip())
 
             except ValueError:
                 pass
 
-            # Підтримка формату YYYY-MM-DD-HH-MM
+            # Формат YYYY-MM-DD-HH-MM
             try:
                 return datetime.strptime(
                     value.strip(),
@@ -101,7 +99,7 @@ class ExpenseService:
             except ValueError:
                 pass
 
-            # Підтримка дати без часу
+            # Дата без часу
             try:
                 return datetime.combine(
                     date.fromisoformat(value.strip()),
@@ -184,7 +182,6 @@ class ExpenseService:
             lots.append({
 
                 "row": row,
-
                 "date": lot_date,
 
                 "lot": self.ws_fifo.cell(
@@ -193,7 +190,6 @@ class ExpenseService:
                 ).value,
 
                 "remaining": remaining,
-
                 "price": price
 
             })
@@ -219,12 +215,14 @@ class ExpenseService:
             Decimal("0")
         )
 
+        # Контроль достатності залишку
         if available < quantity:
 
             raise ValueError(
                 f"Недостатньо товару!\n"
                 f"Потрібно: {quantity}\n"
-                f"Доступно: {available}"
+                f"Доступно: {available}\n"
+                f"Нестача: {quantity - available}"
             )
 
         remaining_to_write_off = quantity
@@ -254,15 +252,10 @@ class ExpenseService:
             allocations.append({
 
                 "row": lot["row"],
-
                 "lot": lot["lot"],
-
                 "quantity": write_quantity,
-
                 "price": price,
-
                 "value": value,
-
                 "new_remaining": new_remaining
 
             })
@@ -289,17 +282,19 @@ class ExpenseService:
 
         fifo = self.fifo_columns
 
+        # Запам'ятовуємо початкову кількість рядків
         original_expense_max_row = self.ws_expense.max_row
 
+        # Запам'ятовуємо початкові значення FIFO
         original_values = {}
 
         try:
 
+            # Спочатку оновлюємо FIFO
             for item in allocations:
 
                 fifo_row = item["row"]
 
-                # Запам'ятовуємо попередні значення
                 original_values[fifo_row] = {
 
                     fifo["remaining_quantity"]:
@@ -334,30 +329,24 @@ class ExpenseService:
                     fifo["remaining_value"]
                 ).value = float(new_value)
 
-                # Запис видатку
+            # Тільки після оновлення FIFO записуємо видаток
+            for item in allocations:
+
                 expense_row = [
 
                     expense_date,
-
                     product["code"],
-
                     product["name"],
-
                     product["unit"],
-
                     float(item["quantity"]),
-
                     float(item["price"]),
-
                     float(item["value"]),
-
                     item["lot"]
 
                 ]
 
                 self.ws_expense.append(expense_row)
 
-                # Формат дати та часу
                 self.ws_expense.cell(
                     self.ws_expense.max_row,
                     1
@@ -368,7 +357,7 @@ class ExpenseService:
 
         except Exception:
 
-            # Відновлення FIFO
+            # Відновлюємо FIFO
             for row, values in original_values.items():
 
                 for column, value in values.items():
@@ -378,7 +367,7 @@ class ExpenseService:
                         column
                     ).value = value
 
-            # Видалення доданих записів видатку
+            # Видаляємо додані записи видатку
             current_max_row = self.ws_expense.max_row
 
             if current_max_row > original_expense_max_row:
@@ -457,13 +446,29 @@ class ExpenseService:
                 f"Немає доступних FIFO-партій товару {code}"
             )
 
+        # КОНТРОЛЬ ЗАЛИШКУ ДО БУДЬ-ЯКИХ ЗАПИСІВ
+        available = sum(
+            (lot["remaining"] for lot in lots),
+            Decimal("0")
+        )
+
+        if quantity > available:
+
+            raise ValueError(
+                f"Недостатньо товару!\n"
+                f"Товар: {product['name']}\n"
+                f"Потрібно: {quantity}\n"
+                f"Доступно: {available}\n"
+                f"Нестача: {quantity - available}"
+            )
+
         # Формуємо план списання
         allocations = self.prepare_allocations(
             lots,
             quantity
         )
 
-        # Записуємо списання
+        # Записуємо списання ТІЛЬКИ після перевірок
         self.save_allocations(
             allocations,
             product,
@@ -479,13 +484,9 @@ class ExpenseService:
         return {
 
             "code": product["code"],
-
             "name": product["name"],
-
             "quantity": quantity,
-
             "total_value": total_value,
-
             "allocations": allocations
 
         }
