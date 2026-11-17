@@ -1,3 +1,4 @@
+from kivymd.uix.bottomnavigation.bottomnavigation import WindowSDL
 from kivymd.uix.datatables import MDDataTable
 from kivymd.uix.list import MDList
 from kivymd.uix.list import ImageRightWidget
@@ -37,6 +38,13 @@ from kivymd.uix.list import (
     ImageRightWidget
 )
 from kivymd.uix.datatables import MDDataTable
+from kivy.core.window import Window
+
+from kivy.metrics import dp
+from kivy.clock import Clock
+
+
+Window.size = (300, 500)
 
 screen_helper = """
 Screen:
@@ -44,9 +52,24 @@ Screen:
         orientation: 'vertical'
         MDTopAppBar:
             title: 'Lesson_11'
+            left_action_items: [["menu", lambda x: app.navigation_draw() ]]
+            right_action_items: [["clock", lambda x: app.clock_draw() ]]
+            elevation: 8
         MDLabel:
             text: 'Label Lesson_11'
             halign: 'center'
+        
+        MDBottomAppBar:
+            MDTopAppBar:
+                title: 'Help'
+                icon: 'plus'
+                type: 'bottom'
+                mode: 'center'  
+                left_action_items: [["coffee", lambda x: app.navigation_draw() ]]
+                on_action_button: app.central_button_action()
+        
+                  
+
 
 """
 
@@ -64,8 +87,53 @@ class Lesson_11_App(MDApp):
         
         return screen   
 
-   
 
+    
+    # def on_start(self):
+    #     Clock.schedule_once(self.move_bottom_button, 0.5)
+
+    # region move_bottom_button 
+    # def move_bottom_button(self, *args):
+
+    #     bottom_bar = self.root.children[0].children[0]
+
+    #     for widget in bottom_bar.walk():
+    #         print(widget.__class__.__name__, widget.pos)
+
+    #         if widget.__class__.__name__ == "ActionBottomAppBarButton":
+
+    #             print("Знайдено FAB:", widget)
+    #             print("Початкова позиція:", widget.pos)
+
+    #             widget.y += dp(120)
+
+    #             print("Нова позиція:", widget.pos)
+    #             break
+    #endregion
+
+
+
+
+    def navigation_draw(self):
+        print("navigation")
+
+    def clock_draw(self):
+        print("clock")
+
+    def central_button_action(self):
+
+        self.dialog = MDDialog(
+            title="Центральна кнопка",
+            text="Ти натиснув FAB!",
+            buttons=[
+                MDFlatButton(
+                    text="OK",
+                    on_release=lambda x: self.dialog.dismiss()
+                )
+            ]
+        )
+
+        self.dialog.open()
 
 
 Lesson_11_App().run()
