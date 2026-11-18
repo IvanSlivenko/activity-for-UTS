@@ -61,10 +61,12 @@ Screen:
         
         MDBottomAppBar:
             MDTopAppBar:
-                title: 'Help'
+                # title: 'Help'
                 icon: 'plus'
                 type: 'bottom'
-                mode: 'center'  
+                # mode: 'center'
+                mode: 'end'
+                # mode: 'free-end'  
                 left_action_items: [["coffee", lambda x: app.navigation_draw() ]]
                 on_action_button: app.central_button_action()
         
