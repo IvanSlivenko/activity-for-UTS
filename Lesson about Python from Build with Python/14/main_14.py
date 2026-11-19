@@ -46,63 +46,14 @@ from kivy.core.window import Window
 from kivy.metrics import dp
 from kivy.clock import Clock
 from kivymd.uix.navigationdrawer import MDNavigationLayout
+
+from screen_nav import screen_helper
+
 #endregion
 
 Window.size = (300, 700)
 
-screen_helper = """ 
-ScreenManager:
-    MenuScreen:
-    ProfileScreen:
-    ProductsScreen:
-    ContactsScreen:
 
-
-<MenuScreen>:
-    name: 'menu'
-    MDLabel:  
-        text: 'Screen Menu'
-        halign: 'center'
-
-    MDRectangleFlatButton:  
-        text: 'Profile'
-        pos_hint: {'center_x': 0.5, 'center_y': 0.35}
-        on_press: root.manager.current = 'profile'
-
-<ProfileScreen>:
-    name: 'profile'
-    MDLabel:  
-        text: 'Screen Profile'
-        halign: 'center'
-
-    MDRectangleFlatButton:  
-        text: 'Products'
-        pos_hint: {'center_x': 0.5, 'center_y': 0.2}
-        on_press: root.manager.current = 'products' 
-
-<ProductsScreen>:
-    name: 'products'
-    MDLabel:  
-        text: 'Screen Products'
-        halign: 'center'
-
-    MDRectangleFlatButton:  
-        text: 'Contacts'
-        pos_hint: {'center_x': 0.5, 'center_y': 0.2}
-        on_press: root.manager.current = 'contacts'
-
-<ContactsScreen>:
-    name: 'contacts'
-    MDLabel:  
-        text: 'Screen Contacts'
-        halign: 'center'
-
-    MDRectangleFlatButton:  
-        text: 'Menu'
-        pos_hint: {'center_x': 0.5, 'center_y': 0.2}
-        on_press: root.manager.current = 'menu'                    
-
-"""
 class MenuScreen(Screen):
     pass
 
@@ -114,12 +65,18 @@ class ProductsScreen(Screen):
     pass
 
 class ContactsScreen(Screen):
-    pass            
+    pass
+
+class UploadScreen(Screen):
+    pass                
 
 sm = ScreenManager()
 
 sm.add_widget(MenuScreen(name='menu'))
 sm.add_widget(ProfileScreen(name='profile'))
+sm.add_widget(ProductsScreen(name='product'))
+sm.add_widget(ContactsScreen(name='contact'))
+sm.add_widget(UploadScreen(name='upload'))
 
 class Lesson_14_App(MDApp):
 
