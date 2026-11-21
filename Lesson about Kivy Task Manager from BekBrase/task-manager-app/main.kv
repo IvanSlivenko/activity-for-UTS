@@ -11,7 +11,16 @@ MDFloatLayout:
         MDList:
             id: container
 
-    MDFabButton:    
+    MDFabButton:
+        theme_bg_color: "Custom"
+        md_bg_color: "#f5c1b0"    
+        
+        theme_icon_color: "Custom"
+        icon_color: "#0a0a0a"
+
+        on_enter: self.md_bg_color = "#ff8800"
+        on_leave: self.md_bg_color = "#f5c1b0"
+
         icon: "plus-thick"
         on_release: app.show_task_dialog()
         elevation_normal: 12
