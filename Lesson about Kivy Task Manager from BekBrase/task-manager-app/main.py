@@ -1,4 +1,3 @@
-from kivymd.uix.expansionpanel.expansionpanel import TwoLineAvatarIconListItem
 #region imports
 from kivymd.app import MDApp
 
@@ -13,7 +12,13 @@ from kivymd.uix.boxlayout import MDBoxLayout
 from kivymd.uix.pickers import MDModalDatePicker
 
 from kivymd.uix.pickers.datepicker.datepicker import date
-from kivymd.uix.list import TwoLineAvatarIconListItem, ILeftBody
+# from kivymd.uix.list import TwoLineAvatarIconListItem, ILeftBody
+from kivymd.uix.list import (
+    MDListItem,
+    MDListItemHeadlineText,
+    MDListItemSupportingText,
+    MDListItemTrailingCheckbox,
+)
 from kivymd.uix.selectioncontrol import MDCheckbox
 
 from datetime import datetime
@@ -34,8 +39,7 @@ from datetime import datetime
 
     # def on_save(self, instance, value, date_range):
     #     date = value.strftime("%A %d %B %Y")
-    #     self.ids.date_text.text  = str(date)
-        
+    #     self.ids.date_text.text  = str(date)       
 #endregion
 
 #------------------------------------------ var 2
@@ -67,25 +71,45 @@ class DialogContent(MDBoxLayout):
 #------------------------------------------------
 
 #Class for marking for leliting the list item
-class ListItemWithCheckbox(TwoLineAvatarIconListItem):
+#region ---------------------------------------------------class ListItemWithCheckbox var_1
+# class ListItemWithCheckbox(TwoLineAvatarIconListItem):
+#     def __init__(self, pk=None, **kwargs):
+#         super().__init__(**kwargs)
+#         self.pk = pk
+#     #Markin the item complite or in complite
+#     def mark(self, check, the_list_item):
+#         if check.active == True:
+#             the_list_item.text = '[s]'+ the_list_item.text +'[/s]'
+#         else:
+#             pass
+#     #Deleting the list item
+#     def delete_item(self, the_list_item):
+#         self.parent.remove_widget(the_list_item)
+#endregion
+
+class ListItemWithCheckbox(MDBoxLayout):
+
     def __init__(self, pk=None, **kwargs):
         super().__init__(**kwargs)
+
         self.pk = pk
-    #Markin the item complite or in complite
-    def makr(self, check, the_list_item):
-        if check.active == True:
-            the_list_item.text = '[s]'+ the_list_item.text +'[/s]'
+        self.original_text = ""
+
+    # Позначення виконаного завдання
+    def mark(self, checkbox, value):
+
+        if value:
+            self.ids.task_label.text = (
+                f"[s]{self.original_text}[/s]"
+            )
         else:
-            pass
-    #Deleting the list item
-    def delete_item(self, the_list_item):
-        self.parent.remove_widget(the_list_item)
+            self.ids.task_label.text = self.original_text
 
-class LeftcheckBox(ILeftBody, MDCheckbox):
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
+    # Видалення завдання
+    def delete_item(self):
 
-    pass
+        if self.parent:
+            self.parent.remove_widget(self)
 
 class MainApp(MDApp):
     task_list_dialog = None
@@ -139,16 +163,29 @@ class MainApp(MDApp):
             )
         self.task_list_dialog.open()
 
-    #---------------------------------------------
-
+#region ----------------------------------------------- add_task var_1
+    # def add_task(self, task, task_date):
+    #     print(task.text, task_date)
+    #     self.root.ids['container'].add_widget(ListItemWithCheckbox(
+    #         text='[b]'+task.text+'[/b]',
+    #         secondary_text = task_date
+    #         ))
+    #     task.text = ""
+#endregion
+    
     def add_task(self, task, task_date):
-        print(task.text, task_date)
-        self.root.ids['container'].add_widget(ListItemWithCheckbox(
-            text='[b]'+task.text+'[/b]',
-            secondary_task = task_date
-            ))
-        task.text = ""
 
+        item = ListItemWithCheckbox()
+
+        item.original_text = f"[b]{task.text}[/b]"
+
+        item.ids.task_label.text = item.original_text
+        item.ids.task_date.text = task_date
+
+        self.root.ids.container.add_widget(item)
+
+        task.text = ""
+    
     def close_dialog(self, *args):
         self.task_list_dialog.dismiss()
 
