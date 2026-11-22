@@ -1,0 +1,46 @@
+<MainScreen>:
+
+    # Заголовок
+    MDLabel:
+        id: task_title
+        halign: "center"
+        markup: True
+        text: "[b][u][size=48]Task Manager[/size][/u][/b]"
+
+        size_hint_y: None
+        height: "80dp"
+        pos_hint: {"center_x": 0.5, "top": 0.98}
+
+    # Список завдань
+    ScrollView:
+        pos_hint: {"center_y": 0.43,"center_x": 0.5}
+
+        size_hint: 0.9, 0.75
+
+        MDBoxLayout:
+            id: container
+            orientation: "vertical"
+
+            spacing: "10dp"
+            padding: "5dp"
+
+            size_hint_y: None
+            height: self.minimum_height
+
+    # Кнопка додавання завдання
+    MDFabButton:
+        theme_bg_color: "Custom"
+        md_bg_color: "#f5c1b0"
+
+        theme_icon_color: "Custom"
+        icon_color: "#0a0a0a"
+
+        on_enter: self.md_bg_color = "#9c958c"
+        on_leave: self.md_bg_color = "#f5c1b0"
+
+        icon: "plus-thick"
+        on_release: app.show_task_dialog()
+
+        elevation_normal: 12
+
+        pos_hint: {"x": 0.45,"y": 0.04}

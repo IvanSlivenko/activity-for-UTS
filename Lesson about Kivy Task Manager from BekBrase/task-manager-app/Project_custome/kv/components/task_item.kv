@@ -1,0 +1,57 @@
+#:import Window kivy.core.window.Window
+
+<ListItemWithCheckbox>:
+    orientation: "horizontal"
+    size_hint_y: None
+    height: "72dp"
+    spacing: "8dp"
+    padding: "8dp"
+
+    theme_bg_color: "Custom"
+    md_bg_color: "#646463"
+
+    on_kv_post: Window.bind(mouse_pos=lambda window, pos: setattr(self, "md_bg_color", "#313242" if self.collide_point(*self.to_widget(*pos)) else "#646463"))
+
+    # Checkbox зліва
+    AnchorLayout:
+        size_hint: None, 1
+        width: "48dp"
+        anchor_x: "center"
+        anchor_y: "center"
+
+        MDCheckbox:
+            id: check
+            size_hint: None, None
+            size: "48dp", "48dp"
+
+            on_active: root.mark(self, self.active)
+
+    # Назва та дата завдання
+    MDBoxLayout:
+        orientation: "vertical"
+        spacing: "2dp"
+
+        MDLabel:
+            id: task_label
+            text: ""
+            markup: True
+            halign: "left"
+            valign: "middle"
+
+        MDLabel:
+            id: task_date
+            text: ""
+            theme_text_color: "Secondary"
+            font_size: "12sp"
+            halign: "left"
+            valign: "middle"
+
+    # Кнопка видалення
+    MDIconButton:
+        icon: "trash-can-outline"
+        theme_icon_color: "Custom"
+        icon_color: "#FF0000"
+        size_hint: None, None
+        size: "48dp", "48dp"
+
+        on_release: root.delete_item()

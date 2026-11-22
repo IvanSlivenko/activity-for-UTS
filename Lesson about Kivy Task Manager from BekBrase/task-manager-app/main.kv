@@ -6,6 +6,7 @@ MDFloatLayout:
         markup: True
         text: "[b][u][size=48]Task Manager[/size][/u][/b]"
         pos_hint: {"y": 0.40}
+#----------------------------------------------------------------
     ScrollView:
         pos_hint: {"center_y": 0.4, "center_x": 0.5}
         size_hint: 0.9, 0.8
@@ -13,7 +14,7 @@ MDFloatLayout:
             id: container
             spacing: "10dp"
 
-
+#------------------------------------------------------------- Кнопка додавання Завдань
     MDFabButton:
         theme_bg_color: "Custom"
         md_bg_color: "#f5c1b0"    
@@ -28,7 +29,7 @@ MDFloatLayout:
         on_release: app.show_task_dialog()
         elevation_normal: 12
         pos_hint: {"x": 0.45, "y": 0.04}
-
+#------------------------------------------------------------- Форма створення Завдання
 <DialogContent>
     orientation: 'vertical'
     spacing: "10dp"
@@ -39,14 +40,6 @@ MDFloatLayout:
         rows: 1
         # cols: 2
         spacing: "10dp"
-#region MDTextField_var_1
-        # MDTextField:
-            # id: task_text
-            # hint_text: "Add Task ..."
-            # pos_hint: {"center_y": 0.4}
-            # max_text_length: 50
-            # on_text_validate: (app.add_task(task_text, date_text.text), app.close_dialog())
-#endregion
 
         MDTextField:
             id: task_text
@@ -67,7 +60,7 @@ MDFloatLayout:
     MDLabel:
         id: date_text
         spacing: "10dp"
-
+#--------------------------------------------------------------------------------------------- Кнопки форми створення завдання
     BoxLayout:
         orientation: 'horizontal'
         
@@ -86,7 +79,7 @@ MDFloatLayout:
                 text: "CANCEL"      
 
 
-
+#------------------------------------------------------------------------------ Завдання
 <ListItemWithCheckbox>:
     orientation: "horizontal"
     size_hint_y: None

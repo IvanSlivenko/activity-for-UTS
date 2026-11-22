@@ -142,9 +142,9 @@ class MainApp(MDApp):
 
     #     self.task_list_dialog.open()
 
-    #--------------------------------------------- var 3
+    
 #endregion
-
+#--------------------------------------------- var 3
     def show_task_dialog(self):
 
         if not self.task_list_dialog:

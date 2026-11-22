@@ -1,0 +1,135 @@
+#:import Window kivy.core.window.Window
+MDFloatLayout:
+    MDLabel:
+        id: task_label
+        halign: "center"
+        markup: True
+        text: "[b][u][size=48]Task Manager[/size][/u][/b]"
+        pos_hint: {"y": 0.40}
+    ScrollView:
+        pos_hint: {"center_y": 0.4, "center_x": 0.5}
+        size_hint: 0.9, 0.8
+        MDList:
+            id: container
+            spacing: "10dp"
+
+
+    MDFabButton:
+        theme_bg_color: "Custom"
+        md_bg_color: "#f5c1b0"    
+        
+        theme_icon_color: "Custom"
+        icon_color: "#0a0a0a"
+
+        on_enter: self.md_bg_color = "#9c958c"
+        on_leave: self.md_bg_color = "#f5c1b0"
+
+        icon: "plus-thick"
+        on_release: app.show_task_dialog()
+        elevation_normal: 12
+        pos_hint: {"x": 0.45, "y": 0.04}
+
+<DialogContent>
+    orientation: 'vertical'
+    spacing: "10dp"
+    size_hint: 1, None          
+    height: "150dp"
+
+    GridLayout:
+        rows: 1
+        # cols: 2
+        spacing: "10dp"
+
+        MDTextField:
+            id: task_text
+            mode: "outlined"
+            size_hint_x: 0.85
+
+            MDTextFieldHintText:
+                text: "Add Task ..."
+
+            MDTextFieldMaxLengthText:
+                max_text_length: 50
+  
+        MDIconButton:
+            icon: "calendar"
+            on_release: root.show_date_picker()
+            padding:"10dp"
+
+    MDLabel:
+        id: date_text
+        spacing: "10dp"
+
+    BoxLayout:
+        orientation: 'horizontal'
+        
+        MDButton:
+            style: "filled"
+            on_release: (app.add_task(task_text, date_text.text), app.close_dialog())
+
+            MDButtonText:
+                text: "SAVE"    
+                     
+        MDButton:
+            style: "text"
+            on_release: app.close_dialog()
+
+            MDButtonText:
+                text: "CANCEL"      
+
+
+
+<ListItemWithCheckbox>:
+    orientation: "horizontal"
+    size_hint_y: None
+    height: "72dp"
+    spacing: "8dp"
+    padding: "8dp"
+
+    theme_bg_color: "Custom"
+    md_bg_color: "#646463"
+
+    on_kv_post: Window.bind(mouse_pos=lambda window, pos: setattr(self, "md_bg_color", "#313242" if self.collide_point(*self.to_widget(*pos)) else "#646463"))
+
+    AnchorLayout:
+        size_hint: None, 1
+        width: "48dp"
+        anchor_x: "center"
+        anchor_y: "center"
+
+        # # Checkbox зліва
+        MDCheckbox:
+            id: check
+            size_hint: None, None
+            size: "48dp", "48dp"
+            on_active: root.mark(self, self.active)
+
+    # Контейнер для назви та дати
+    MDBoxLayout:
+        orientation: "vertical"
+        spacing: "2dp"
+
+        MDLabel:
+            id: task_label
+            text: ""
+            markup: True
+            halign: "left"
+            valign: "middle"
+
+        MDLabel:
+            id: task_date
+            text: ""
+            theme_text_color: "Secondary"
+            font_size: "12sp"
+            halign: "left"
+            valign: "middle"
+
+    # Кнопка видалення справа
+    MDIconButton:
+        icon: "trash-can-outline"
+        theme_icon_color: "Custom"
+        icon_color: "#FF0000"
+        size_hint: None, None
+        size: "48dp", "48dp"
+        on_release: root.delete_item()
+

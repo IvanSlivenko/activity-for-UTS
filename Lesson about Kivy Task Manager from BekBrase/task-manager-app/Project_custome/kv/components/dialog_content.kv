@@ -1,0 +1,55 @@
+<DialogContent>:
+    orientation: "vertical"
+    spacing: "10dp"
+    size_hint: 1, None
+    height: "170dp"
+
+    # Поле введення та календар
+    GridLayout:
+        rows: 1
+        cols: 2
+        spacing: "10dp"
+        size_hint_y: None
+        height: "56dp"
+
+        MDTextField:
+            id: task_text
+            mode: "outlined"
+            size_hint_x: 0.85
+
+            MDTextFieldHintText:
+                text: "Add Task ..."
+
+            MDTextFieldMaxLengthText:
+                max_text_length: 50
+
+        MDIconButton:
+            icon: "calendar"
+            on_release: root.show_date_picker()
+            padding: "10dp"
+
+    # Дата завдання
+    MDLabel:
+        id: date_text
+        spacing: "10dp"
+
+    # Кнопки керування
+    BoxLayout:
+        orientation: "horizontal"
+        size_hint_y: None
+        height: "48dp"
+
+        MDButton:
+            style: "filled"
+
+            on_release: (app.add_task(task_text, date_text.text),app.close_dialog())
+
+            MDButtonText:
+                text: "SAVE"
+
+        MDButton:
+            style: "text"
+            on_release: app.close_dialog()
+
+            MDButtonText:
+                text: "CANCEL"
