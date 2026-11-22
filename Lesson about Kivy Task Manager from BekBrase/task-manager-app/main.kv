@@ -82,3 +82,15 @@ MDFloatLayout:
             MDButtonText:
                 text: "CANCEL"      
 
+<ListItemWithCheckbox>:
+    id: the_list_item
+    markup: True
+
+    LeftCheckBox:
+        id: check
+        on_release: root.mark(check, the_list_item)
+
+    IconRightWidget:
+        icon: "trash-can-outline"
+        theme_text_color: 'Custom'
+        text_color: "#FF0000"
