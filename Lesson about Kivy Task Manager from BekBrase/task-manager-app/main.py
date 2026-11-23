@@ -21,7 +21,7 @@ from kivymd.uix.list import (
 )
 from kivymd.uix.selectioncontrol import MDCheckbox
 
-from database import DataBase
+from dataBase import DataBase
 
 from datetime import datetime
 #endregion
@@ -100,21 +100,47 @@ class ListItemWithCheckbox(MDBoxLayout):
         self.original_text = ""
 
     # Позначення виконаного завдання
-    def mark(self, checkbox, value):
+    #region mark_var_1
+    #--------------------------------------------------------------------------
+    # def mark(self, checkbox, value):
 
-        if value:
+    #     if value:
+    #         self.ids.task_label.text = (
+    #             f"[s]{self.original_text}[/s]"
+    #         )
+    #     else:
+    #         # self.ids.task_label.text = self.original_text
+    #         self.ids.task_label.text = db.mark_task_as_completed(value.id=pk)
+    #--------------------------------------------------------------------------
+    #endregion
+    
+    def mark(self, checkbox, active):
+
+        if active:
+            # Записуємо стан у базу
+            db.mark_task_as_completed(self.pk)
+
+            # Перекреслюємо текст
             self.ids.task_label.text = (
                 f"[s]{self.original_text}[/s]"
             )
+
         else:
-            # self.ids.task_label.text = self.original_text
-            self.ids.task_label.text = db.mark_task_as_completed(value.id=pk)
+            # Оновлюємо стан у базі
+            db.mark_task_as_incompleted(self.pk)
+
+            # Повертаємо початковий текст
+            self.ids.task_label.text = self.original_text
+        
+
+
 
     # Видалення завдання
     def delete_item(self):
 
         if self.parent:
             self.parent.remove_widget(self)
+            db.delete_task(self.pk)
 
 class MainApp(MDApp):
     task_list_dialog = None
@@ -180,19 +206,26 @@ class MainApp(MDApp):
     
     def add_task(self, task, task_date):
 
+        created_task = db.create_task(task.text, task_date)
         item = ListItemWithCheckbox()
+        item = ListItemWithCheckbox(pk=created_task[0])
 
-        item.original_text = f"[b]{task.text}[/b]"
+        item.original_text = f"[b]{created_task[1]}[/b]"
 
         item.ids.task_label.text = item.original_text
-        item.ids.task_date.text = task_date
+        item.ids.task_date.text = created_task[2]
 
         self.root.ids.container.add_widget(item)
 
         task.text = ""
+
+
     
+
     def close_dialog(self, *args):
         self.task_list_dialog.dismiss()
+
+
 
 
 if __name__ == "__main__":
