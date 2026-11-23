@@ -21,8 +21,12 @@ from kivymd.uix.list import (
 )
 from kivymd.uix.selectioncontrol import MDCheckbox
 
+from database import DataBase
+
 from datetime import datetime
 #endregion
+
+db = DataBase()
 
 #region_DialogContent_var_1
 # class DialogContent(MDBoxLayout):
@@ -103,7 +107,8 @@ class ListItemWithCheckbox(MDBoxLayout):
                 f"[s]{self.original_text}[/s]"
             )
         else:
-            self.ids.task_label.text = self.original_text
+            # self.ids.task_label.text = self.original_text
+            self.ids.task_label.text = db.mark_task_as_completed(value.id=pk)
 
     # Видалення завдання
     def delete_item(self):
