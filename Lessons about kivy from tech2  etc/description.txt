@@ -1,0 +1,12 @@
+--------------------------------
+
+python -m venv .venv
+
+pip install kivy kivymd
+
+source .venv/Scripts/activate
+
+--------------------------------
+https://youtu.be/ORGYmVvUmEY
+--------------------------------
+00 : 00 : 00

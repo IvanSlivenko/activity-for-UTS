@@ -8,12 +8,12 @@ class DataBase():
 
         self.update_task_table()
 
-        columns = self.cursor.execute(
-        "PRAGMA table_info(tasks)"
-        ).fetchall()
+        # columns = self.cursor.execute(
+        # "PRAGMA table_info(tasks)"
+        # ).fetchall()
 
-        for column in columns:
-            print(column)
+        # for column in columns:
+        #     print(column)
 
     #---------------------------------------- Створення таблиці
     # def create_task_table(self):
@@ -41,7 +41,8 @@ class DataBase():
                                             SELECT id, task, due_date 
                                             FROM tasks 
                                             WHERE task = ? and completed  = 0 """, (task,)).fetchone()
-        return created_task[-1]
+        # return created_task[-1]
+        return created_task
 
     #--------------------------------------------------- Отримати всі завдання
     def get_tasks(self):
@@ -103,7 +104,11 @@ class DataBase():
 
     #-------------------------------------------------- Видалити завдання
     def delete_task(self, task_id):
-        self.cursor.execute("DELETE FROM tasks WHERE id = ?", (task_id))                                           
+        self.cursor.execute("DELETE FROM tasks WHERE id = ?", (task_id,))
+
+        # print(f"ID для видалення: {task_id}")
+        # print(f"Видалено записів: {self.cursor.rowcount}")
+
         self.con.commit()
 
     #------------------------------------------------------------------------------ Вихід зі з'єднання

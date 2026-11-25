@@ -20,6 +20,7 @@ from kivymd.uix.list import (
     MDListItemTrailingCheckbox,
 )
 from kivymd.uix.selectioncontrol import MDCheckbox
+from kivy.properties import StringProperty, NumericProperty, BooleanProperty
 
 from dataBase import DataBase
 
@@ -92,12 +93,20 @@ class DialogContent(MDBoxLayout):
 #endregion
 
 class ListItemWithCheckbox(MDBoxLayout):
+    
+    pk = NumericProperty(0)
+    task_text = StringProperty("")
+    task_date = StringProperty("")
+    completed = BooleanProperty(False)
 
     def __init__(self, pk=None, **kwargs):
         super().__init__(**kwargs)
+        # self.pk = pk
+        # self.original_text = ""
 
-        self.pk = pk
-        self.original_text = ""
+        if pk is not None:
+            self.pk = pk
+        
 
     # Позначення виконаного завдання
     #region mark_var_1
@@ -122,7 +131,7 @@ class ListItemWithCheckbox(MDBoxLayout):
 
             # Перекреслюємо текст
             self.ids.task_label.text = (
-                f"[s]{self.original_text}[/s]"
+                f"[s]{self.task_text}[/s]"
             )
 
         else:
@@ -130,17 +139,23 @@ class ListItemWithCheckbox(MDBoxLayout):
             db.mark_task_as_incompleted(self.pk)
 
             # Повертаємо початковий текст
-            self.ids.task_label.text = self.original_text
+            self.ids.task_label.text = self.task_text
         
 
 
 
     # Видалення завдання
+
     def delete_item(self):
+
+        # print("Викликано delete_item()")
+        # print("ID завдання:", self.pk)
 
         if self.parent:
             self.parent.remove_widget(self)
             db.delete_task(self.pk)
+
+            # print("Завдання видалено з бази")        
 
 class MainApp(MDApp):
     task_list_dialog = None
@@ -203,29 +218,99 @@ class MainApp(MDApp):
     #         ))
     #     task.text = ""
 #endregion
-    
+
+#region ----------------------------------------------- add_task var_2    
+    # def add_task(self, task, task_date):
+
+    #     created_task = db.create_task(task.text, task_date)
+    #     # print(created_task)
+
+    #     item = ListItemWithCheckbox(pk=created_task[0])
+
+    #     item.original_text = f"[b]{created_task[1]}[/b]"
+
+    #     # print(item.original_text)
+
+    #     item.ids.task_label.text = item.original_text
+    #     item.ids.task_date.text = created_task[2]
+
+    #     self.root.ids.container.add_widget(item)
+
+    #     task.text = ""
+#endregion
+
     def add_task(self, task, task_date):
 
         created_task = db.create_task(task.text, task_date)
-        item = ListItemWithCheckbox()
-        item = ListItemWithCheckbox(pk=created_task[0])
 
-        item.original_text = f"[b]{created_task[1]}[/b]"
-
-        item.ids.task_label.text = item.original_text
-        item.ids.task_date.text = created_task[2]
+        item = ListItemWithCheckbox(
+            pk=created_task[0],
+            task_text=f"[b]{created_task[1]}[/b]",
+            task_date=created_task[2]
+        )
 
         self.root.ids.container.add_widget(item)
 
         task.text = ""
 
 
-    
-
     def close_dialog(self, *args):
         self.task_list_dialog.dismiss()
 
+#region ---------------------------------------------------------- on_start var_1
+    # def  on_start(self):
+    #     complited_tasks, incomplited_tasks = db.get_tasks()
+    #     if incomplited_tasks != []:
+    #         for task in incomplited_tasks:
+    #             add_task = ListItemWithCheckbox(
+    #                 pk=task[0], 
+    #                 text = task[1], 
+    #                 secondary_text=task[2])
+    #             self.root.ids.container.add_widget(add_task)
 
+    #     if completed_tasks !=[]:
+    #         for task in complited_tasks:
+    #             add_task = ListItemWithCheckbox(
+    #                 pk=task[0], 
+    #                 text = "[s]" + task[1] + "[/s]", 
+    #                 secondary_text=task[2])
+    #             add_task.ids.check.active = True    
+    #             self.root.ids.container.add_widget(add_task)
+#endregion
+
+    def on_start(self):
+
+        incompleted_tasks, completed_tasks  = db.get_tasks()
+
+        # Незавершені задачі
+        for task in incompleted_tasks:
+
+            item = ListItemWithCheckbox(
+                pk=task[0],
+                task_text=f"[b]{task[1]}[/b]",
+                task_date=task[2],
+                completed=False
+            )
+
+            self.root.ids.container.add_widget(item)
+
+        # Завершені задачі
+        for task in completed_tasks:
+
+            item = ListItemWithCheckbox(
+                pk=task[0],
+                task_text=f"[b]{task[1]}[/b]",
+                task_date=task[2],
+                completed=True
+            )
+
+            item.ids.check.active = True
+
+            item.ids.task_label.text = (
+                f"[s]{item.task_text}[/s]"
+            )
+
+            self.root.ids.container.add_widget(item)
 
 
 if __name__ == "__main__":
