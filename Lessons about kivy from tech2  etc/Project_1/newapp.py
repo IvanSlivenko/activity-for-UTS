@@ -11,7 +11,16 @@ class childApp(GridLayout):
         super(childApp, self).__init__()
 
         self.cols = 2
+
         self.add_widget(Label(text = 'Stuent Name'))
+        self.s_name = TextInput()
+        self.add_widget(self.s_name)
+
+
+        self.add_widget(Label(text = 'Stuent Marks'))
+        self.s_marks = TextInput()
+        self.add_widget(self.s_marks)
+
 
 
 
