@@ -9,4 +9,4 @@ source .venv/Scripts/activate
 --------------------------------
 https://youtu.be/ORGYmVvUmEY
 --------------------------------
-00 : 00 : 00
+00 : 10 : 37
