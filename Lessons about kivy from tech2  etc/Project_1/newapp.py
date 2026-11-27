@@ -21,6 +21,17 @@ class childApp(GridLayout):
         self.s_marks = TextInput()
         self.add_widget(self.s_marks)
 
+        self.add_widget(Label(text = 'Stuent Gender'))
+        self.s_gender = TextInput()
+        self.add_widget(self.s_gender)
+
+class parentApp(App):
+    def build(self):
+        return childApp()
+
+if __name__ == "__main__":
+    parentApp().run()                
+
 
 
 
